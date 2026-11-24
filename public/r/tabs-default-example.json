@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-default-example",
+  "title": "Tabs Default Example",
+  "description": "Atomic example for the Luck UI Tabs component.",
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/tabs-default-example.tsx",
+      "content": "import { Tabs, TabsList, TabsTab, TabsPanel } from \"registry/default/ui/tabs\";\r\nconst tabContentClassName =\r\n  \"w-full rounded-lg bg-gray-100 p-4 text-sm text-gray-600 dark:bg-gray-900 dark:text-gray-400\";\r\nexport function TabsExample() {\r\n  return (\r\n    <div className=\"flex flex-col items-start justify-center\">\r\n      <Tabs defaultValue=\"account\" className=\"w-full max-w-72\">\r\n        <TabsList>\r\n          <TabsTab value=\"account\">Account</TabsTab>\r\n          <TabsTab value=\"password\">Password</TabsTab>\r\n          <TabsTab value=\"settings\">Settings</TabsTab>\r\n        </TabsList>\r\n        <TabsPanel value=\"account\">\r\n          <p className={tabContentClassName}>Manage your account settings.</p>\r\n        </TabsPanel>\r\n        <TabsPanel value=\"password\">\r\n          <p className={tabContentClassName}>Change your password.</p>\r\n        </TabsPanel>\r\n        <TabsPanel value=\"settings\">\r\n          <p className={tabContentClassName}>Configure application settings.</p>\r\n        </TabsPanel>\r\n      </Tabs>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/tabs-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

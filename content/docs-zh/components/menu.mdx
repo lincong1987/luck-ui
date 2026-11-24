@@ -1,0 +1,241 @@
+---
+title: 菜单
+description: 向用户显示菜单，通常是由按钮触发的操作或链接列表。
+component: Menu
+registry: menu
+---
+
+import { MenuExample } from "registry/default/examples/menu-default-example";
+import menuExampleSource from "registry/default/examples/menu-default-example.tsx?raw";
+import { MenuWithIconsExample } from "registry/default/examples/menu-with-icons-example";
+import menuWithIconsExampleSource from "registry/default/examples/menu-with-icons-example.tsx?raw";
+import { MenuWithKbdExample } from "registry/default/examples/menu-with-kbd-example";
+import menuWithKbdExampleSource from "registry/default/examples/menu-with-kbd-example.tsx?raw";
+import { MenuWithGroupsExample } from "registry/default/examples/menu-with-groups-example";
+import menuWithGroupsExampleSource from "registry/default/examples/menu-with-groups-example.tsx?raw";
+import { MenuCheckboxExample } from "registry/default/examples/menu-checkbox-example";
+import menuCheckboxExampleSource from "registry/default/examples/menu-checkbox-example.tsx?raw";
+import { MenuRadioExample } from "registry/default/examples/menu-radio-example";
+import menuRadioExampleSource from "registry/default/examples/menu-radio-example.tsx?raw";
+import { MenuDestructiveExample } from "registry/default/examples/menu-destructive-example";
+import menuDestructiveExampleSource from "registry/default/examples/menu-destructive-example.tsx?raw";
+import { MenuSubmenuExample } from "registry/default/examples/menu-submenu-example";
+import menuSubmenuExampleSource from "registry/default/examples/menu-submenu-example.tsx?raw";
+import { MenuComplexExample } from "registry/default/examples/menu-complex-example";
+import menuComplexExampleSource from "registry/default/examples/menu-complex-example.tsx?raw";
+import menuSource from "registry/default/ui/menu.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuExample">
+      <MenuExample />
+    </ComponentPreview>
+    <ComponentSource code={menuExampleSource} language="tsx" title="menu-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 带附属内容
+
+用 `MenuItemAddon` 添加图标、文本或其他补充内容。放在 `MenuItemLabel` 之前为前置附属内容，放在标签之后为后置附属内容。每侧只使用一个附属内容容器，并在其中组合多个元素。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuWithIconsExample">
+      <MenuWithIconsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuWithIconsExampleSource}
+      language="tsx"
+      title="menu-with-icons-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 带快捷键
+
+将 `Kbd` 放入后置的 `MenuItemAddon` 中即可显示键盘快捷键。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuWithKbdExample">
+      <MenuWithKbdExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuWithKbdExampleSource}
+      language="tsx"
+      title="menu-with-kbd-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 分组
+
+使用 `MenuGroup` 与 `MenuGroupLabel` 对相关条目分组。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuWithGroupsExample">
+      <MenuWithGroupsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuWithGroupsExampleSource}
+      language="tsx"
+      title="menu-with-groups-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 复选框项
+
+使用 `MenuCheckboxItem` 表示可切换的选项。
+
+> **注意：** 复选框指示器会占用前置附属内容列。请避免再添加前置的 `MenuItemAddon`；如需补充内容，请放在 `MenuItemLabel` 之后。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuCheckboxExample">
+      <MenuCheckboxExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuCheckboxExampleSource}
+      language="tsx"
+      title="menu-checkbox-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 单选项
+
+使用 `MenuRadioGroup` 与 `MenuRadioItem` 表示互斥选项。
+
+> **注意：** 单选指示器会占用前置附属内容列。请避免再添加前置的 `MenuItemAddon`；如需补充内容，请放在 `MenuItemLabel` 之后。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuRadioExample">
+      <MenuRadioExample />
+    </ComponentPreview>
+    <ComponentSource code={menuRadioExampleSource} language="tsx" title="menu-radio-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+### 危险项
+
+对删除等危险操作，请在 `MenuItem` 上使用 `destructive` 变体。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuDestructiveExample">
+      <MenuDestructiveExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuDestructiveExampleSource}
+      language="tsx"
+      title="menu-destructive-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 子菜单
+
+使用 `MenuSubmenu` 与 `MenuSubmenuTrigger` 嵌套菜单。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuSubmenuExample">
+      <MenuSubmenuExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuSubmenuExampleSource}
+      language="tsx"
+      title="menu-submenu-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 完整菜单
+
+一个完整的菜单，组合了分组、图标、键盘快捷键、链接、子菜单、单选项、复选框项以及危险操作。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuComplexExample">
+      <MenuComplexExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuComplexExampleSource}
+      language="tsx"
+      title="menu-complex-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={menuSource} language="tsx" />
+
+## API 参考
+
+### Menu
+
+<PropsTable component="Menu" />
+
+### MenuTrigger
+
+<PropsTable component="MenuTrigger" />
+
+### MenuContent
+
+<PropsTable component="MenuContent" />
+
+### MenuItem
+
+<PropsTable component="MenuItem" />
+
+### MenuLinkItem
+
+<PropsTable component="MenuLinkItem" />
+
+### MenuGroup
+
+<PropsTable component="MenuGroup" />
+
+### MenuGroupLabel
+
+<PropsTable component="MenuGroupLabel" />
+
+### MenuSeparator
+
+<PropsTable component="MenuSeparator" />
+
+### MenuItemAddon
+
+<PropsTable component="MenuItemAddon" />
+
+### MenuItemLabel
+
+<PropsTable component="MenuItemLabel" />
+
+### MenuSubmenu
+
+<PropsTable component="MenuSubmenu" />
+
+### MenuSubmenuTrigger
+
+<PropsTable component="MenuSubmenuTrigger" />
+
+### MenuRadioGroup
+
+<PropsTable component="MenuRadioGroup" />
+
+### MenuRadioItem
+
+<PropsTable component="MenuRadioItem" />
+
+### MenuCheckboxItem
+
+<PropsTable component="MenuCheckboxItem" />

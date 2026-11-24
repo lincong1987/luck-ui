@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-disabled-example",
+  "title": "Slider Disabled Example",
+  "description": "Atomic example for the Luck UI Slider component.",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/slider-disabled-example.tsx",
+      "content": "import Slider from \"registry/default/ui/slider\";\r\nexport function DisabledSliderExample() {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Slider aria-label=\"Disabled volume\" defaultValue={40} disabled />\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/slider-disabled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

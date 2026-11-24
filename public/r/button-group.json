@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group",
+  "title": "Button Group",
+  "description": "Luck UI Button Group component.",
+  "dependencies": [
+    "@base-ui/react",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/button-group.tsx",
+      "content": "import { mergeProps, useRender } from \"@base-ui/react\";\r\nimport { Separator } from \"./separator\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { cva } from \"class-variance-authority\";\r\nimport type { ComponentProps } from \"react\";\r\nimport type { VariantProps } from \"class-variance-authority\";\r\n\r\nconst buttonGroupVariants = cva(\r\n  \"flex w-fit items-stretch has-[>[data-slot=button-group]]:gap-2 [&>*]:focus-visible:relative [&>*]:focus-visible:z-10 [&>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&>input]:flex-1 [&>input]:not-disabled:hover:relative [&>input]:not-disabled:hover:z-10\",\r\n  {\r\n    defaultVariants: {\r\n      orientation: \"horizontal\",\r\n    },\r\n    variants: {\r\n      orientation: {\r\n        horizontal:\r\n          \"[&>*:has(+input)]:border-r-0 [&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none [&>[data-slot=button]:first-child:not(:only-child)]:origin-right [&>[data-slot=button]:last-child:not(:only-child)]:origin-left\",\r\n        vertical:\r\n          \"flex-col [&>*:has(+input)]:border-b-0 [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none [&>[data-slot=button]:first-child:not(:only-child)]:origin-bottom [&>[data-slot=button]:last-child:not(:only-child)]:origin-top\",\r\n      },\r\n    },\r\n  },\r\n);\r\n\r\nfunction ButtonGroup({\r\n  className,\r\n  orientation = \"horizontal\",\r\n  ...props\r\n}: ComponentProps<\"div\"> & VariantProps<typeof buttonGroupVariants>) {\r\n  return (\r\n    <div\r\n      className={cn(buttonGroupVariants({ orientation }), className)}\r\n      data-orientation={orientation}\r\n      data-slot=\"button-group\"\r\n      role=\"group\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction ButtonGroupText({ className, render, ...props }: useRender.ComponentProps<\"div\">) {\r\n  return useRender({\r\n    defaultTagName: \"div\",\r\n    props: {\r\n      ...mergeProps<\"div\">(props, {\r\n        className: cn(\r\n          \"flex items-center gap-2 rounded-lg border border-border bg-muted px-4 text-sm font-medium text-foreground [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4\",\r\n          className,\r\n        ),\r\n      }),\r\n      \"data-slot\": \"button-group-text\",\r\n    },\r\n    render,\r\n  });\r\n}\r\n\r\nfunction ButtonGroupSeparator({\r\n  className,\r\n  orientation = \"vertical\",\r\n  ...props\r\n}: ComponentProps<typeof Separator>) {\r\n  return (\r\n    <Separator\r\n      className={cn(\r\n        \"relative m-0! self-stretch bg-primary/80 data-[orientation=vertical]:h-auto\",\r\n        className,\r\n      )}\r\n      data-slot=\"button-group-separator\"\r\n      orientation={orientation}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { ButtonGroup, ButtonGroupSeparator, ButtonGroupText, buttonGroupVariants };\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-group.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

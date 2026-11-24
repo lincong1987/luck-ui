@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-vertical-example",
+  "title": "Tabs Vertical Example",
+  "description": "Atomic example for the Luck UI Tabs component.",
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/tabs-vertical-example.tsx",
+      "content": "import { Tabs, TabsList, TabsTab, TabsPanel } from \"registry/default/ui/tabs\";\r\nconst tabContentClassName =\r\n  \"w-full rounded-lg bg-gray-100 p-4 text-sm text-gray-600 dark:bg-gray-900 dark:text-gray-400\";\r\nexport function TabsVerticalExample() {\r\n  return (\r\n    <div className=\"flex flex-col items-start justify-center\">\r\n      <Tabs defaultValue=\"general\" orientation=\"vertical\" className=\"w-full max-w-72\">\r\n        <TabsList>\r\n          <TabsTab value=\"general\">General</TabsTab>\r\n          <TabsTab value=\"display\">Display</TabsTab>\r\n          <TabsTab value=\"advanced\">Advanced</TabsTab>\r\n        </TabsList>\r\n        <TabsPanel value=\"general\">\r\n          <p className={tabContentClassName}>General settings for your application.</p>\r\n        </TabsPanel>\r\n        <TabsPanel value=\"display\">\r\n          <p className={tabContentClassName}>Customize display and appearance options.</p>\r\n        </TabsPanel>\r\n        <TabsPanel value=\"advanced\">\r\n          <p className={tabContentClassName}>Advanced configuration and experimental features.</p>\r\n        </TabsPanel>\r\n      </Tabs>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/tabs-vertical-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

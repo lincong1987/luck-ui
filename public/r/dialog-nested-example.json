@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-nested-example",
+  "title": "Dialog Nested Example",
+  "description": "Atomic example for the Luck UI Dialog component.",
+  "registryDependencies": [
+    "dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/dialog-nested-example.tsx",
+      "content": "import {\r\n  Dialog,\r\n  DialogBody,\r\n  DialogClose,\r\n  DialogContent,\r\n  DialogDescription,\r\n  DialogFooter,\r\n  DialogHeader,\r\n  DialogTitle,\r\n  DialogTrigger,\r\n} from \"registry/default/ui/dialog\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nimport { Switch } from \"registry/default/ui/switch\";\r\n\r\nexport function DialogNestedExample() {\r\n  return (\r\n    <Dialog>\r\n      <DialogTrigger render={<Button variant=\"outline\">View Notifications</Button>} />\r\n      <DialogContent className=\"data-nested-dialog-open:scale-[calc(1-0.05*var(--nested-dialogs))] data-nested-dialog-open:opacity-85\">\r\n        <DialogHeader>\r\n          <DialogTitle>Notifications</DialogTitle>\r\n          <DialogDescription>You are all caught up. Good job!</DialogDescription>\r\n        </DialogHeader>\r\n        <DialogBody>\r\n          <p className=\"text-sm text-muted-foreground\">\r\n            Open the nested dialog to customize how future notifications are delivered.\r\n          </p>\r\n        </DialogBody>\r\n        <DialogFooter direction=\"row\">\r\n          <Dialog>\r\n            <DialogTrigger render={<Button variant=\"outline\">Customize</Button>} />\r\n            <DialogContent>\r\n              <DialogHeader>\r\n                <DialogTitle>Customize notifications</DialogTitle>\r\n                <DialogDescription>Review your notification settings here.</DialogDescription>\r\n              </DialogHeader>\r\n              <DialogBody className=\"flex flex-row items-center gap-2\">\r\n                <Switch />\r\n                <p className=\"text-sm text-muted-foreground\">Email summaries are enabled.</p>\r\n              </DialogBody>\r\n              <DialogFooter direction=\"row\">\r\n                <DialogClose render={<Button variant=\"secondary\">Close</Button>} />\r\n              </DialogFooter>\r\n            </DialogContent>\r\n          </Dialog>\r\n          <DialogClose render={<Button>Done</Button>} />\r\n        </DialogFooter>\r\n      </DialogContent>\r\n    </Dialog>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/dialog-nested-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

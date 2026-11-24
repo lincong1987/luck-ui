@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-checkbox-example",
+  "title": "Menu Checkbox Example",
+  "description": "Atomic example for the Luck UI Menu component.",
+  "registryDependencies": [
+    "menu",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/menu-checkbox-example.tsx",
+      "content": "import {\r\n  Menu,\r\n  MenuTrigger,\r\n  MenuContent,\r\n  MenuItemLabel,\r\n  MenuCheckboxItem,\r\n} from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nimport { useState } from \"react\";\r\nexport function MenuCheckboxExample() {\r\n  const [showStatusBar, setShowStatusBar] = useState(true);\r\n  const [showActivityBar, setShowActivityBar] = useState(false);\r\n\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuCheckboxItem checked={showStatusBar} onCheckedChange={setShowStatusBar}>\r\n          <MenuItemLabel>Show status bar</MenuItemLabel>\r\n        </MenuCheckboxItem>\r\n        <MenuCheckboxItem checked={showActivityBar} onCheckedChange={setShowActivityBar}>\r\n          <MenuItemLabel>Show activity bar</MenuItemLabel>\r\n        </MenuCheckboxItem>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/menu-checkbox-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

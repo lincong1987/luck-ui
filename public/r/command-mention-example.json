@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-mention-example",
+  "title": "Command Mention Example",
+  "description": "Atomic example for the Luck UI Command component.",
+  "registryDependencies": [
+    "command",
+    "input-group",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/command-mention-example.tsx",
+      "content": "import { useState } from \"react\";\r\nimport {\r\n  Command,\r\n  CommandContent,\r\n  CommandEmpty,\r\n  CommandInput,\r\n  CommandItem,\r\n  CommandItemDescription,\r\n  CommandItemLabel,\r\n  CommandList,\r\n  createCommandTrigger,\r\n} from \"registry/default/ui/command\";\r\nimport { Avatar, AvatarFallback } from \"registry/default/ui/avatar\";\r\nimport { InputGroup } from \"registry/default/ui/input-group\";\r\n\r\nconst people = [\r\n  { handle: \"alice\", name: \"Alice Chen\", role: \"Design\" },\r\n  { handle: \"bob\", name: \"Bob Park\", role: \"Engineering\" },\r\n  { handle: \"carol\", name: \"Carol Diaz\", role: \"Product\" },\r\n  { handle: \"dave\", name: \"Dave Kim\", role: \"Engineering\" },\r\n];\r\n\r\ntype Person = (typeof people)[number];\r\n\r\nconst mentionTrigger = createCommandTrigger(\"@\", { position: \"anywhere\" });\r\n\r\nexport function CommandMentionExample() {\r\n  const [value, setValue] = useState(\"\");\r\n\r\n  return (\r\n    <div className=\"w-full max-w-md\">\r\n      <Command\r\n        items={people}\r\n        itemToStringValue={(person: Person) => `${person.name} ${person.handle}`}\r\n        onSelect={(person: Person, { match, value: next }) => {\r\n          const at = match?.start ?? next.length;\r\n          setValue(`${next.slice(0, at)}@${person.handle} ${next.slice(at)}`);\r\n        }}\r\n        onValueChange={setValue}\r\n        trigger={mentionTrigger}\r\n        value={value}\r\n      >\r\n        <InputGroup>\r\n          <CommandInput placeholder=\"Type @ to mention someone\" />\r\n        </InputGroup>\r\n        <CommandContent>\r\n          <CommandEmpty>No people found.</CommandEmpty>\r\n          <CommandList>\r\n            {(person: Person) => (\r\n              <CommandItem key={person.handle} value={person}>\r\n                <Avatar size=\"sm\">\r\n                  <AvatarFallback>{person.name[0]}</AvatarFallback>\r\n                </Avatar>\r\n                <CommandItemLabel>{person.name}</CommandItemLabel>\r\n                <CommandItemDescription>@{person.handle}</CommandItemDescription>\r\n              </CommandItem>\r\n            )}\r\n          </CommandList>\r\n        </CommandContent>\r\n      </Command>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/command-mention-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

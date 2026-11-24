@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-default-example",
+  "title": "KBD Default Example",
+  "description": "Atomic example for the Luck UI KBD component.",
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/kbd-default-example.tsx",
+      "content": "import { Kbd } from \"registry/default/ui/kbd\";\r\n\r\nexport function KbdExample() {\r\n  return (\r\n    <div className=\"flex items-center gap-4\">\r\n      <Kbd>⌘</Kbd>\r\n      <Kbd>K</Kbd>\r\n      <Kbd>Shift</Kbd>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/kbd-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

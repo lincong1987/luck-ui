@@ -1,0 +1,33 @@
+---
+title: 分隔线
+description: 在视觉上分隔内容。
+component: Separator
+registry: separator
+---
+
+import { SeparatorExample } from "registry/default/examples/separator-default-example";
+import separatorExampleSource from "registry/default/examples/separator-default-example.tsx?raw";
+import separatorSource from "registry/default/ui/separator.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SeparatorExample">
+      <SeparatorExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={separatorExampleSource}
+      language="tsx"
+      title="separator-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={separatorSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Separator" />

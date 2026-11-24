@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-default-example",
+  "title": "Card Default Example",
+  "description": "Atomic example for the Luck UI Card component.",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/card-default-example.tsx",
+      "content": "import {\r\n  Card,\r\n  CardBody,\r\n  CardDescription,\r\n  CardFooter,\r\n  CardHeader,\r\n  CardTitle,\r\n} from \"registry/default/ui/card\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function CardExample() {\r\n  return (\r\n    <Card className=\"w-full max-w-lg\">\r\n      <CardHeader>\r\n        <CardTitle>Project Update</CardTitle>\r\n        <CardDescription>Deploy your new project in one click.</CardDescription>\r\n      </CardHeader>\r\n      <CardBody>\r\n        <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n          Your project is ready for deployment. Review the settings and click deploy to go live.\r\n        </p>\r\n      </CardBody>\r\n      <CardFooter>\r\n        <Button variant=\"secondary\">Cancel</Button>\r\n        <Button>Deploy</Button>\r\n      </CardFooter>\r\n    </Card>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/card-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

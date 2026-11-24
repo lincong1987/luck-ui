@@ -1,0 +1,110 @@
+---
+title: 工具提示
+description: 用户悬停或聚焦元素时出现的小型弹出提示。
+component: Tooltip
+registry: tooltip
+---
+
+import { TooltipExample } from "registry/default/examples/tooltip-default-example";
+import tooltipExampleSource from "registry/default/examples/tooltip-default-example.tsx?raw";
+import { TooltipPositionedExample } from "registry/default/examples/tooltip-positioned-example";
+import tooltipPositionedExampleSource from "registry/default/examples/tooltip-positioned-example.tsx?raw";
+import { TooltipWithDelayExample } from "registry/default/examples/tooltip-with-delay-example";
+import tooltipWithDelayExampleSource from "registry/default/examples/tooltip-with-delay-example.tsx?raw";
+import { TooltipAnimatedExample } from "registry/default/examples/tooltip-animated-example";
+import tooltipAnimatedExampleSource from "registry/default/examples/tooltip-animated-example.tsx?raw";
+import tooltipSource from "registry/default/ui/tooltip.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TooltipExample">
+      <TooltipExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tooltipExampleSource}
+      language="tsx"
+      title="tooltip-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 定位
+
+在 `TooltipContent` 上使用 `positionerProps`，控制工具提示出现在哪一侧。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TooltipPositionedExample">
+      <TooltipPositionedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tooltipPositionedExampleSource}
+      language="tsx"
+      title="tooltip-positioned-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 悬停延迟
+
+通过 `TooltipTrigger` 上的 `delay` 属性控制打开延迟。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TooltipWithDelayExample">
+      <TooltipWithDelayExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tooltipWithDelayExampleSource}
+      language="tsx"
+      title="tooltip-with-delay-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 带动效的共享工具提示
+
+将 `createTooltipHandle` 与 `TooltipProvider` 搭配使用，可在多个触发器之间共享同一个工具提示。在触发器之间移动时，`TooltipViewport` 组件会为内容添加动画。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TooltipAnimatedExample">
+      <TooltipAnimatedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tooltipAnimatedExampleSource}
+      language="tsx"
+      title="tooltip-animated-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={tooltipSource} language="tsx" />
+
+## API 参考
+
+### Tooltip
+
+<PropsTable component="Tooltip" />
+
+### TooltipTrigger
+
+<PropsTable component="TooltipTrigger" />
+
+### TooltipContent
+
+<PropsTable component="TooltipContent" />
+
+### TooltipViewport
+
+<PropsTable component="TooltipViewport" />
+
+### TooltipProvider
+
+<PropsTable component="TooltipProvider" />

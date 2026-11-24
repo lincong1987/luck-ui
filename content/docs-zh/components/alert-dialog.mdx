@@ -1,0 +1,96 @@
+---
+title: 警告对话框
+description: 一种模态对话框，用重要内容打断用户并等待其回应。
+component: Alert Dialog
+registry: alert-dialog
+---
+
+import { AlertDialogExample } from "registry/default/examples/alert-dialog-default-example";
+import alertDialogExampleSource from "registry/default/examples/alert-dialog-default-example.tsx?raw";
+import { AlertDialogDestructiveExample } from "registry/default/examples/alert-dialog-destructive-example";
+import alertDialogDestructiveExampleSource from "registry/default/examples/alert-dialog-destructive-example.tsx?raw";
+import alertDialogSource from "registry/default/ui/alert-dialog.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AlertDialogExample">
+      <AlertDialogExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={alertDialogExampleSource}
+      language="tsx"
+      title="alert-dialog-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 危险操作
+
+对于删除数据等无法撤销的操作，请使用危险样式的按钮。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AlertDialogDestructiveExample">
+      <AlertDialogDestructiveExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={alertDialogDestructiveExampleSource}
+      language="tsx"
+      title="alert-dialog-destructive-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={alertDialogSource} language="tsx" />
+
+## API 参考
+
+### AlertDialog
+
+<PropsTable component="AlertDialog" />
+
+### AlertDialogTrigger
+
+<PropsTable component="AlertDialogTrigger" />
+
+### AlertDialogContent
+
+<PropsTable component="AlertDialogContent" />
+
+### AlertDialogHeader
+
+<PropsTable component="AlertDialogHeader" />
+
+### AlertDialogFooter
+
+<PropsTable component="AlertDialogFooter" />
+
+### AlertDialogTitle
+
+<PropsTable component="AlertDialogTitle" />
+
+### AlertDialogDescription
+
+<PropsTable component="AlertDialogDescription" />
+
+### AlertDialogBackdrop
+
+<PropsTable component="AlertDialogBackdrop" />
+
+### AlertDialogClose
+
+<PropsTable component="AlertDialogClose" />
+
+### AlertDialogCloseButton
+
+<PropsTable component="AlertDialogCloseButton" />
+
+### AlertDialogPortal
+
+<PropsTable component="AlertDialogPortal" />

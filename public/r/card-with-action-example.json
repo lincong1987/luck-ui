@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-with-action-example",
+  "title": "Card With Action Example",
+  "description": "Atomic example for the Luck UI Card component.",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/card-with-action-example.tsx",
+      "content": "import {\r\n  Card,\r\n  CardAction,\r\n  CardBody,\r\n  CardDescription,\r\n  CardHeader,\r\n  CardTitle,\r\n} from \"registry/default/ui/card\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function CardWithActionExample() {\r\n  return (\r\n    <Card className=\"w-full max-w-lg\">\r\n      <CardHeader>\r\n        <CardTitle>Notifications</CardTitle>\r\n        <CardDescription>Manage your notification preferences.</CardDescription>\r\n        <CardAction>\r\n          <Button variant=\"ghost\" size=\"sm\">\r\n            Mark all read\r\n          </Button>\r\n        </CardAction>\r\n      </CardHeader>\r\n      <CardBody>\r\n        <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n          You have 3 unread notifications. Review them to stay up to date.\r\n        </p>\r\n      </CardBody>\r\n    </Card>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/card-with-action-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

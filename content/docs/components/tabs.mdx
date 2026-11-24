@@ -1,0 +1,98 @@
+---
+title: Tabs
+description: A set of layered sections of content, known as tab panels, that display one panel of content at a time.
+component: Tabs
+registry: tabs
+---
+
+import { TabsExample } from "registry/default/examples/tabs-default-example";
+import tabsExampleSource from "registry/default/examples/tabs-default-example.tsx?raw";
+import { TabsUnderlineExample } from "registry/default/examples/tabs-underline-example";
+import tabsUnderlineExampleSource from "registry/default/examples/tabs-underline-example.tsx?raw";
+import { TabsSizesExample } from "registry/default/examples/tabs-sizes-example";
+import tabsSizesExampleSource from "registry/default/examples/tabs-sizes-example.tsx?raw";
+import { TabsVerticalExample } from "registry/default/examples/tabs-vertical-example";
+import tabsVerticalExampleSource from "registry/default/examples/tabs-vertical-example.tsx?raw";
+import tabsSource from "registry/default/ui/tabs.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsExample">
+      <TabsExample />
+    </ComponentPreview>
+    <ComponentSource code={tabsExampleSource} language="tsx" title="tabs-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### Underline variant
+
+Use the `underline` variant for a minimal, border-based indicator style.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsUnderlineExample">
+      <TabsUnderlineExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tabsUnderlineExampleSource}
+      language="tsx"
+      title="tabs-underline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Sizes
+
+Available sizes: `default`, `sm`, `lg`.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsSizesExample">
+      <TabsSizesExample />
+    </ComponentPreview>
+    <ComponentSource code={tabsSizesExampleSource} language="tsx" title="tabs-sizes-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+### Vertical orientation
+
+Set `orientation="vertical"` on `Tabs` to arrange tabs and panels side by side.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsVerticalExample">
+      <TabsVerticalExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tabsVerticalExampleSource}
+      language="tsx"
+      title="tabs-vertical-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={tabsSource} language="tsx" />
+
+## API Reference
+
+### Tabs
+
+<PropsTable component="Tabs" />
+
+### TabsList
+
+<PropsTable component="TabsList" />
+
+### TabsTab
+
+<PropsTable component="TabsTab" />
+
+### TabsPanel
+
+<PropsTable component="TabsPanel" />

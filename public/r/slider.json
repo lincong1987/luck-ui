@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider",
+  "title": "Slider",
+  "description": "Luck UI Slider component.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/slider.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\r\nimport { Slider as BaseSlider } from \"@base-ui/react\";\r\nimport React from \"react\";\r\n\r\nexport default function Slider({\r\n  className,\r\n  value,\r\n  defaultValue,\r\n  min,\r\n  max,\r\n  ...props\r\n}: BaseSlider.Root.Props) {\r\n  const _values = React.useMemo(\r\n    () =>\r\n      Array.isArray(value)\r\n        ? value\r\n        : typeof value === \"number\"\r\n          ? [value]\r\n          : Array.isArray(defaultValue)\r\n            ? defaultValue\r\n            : typeof defaultValue === \"number\"\r\n              ? [defaultValue]\r\n              : [min ?? 0],\r\n    [value, defaultValue, min],\r\n  );\r\n\r\n  return (\r\n    <BaseSlider.Root\r\n      data-slot=\"slider\"\r\n      defaultValue={defaultValue}\r\n      value={value}\r\n      min={min}\r\n      max={max}\r\n      {...props}\r\n    >\r\n      <BaseSlider.Control\r\n        className={cn(\"flex w-32 touch-none items-center select-none\", className)}\r\n        data-slot=\"slider-control\"\r\n      >\r\n        <BaseSlider.Track\r\n          className={cn(\r\n            \"h-1 w-full rounded-full bg-muted inset-ring inset-ring-border select-none\",\r\n          )}\r\n          data-slot=\"slider-track\"\r\n        >\r\n          <BaseSlider.Indicator\r\n            className={cn(\"rounded-full bg-accent select-none data-disabled:opacity-50\")}\r\n            data-slot=\"slider-indicator\"\r\n          />\r\n          {Array.from({ length: _values.length }).map((_, index) => (\r\n            <BaseSlider.Thumb\r\n              key={index}\r\n              className=\"h-4 w-5 rounded-full bg-white shadow-xs ring ring-border transition-[transform,scale,opacity] select-none before:hidden data-disabled:cursor-not-allowed data-disabled:bg-muted focus-within:data-dragging:scale-120 focus-within:data-dragging:opacity-80 focus-within:data-dragging:backdrop-blur-md\"\r\n              data-slot=\"slider-thumb\"\r\n              index={index}\r\n            />\r\n          ))}\r\n        </BaseSlider.Track>\r\n      </BaseSlider.Control>\r\n    </BaseSlider.Root>\r\n  );\r\n}\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/slider.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "autocomplete-with-clear-example",
+  "title": "Autocomplete With Clear Example",
+  "description": "Atomic example for the Luck UI Autocomplete component.",
+  "registryDependencies": [
+    "autocomplete"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/autocomplete-with-clear-example.tsx",
+      "content": "import {\r\n  Autocomplete,\r\n  AutocompleteClear,\r\n  AutocompleteContent,\r\n  AutocompleteEmpty,\r\n  AutocompleteInput,\r\n  AutocompleteInputAddon,\r\n  AutocompleteInputGroup,\r\n  AutocompleteItem,\r\n  AutocompleteList,\r\n  AutocompleteTrigger,\r\n} from \"registry/default/ui/autocomplete\";\r\nimport { MagnifyingGlassIcon } from \"@phosphor-icons/react\";\r\n\r\nconst languages = [\r\n  \"TypeScript\",\r\n  \"JavaScript\",\r\n  \"Python\",\r\n  \"Rust\",\r\n  \"Go\",\r\n  \"Ruby\",\r\n  \"Swift\",\r\n  \"Kotlin\",\r\n  \"Elixir\",\r\n];\r\n\r\nexport function AutocompleteWithClearExample() {\r\n  return (\r\n    <div className=\"w-full max-w-64\">\r\n      <Autocomplete items={languages}>\r\n        <AutocompleteInputGroup>\r\n          <AutocompleteInputAddon>\r\n            <MagnifyingGlassIcon />\r\n          </AutocompleteInputAddon>\r\n          <AutocompleteInput placeholder=\"Search a language\" />\r\n          <AutocompleteClear />\r\n          <AutocompleteTrigger />\r\n        </AutocompleteInputGroup>\r\n        <AutocompleteContent>\r\n          <AutocompleteEmpty>No languages found.</AutocompleteEmpty>\r\n          <AutocompleteList>\r\n            {(item: string) => (\r\n              <AutocompleteItem key={item} value={item}>\r\n                {item}\r\n              </AutocompleteItem>\r\n            )}\r\n          </AutocompleteList>\r\n        </AutocompleteContent>\r\n      </Autocomplete>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/autocomplete-with-clear-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

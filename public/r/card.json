@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card",
+  "title": "Card",
+  "description": "Luck UI Card component.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/card.tsx",
+      "content": "import { mergeProps, useRender } from \"@base-ui/react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nfunction Card({ className, ...props }: useRender.ComponentProps<\"div\">) {\r\n  const cardElement = useRender({\r\n    defaultTagName: \"div\",\r\n    props: {\r\n      ...mergeProps<\"div\">(props, {\r\n        className: cn(\"relative flex flex-col rounded-3xl bg-card p-1\", className),\r\n      }),\r\n      \"data-slot\": \"card\",\r\n    },\r\n  });\r\n  return cardElement;\r\n}\r\n\r\nfunction CardHeader({ className, ...props }: useRender.ComponentProps<\"div\">) {\r\n  const cardHeaderElement = useRender({\r\n    defaultTagName: \"div\",\r\n    props: {\r\n      ...mergeProps<\"div\">(props, {\r\n        className: cn(\r\n          \"@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 p-5 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6\",\r\n          className,\r\n        ),\r\n      }),\r\n      \"data-slot\": \"card-header\",\r\n    },\r\n  });\r\n  return cardHeaderElement;\r\n}\r\n\r\nfunction CardTitle({ className, ...props }: useRender.ComponentProps<\"div\">) {\r\n  const cardTitleElement = useRender({\r\n    defaultTagName: \"div\",\r\n    props: {\r\n      ...mergeProps<\"div\">(props, {\r\n        className: cn(\"text-lg leading-none font-semibold\", className),\r\n      }),\r\n      \"data-slot\": \"card-title\",\r\n    },\r\n  });\r\n  return cardTitleElement;\r\n}\r\n\r\nfunction CardDescription({ className, ...props }: useRender.ComponentProps<\"div\">) {\r\n  const cardDescriptionElement = useRender({\r\n    defaultTagName: \"div\",\r\n    props: {\r\n      ...mergeProps<\"div\">(props, {\r\n        className: cn(\"text-sm text-muted-foreground\", className),\r\n      }),\r\n      \"data-slot\": \"card-description\",\r\n    },\r\n  });\r\n  return cardDescriptionElement;\r\n}\r\n\r\nfunction CardAction({ className, ...props }: useRender.ComponentProps<\"div\">) {\r\n  const cardActionElement = useRender({\r\n    defaultTagName: \"div\",\r\n    props: {\r\n      ...mergeProps<\"div\">(props, {\r\n        className: cn(\"col-start-2 row-span-2 row-start-1 self-start justify-self-end\", className),\r\n      }),\r\n      \"data-slot\": \"card-action\",\r\n    },\r\n  });\r\n  return cardActionElement;\r\n}\r\n\r\nfunction CardPanel({ className, children, ...props }: useRender.ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      className={cn(\r\n        \"w-full rounded-[calc(var(--radius-3xl)-var(--spacing))] border border-border bg-white p-5 dark:bg-gray-800\",\r\n        className,\r\n      )}\r\n      data-slot=\"card-panel\"\r\n      {...props}\r\n    >\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nfunction CardFooter({\r\n  className,\r\n  direction = \"row\",\r\n  ...props\r\n}: useRender.ComponentProps<\"div\"> & { direction?: \"row\" | \"column\" }) {\r\n  const cardFooterElement = useRender({\r\n    defaultTagName: \"div\",\r\n    props: {\r\n      ...mergeProps<\"div\">(props, {\r\n        className: cn(\r\n          \"flex items-center gap-2 p-5 [.border-t]:pt-5\",\r\n          direction === \"row\" && \"flex-row justify-end\",\r\n          direction === \"column\" && \"flex-col\",\r\n          className,\r\n        ),\r\n      }),\r\n      \"data-slot\": \"card-footer\",\r\n    },\r\n  });\r\n  return cardFooterElement;\r\n}\r\n\r\nexport {\r\n  Card,\r\n  CardHeader,\r\n  CardFooter,\r\n  CardTitle,\r\n  CardAction,\r\n  CardDescription,\r\n  CardPanel,\r\n  CardPanel as CardContent,\r\n  CardPanel as CardBody,\r\n};\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

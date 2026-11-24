@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-default-example",
+  "title": "Alert Dialog Default Example",
+  "description": "Atomic example for the Luck UI Alert Dialog component.",
+  "registryDependencies": [
+    "alert-dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/alert-dialog-default-example.tsx",
+      "content": "import {\r\n  AlertDialog,\r\n  AlertDialogClose,\r\n  AlertDialogContent,\r\n  AlertDialogDescription,\r\n  AlertDialogFooter,\r\n  AlertDialogHeader,\r\n  AlertDialogTitle,\r\n  AlertDialogTrigger,\r\n} from \"registry/default/ui/alert-dialog\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function AlertDialogExample() {\r\n  return (\r\n    <AlertDialog>\r\n      <AlertDialogTrigger render={<Button variant=\"outline\">Open Alert Dialog</Button>} />\r\n      <AlertDialogContent>\r\n        <AlertDialogHeader>\r\n          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>\r\n        </AlertDialogHeader>\r\n        <AlertDialogDescription>\r\n          This action cannot be undone. This will permanently delete your account and remove your\r\n          data from our servers.\r\n        </AlertDialogDescription>\r\n        <AlertDialogFooter>\r\n          <AlertDialogClose render={<Button variant=\"secondary\">Cancel</Button>} />\r\n          <Button variant=\"destructive\">Continue</Button>\r\n        </AlertDialogFooter>\r\n      </AlertDialogContent>\r\n    </AlertDialog>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/alert-dialog-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

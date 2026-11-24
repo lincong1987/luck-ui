@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-group-textarea-example",
+  "title": "Input Group Textarea Example",
+  "description": "Atomic example for the Luck UI Input Group component.",
+  "registryDependencies": [
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/input-group-textarea-example.tsx",
+      "content": "import {\r\n  InputGroup,\r\n  InputGroupAddon,\r\n  InputGroupText,\r\n  InputGroupTextarea,\r\n} from \"registry/default/ui/input-group\";\r\nexport function InputGroupTextareaExample() {\r\n  return (\r\n    <div className=\"flex w-full max-w-sm flex-wrap items-center gap-4\">\r\n      <InputGroup>\r\n        <InputGroupTextarea placeholder=\"Write a short message...\" />\r\n        <InputGroupAddon align=\"block-end\">\r\n          <InputGroupText>Press Cmd + Enter to send</InputGroupText>\r\n        </InputGroupAddon>\r\n      </InputGroup>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/input-group-textarea-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

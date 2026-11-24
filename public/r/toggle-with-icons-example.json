@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-with-icons-example",
+  "title": "Toggle With Icons Example",
+  "description": "Atomic example for the Luck UI Toggle component.",
+  "registryDependencies": [
+    "toggle"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/toggle-with-icons-example.tsx",
+      "content": "import { Toggle } from \"registry/default/ui/toggle\";\r\nimport { TextBIcon, TextItalicIcon, TextStrikethroughIcon } from \"@phosphor-icons/react\";\r\nexport function ToggleWithIconsExample() {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-2\">\r\n      <Toggle size=\"sm\" aria-label=\"Toggle bold\">\r\n        <TextBIcon />\r\n      </Toggle>\r\n      <Toggle size=\"sm\" aria-label=\"Toggle italic\">\r\n        <TextItalicIcon />\r\n      </Toggle>\r\n      <Toggle size=\"sm\" aria-label=\"Toggle strikethrough\">\r\n        <TextStrikethroughIcon />\r\n      </Toggle>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/toggle-with-icons-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

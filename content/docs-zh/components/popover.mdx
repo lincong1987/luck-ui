@@ -1,0 +1,103 @@
+---
+title: 弹出框
+description: 锚定在按钮上的可访问弹出框。
+component: Popover
+registry: popover
+---
+
+import { PopoverExample } from "registry/default/examples/popover-default-example";
+import popoverExampleSource from "registry/default/examples/popover-default-example.tsx?raw";
+import { PopoverNoCloseButtonExample } from "registry/default/examples/popover-no-close-button-example";
+import popoverNoCloseButtonExampleSource from "registry/default/examples/popover-no-close-button-example.tsx?raw";
+import { PopoverWithPositionerPropsExample } from "registry/default/examples/popover-with-positioner-props-example";
+import popoverWithPositionerPropsExampleSource from "registry/default/examples/popover-with-positioner-props-example.tsx?raw";
+import popoverSource from "registry/default/ui/popover.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="PopoverExample">
+      <PopoverExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={popoverExampleSource}
+      language="tsx"
+      title="popover-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 隐藏关闭按钮
+
+在 `PopoverHeader` 上设置 `closeButton={false}` 可隐藏默认的关闭按钮。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="PopoverNoCloseButtonExample">
+      <PopoverNoCloseButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={popoverNoCloseButtonExampleSource}
+      language="tsx"
+      title="popover-no-close-button-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 自定义定位
+
+向 `PopoverContent` 传入 `positionerProps`，即可自定义弹出位置。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="PopoverWithPositionerPropsExample">
+      <PopoverWithPositionerPropsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={popoverWithPositionerPropsExampleSource}
+      language="tsx"
+      title="popover-with-positioner-props-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={popoverSource} language="tsx" />
+
+## API 参考
+
+### Popover
+
+<PropsTable component="Popover" />
+
+### PopoverTrigger
+
+<PropsTable component="PopoverTrigger" />
+
+### PopoverContent
+
+<PropsTable component="PopoverContent" />
+
+### PopoverHeader
+
+<PropsTable component="PopoverHeader" />
+
+### PopoverBody
+
+<PropsTable component="PopoverBody" />
+
+### PopoverTitle
+
+<PropsTable component="PopoverTitle" />
+
+### PopoverClose
+
+<PropsTable component="PopoverClose" />
+
+### PopoverPortal
+
+<PropsTable component="PopoverPortal" />

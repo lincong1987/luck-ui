@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "number-field-sizes-example",
+  "title": "Number Field Sizes Example",
+  "description": "Atomic example for the Luck UI Number Field component.",
+  "registryDependencies": [
+    "number-field"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/number-field-sizes-example.tsx",
+      "content": "import {\r\n  NumberField,\r\n  NumberFieldDecrement,\r\n  NumberFieldGroup,\r\n  NumberFieldIncrement,\r\n  NumberFieldInput,\r\n} from \"registry/default/ui/number-field\";\r\n\r\nexport function NumberFieldSizesExample() {\r\n  return (\r\n    <div className=\"flex w-full max-w-48 flex-col gap-4\">\r\n      {([\"sm\", \"default\", \"lg\"] as const).map((size) => (\r\n        <NumberField key={size} defaultValue={5}>\r\n          <NumberFieldGroup size={size}>\r\n            <NumberFieldDecrement />\r\n            <NumberFieldInput />\r\n            <NumberFieldIncrement />\r\n          </NumberFieldGroup>\r\n        </NumberField>\r\n      ))}\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/number-field-sizes-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

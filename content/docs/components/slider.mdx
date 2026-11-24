@@ -1,0 +1,108 @@
+---
+title: Slider
+description: A range control for selecting one value or a pair of values.
+component: Slider
+registry: slider
+---
+
+import Slider from "registry/default/ui/slider";
+import { SliderExample } from "registry/default/examples/slider-default-example";
+import sliderExampleSource from "registry/default/examples/slider-default-example.tsx?raw";
+import { RangeSliderExample } from "registry/default/examples/slider-range-example";
+import rangeSliderExampleSource from "registry/default/examples/slider-range-example.tsx?raw";
+import { SteppedSliderExample } from "registry/default/examples/slider-stepped-example";
+import steppedSliderExampleSource from "registry/default/examples/slider-stepped-example.tsx?raw";
+import { DisabledSliderExample } from "registry/default/examples/slider-disabled-example";
+import disabledSliderExampleSource from "registry/default/examples/slider-disabled-example.tsx?raw";
+import { ControlledSliderExample } from "registry/default/examples/slider-controlled-example";
+import controlledSliderExampleSource from "registry/default/examples/slider-controlled-example.tsx?raw";
+import sliderSource from "registry/default/ui/slider.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SliderExample">
+      <SliderExample />
+    </ComponentPreview>
+    <ComponentSource code={sliderExampleSource} language="tsx" title="slider-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### Range
+
+Pass an array to `defaultValue` to render a range slider with multiple thumbs.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="RangeSliderExample">
+      <RangeSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={rangeSliderExampleSource}
+      language="tsx"
+      title="slider-range-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Step
+
+Use `step` to control the increment between values.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SteppedSliderExample">
+      <SteppedSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={steppedSliderExampleSource}
+      language="tsx"
+      title="slider-stepped-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Disabled
+
+Use the `disabled` prop to prevent interaction.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DisabledSliderExample">
+      <DisabledSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={disabledSliderExampleSource}
+      language="tsx"
+      title="slider-disabled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Controlled
+
+Manage the slider value with React state using `value` and `onValueChange`.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ControlledSliderExample">
+      <ControlledSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={controlledSliderExampleSource}
+      language="tsx"
+      title="slider-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={sliderSource} language="tsx" />
+
+## API Reference
+
+<PropsTable component="Slider" />

@@ -1,0 +1,245 @@
+---
+title: Menu
+description: Displays a menu to the user — typically a list of actions or links triggered by a button.
+component: Menu
+registry: menu
+---
+
+import { MenuExample } from "registry/default/examples/menu-default-example";
+import menuExampleSource from "registry/default/examples/menu-default-example.tsx?raw";
+import { MenuWithIconsExample } from "registry/default/examples/menu-with-icons-example";
+import menuWithIconsExampleSource from "registry/default/examples/menu-with-icons-example.tsx?raw";
+import { MenuWithKbdExample } from "registry/default/examples/menu-with-kbd-example";
+import menuWithKbdExampleSource from "registry/default/examples/menu-with-kbd-example.tsx?raw";
+import { MenuWithGroupsExample } from "registry/default/examples/menu-with-groups-example";
+import menuWithGroupsExampleSource from "registry/default/examples/menu-with-groups-example.tsx?raw";
+import { MenuCheckboxExample } from "registry/default/examples/menu-checkbox-example";
+import menuCheckboxExampleSource from "registry/default/examples/menu-checkbox-example.tsx?raw";
+import { MenuRadioExample } from "registry/default/examples/menu-radio-example";
+import menuRadioExampleSource from "registry/default/examples/menu-radio-example.tsx?raw";
+import { MenuDestructiveExample } from "registry/default/examples/menu-destructive-example";
+import menuDestructiveExampleSource from "registry/default/examples/menu-destructive-example.tsx?raw";
+import { MenuSubmenuExample } from "registry/default/examples/menu-submenu-example";
+import menuSubmenuExampleSource from "registry/default/examples/menu-submenu-example.tsx?raw";
+import { MenuComplexExample } from "registry/default/examples/menu-complex-example";
+import menuComplexExampleSource from "registry/default/examples/menu-complex-example.tsx?raw";
+import menuSource from "registry/default/ui/menu.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuExample">
+      <MenuExample />
+    </ComponentPreview>
+    <ComponentSource code={menuExampleSource} language="tsx" title="menu-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### With addons
+
+Add icons, text, or other supplementary content with `MenuItemAddon`. Place it before
+`MenuItemLabel` for a leading addon or after the label for a trailing addon. Use one addon
+container per side and group multiple elements inside it.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuWithIconsExample">
+      <MenuWithIconsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuWithIconsExampleSource}
+      language="tsx"
+      title="menu-with-icons-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### With shortcuts
+
+Display keyboard shortcuts by placing `Kbd` inside a trailing `MenuItemAddon`.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuWithKbdExample">
+      <MenuWithKbdExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuWithKbdExampleSource}
+      language="tsx"
+      title="menu-with-kbd-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### With groups
+
+Group related items with `MenuGroup` and `MenuGroupLabel`.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuWithGroupsExample">
+      <MenuWithGroupsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuWithGroupsExampleSource}
+      language="tsx"
+      title="menu-with-groups-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Checkbox items
+
+Use `MenuCheckboxItem` for toggleable options.
+
+> **Note:** The checkbox indicator occupies the leading addon column. Avoid adding a leading
+> `MenuItemAddon`; place any supplementary content after `MenuItemLabel` instead.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuCheckboxExample">
+      <MenuCheckboxExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuCheckboxExampleSource}
+      language="tsx"
+      title="menu-checkbox-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Radio items
+
+Use `MenuRadioGroup` and `MenuRadioItem` for mutually exclusive options.
+
+> **Note:** The radio indicator occupies the leading addon column. Avoid adding a leading
+> `MenuItemAddon`; place any supplementary content after `MenuItemLabel` instead.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuRadioExample">
+      <MenuRadioExample />
+    </ComponentPreview>
+    <ComponentSource code={menuRadioExampleSource} language="tsx" title="menu-radio-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+### Destructive item
+
+Use the `destructive` variant on `MenuItem` for destructive actions like delete.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuDestructiveExample">
+      <MenuDestructiveExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuDestructiveExampleSource}
+      language="tsx"
+      title="menu-destructive-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Submenu
+
+Nest menus with `MenuSubmenu` and `MenuSubmenuTrigger`.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuSubmenuExample">
+      <MenuSubmenuExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuSubmenuExampleSource}
+      language="tsx"
+      title="menu-submenu-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Complex menu
+
+A comprehensive menu combining groups, icons, keyboard shortcuts, links, submenus, radio items, checkbox items, and a destructive action.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="MenuComplexExample">
+      <MenuComplexExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={menuComplexExampleSource}
+      language="tsx"
+      title="menu-complex-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={menuSource} language="tsx" />
+
+## API Reference
+
+### Menu
+
+<PropsTable component="Menu" />
+
+### MenuTrigger
+
+<PropsTable component="MenuTrigger" />
+
+### MenuContent
+
+<PropsTable component="MenuContent" />
+
+### MenuItem
+
+<PropsTable component="MenuItem" />
+
+### MenuLinkItem
+
+<PropsTable component="MenuLinkItem" />
+
+### MenuGroup
+
+<PropsTable component="MenuGroup" />
+
+### MenuGroupLabel
+
+<PropsTable component="MenuGroupLabel" />
+
+### MenuSeparator
+
+<PropsTable component="MenuSeparator" />
+
+### MenuItemAddon
+
+<PropsTable component="MenuItemAddon" />
+
+### MenuItemLabel
+
+<PropsTable component="MenuItemLabel" />
+
+### MenuSubmenu
+
+<PropsTable component="MenuSubmenu" />
+
+### MenuSubmenuTrigger
+
+<PropsTable component="MenuSubmenuTrigger" />
+
+### MenuRadioGroup
+
+<PropsTable component="MenuRadioGroup" />
+
+### MenuRadioItem
+
+<PropsTable component="MenuRadioItem" />
+
+### MenuCheckboxItem
+
+<PropsTable component="MenuCheckboxItem" />

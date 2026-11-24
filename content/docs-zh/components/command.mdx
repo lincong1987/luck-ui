@@ -1,0 +1,160 @@
+---
+title: 命令菜单
+description: 斜杠命令列表。当用户输入“/”或“、”等触发字符，或按下触发按钮时，列表会在输入框上方展开。
+component: Command
+registry: command
+---
+
+import { CommandExample } from "registry/default/examples/command-default-example";
+import commandExampleSource from "registry/default/examples/command-default-example.tsx?raw";
+import { AgentChatCommandExample } from "registry/default/examples/command-agent-chat-example";
+import agentChatCommandExampleSource from "registry/default/examples/command-agent-chat-example.tsx?raw";
+import { CommandWithTriggerExample } from "registry/default/examples/command-with-trigger-example";
+import commandWithTriggerExampleSource from "registry/default/examples/command-with-trigger-example.tsx?raw";
+import { CommandMentionExample } from "registry/default/examples/command-mention-example";
+import commandMentionExampleSource from "registry/default/examples/command-mention-example.tsx?raw";
+import commandSource from "registry/default/ui/command.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CommandExample">
+      <CommandExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={commandExampleSource}
+      language="tsx"
+      title="command-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+与命令面板式对话框不同，`Command` 就嵌在用户正在输入的输入框里。它基于 Base UI Autocomplete 构建，因此筛选、键盘导航与 ARIA 关联都无需额外实现。用 `Command` 包裹 `InputGroup`，并把控件换成 `CommandInput`——默认渲染 `InputGroupInput`（启用 `multiline` 时则为 `InputGroupTextarea`）。
+
+- 在输入框开头输入触发字符（默认是 `/` 或 `、`，因此也兼容中文输入法）即可展开列表；其后的文本用于筛选命令。
+- <kbd>↑</kbd> <kbd>↓</kbd> 移动高亮项，<kbd>Enter</kbd> 选中（设置 `confirmKey="tab"` 或 `"both"` 后也可用 <kbd>Tab</kbd> 确认），<kbd>Esc</kbd> 关闭。列表关闭时，这些按键保持原生行为，不会影响用户正在编辑的草稿。
+- 选中命令后，输入框中的触发片段会被移除，并调用 `onSelect`。
+
+## 示例
+
+### 智能体对话
+
+一个多行聊天输入器，包含分组命令与文件引用。在开头输入 `/` 可调用命令；在开头或空白字符之后输入 `@`，即可按名称或路径搜索示例文件。选中文件后会在光标处插入 `@path`，并保留周围的文本。按 <kbd>Enter</kbd> 提交；设置 `confirmKey="both"` 后，<kbd>Enter</kbd> 或 <kbd>Tab</kbd> 将改为选中高亮项。Skills 分组中的条目会把名称保留在输入框里（如 `/create-pr `），方便用户在发送前补充参数与文件引用。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AgentChatCommandExample">
+      <AgentChatCommandExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={agentChatCommandExampleSource}
+      language="tsx"
+      title="command-agent-chat-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 带触发按钮
+
+把 `CommandTrigger` 渲染为 `InputGroupButton`，即可用鼠标打开列表。输入框为空时，按下它会插入触发字符，用户可以继续输入以筛选。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CommandWithTriggerExample">
+      <CommandWithTriggerExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={commandWithTriggerExampleSource}
+      language="tsx"
+      title="command-with-trigger-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 自定义触发器
+
+向 `trigger` 传入匹配函数，决定哪些输入会展开列表。`createCommandTrigger("@", { position: "anywhere" })` 会匹配光标前任意位置的提及；`onSelect` 会收到匹配到的片段，便于把结果插回输入值。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CommandMentionExample">
+      <CommandMentionExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={commandMentionExampleSource}
+      language="tsx"
+      title="command-mention-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={commandSource} language="tsx" />
+
+## API 参考
+
+### Command
+
+<PropsTable component="Command" />
+
+### CommandInput
+
+<PropsTable component="CommandInput" />
+
+### CommandTrigger
+
+<PropsTable component="CommandTrigger" />
+
+### CommandContent
+
+<PropsTable component="CommandContent" />
+
+### CommandList
+
+<PropsTable component="CommandList" />
+
+### CommandItem
+
+<PropsTable component="CommandItem" />
+
+### CommandItemLabel
+
+<PropsTable component="CommandItemLabel" />
+
+### CommandItemDescription
+
+<PropsTable component="CommandItemDescription" />
+
+### CommandShortcut
+
+<PropsTable component="CommandShortcut" />
+
+### CommandEmpty
+
+<PropsTable component="CommandEmpty" />
+
+### CommandStatus
+
+<PropsTable component="CommandStatus" />
+
+### CommandSeparator
+
+<PropsTable component="CommandSeparator" />
+
+### CommandGroup
+
+<PropsTable component="CommandGroup" />
+
+### CommandGroupLabel
+
+<PropsTable component="CommandGroupLabel" />
+
+### createCommandTrigger
+
+<PropsTable component="createCommandTrigger" />
+
+### useCommand
+
+返回最近的 `Command` 的 `{ open, query }`，适合在列表展开时显示提示或禁用其他快捷键。

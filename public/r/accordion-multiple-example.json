@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-multiple-example",
+  "title": "Accordion Multiple Example",
+  "description": "Atomic example for the Luck UI Accordion component.",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/accordion-multiple-example.tsx",
+      "content": "import {\r\n  Accordion,\r\n  AccordionItem,\r\n  AccordionTrigger,\r\n  AccordionContent,\r\n} from \"registry/default/ui/accordion\";\r\n\r\nexport function AccordionMultipleExample() {\r\n  return (\r\n    <Accordion className=\"w-full max-w-md\" multiple defaultValue={[\"item-1\", \"item-2\"]}>\r\n      <AccordionItem value=\"item-1\">\r\n        <AccordionTrigger>Shipping</AccordionTrigger>\r\n        <AccordionContent>\r\n          Orders are processed within 1–2 business days and shipped worldwide.\r\n        </AccordionContent>\r\n      </AccordionItem>\r\n      <AccordionItem value=\"item-2\">\r\n        <AccordionTrigger>Returns</AccordionTrigger>\r\n        <AccordionContent>\r\n          Items can be returned within 30 days of delivery for a full refund.\r\n        </AccordionContent>\r\n      </AccordionItem>\r\n      <AccordionItem value=\"item-3\">\r\n        <AccordionTrigger>Warranty</AccordionTrigger>\r\n        <AccordionContent>\r\n          Every product is covered by a one-year limited warranty against defects.\r\n        </AccordionContent>\r\n      </AccordionItem>\r\n    </Accordion>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/accordion-multiple-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

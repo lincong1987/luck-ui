@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-radio-example",
+  "title": "Menu Radio Example",
+  "description": "Atomic example for the Luck UI Menu component.",
+  "registryDependencies": [
+    "menu",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/menu-radio-example.tsx",
+      "content": "import {\r\n  Menu,\r\n  MenuTrigger,\r\n  MenuContent,\r\n  MenuItemLabel,\r\n  MenuGroup,\r\n  MenuGroupLabel,\r\n  MenuRadioGroup,\r\n  MenuRadioItem,\r\n} from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nimport { useState } from \"react\";\r\nexport function MenuRadioExample() {\r\n  const [view, setView] = useState(\"list\");\r\n\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuGroup>\r\n          <MenuGroupLabel>View</MenuGroupLabel>\r\n          <MenuRadioGroup value={view} onValueChange={setView}>\r\n            <MenuRadioItem value=\"list\">\r\n              <MenuItemLabel>List</MenuItemLabel>\r\n            </MenuRadioItem>\r\n            <MenuRadioItem value=\"grid\">\r\n              <MenuItemLabel>Grid</MenuItemLabel>\r\n            </MenuRadioItem>\r\n            <MenuRadioItem value=\"calendar\">\r\n              <MenuItemLabel>Calendar</MenuItemLabel>\r\n            </MenuRadioItem>\r\n          </MenuRadioGroup>\r\n        </MenuGroup>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/menu-radio-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

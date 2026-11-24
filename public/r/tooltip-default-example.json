@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-default-example",
+  "title": "Tooltip Default Example",
+  "description": "Atomic example for the Luck UI Tooltip component.",
+  "registryDependencies": [
+    "tooltip",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/tooltip-default-example.tsx",
+      "content": "import { Tooltip, TooltipContent, TooltipTrigger } from \"registry/default/ui/tooltip\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function TooltipExample() {\r\n  return (\r\n    <Tooltip>\r\n      <TooltipTrigger render={<Button variant=\"outline\">Hover me</Button>} />\r\n      <TooltipContent>\r\n        <p>Add to library</p>\r\n      </TooltipContent>\r\n    </Tooltip>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/tooltip-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

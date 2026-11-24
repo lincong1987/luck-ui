@@ -1,0 +1,116 @@
+---
+title: 卡片
+description: 用于组织相关内容与操作的容器。
+component: Card
+registry: card
+---
+
+import { CardExample } from "registry/default/examples/card-default-example";
+import cardExampleSource from "registry/default/examples/card-default-example.tsx?raw";
+import { CardWithActionExample } from "registry/default/examples/card-with-action-example";
+import cardWithActionExampleSource from "registry/default/examples/card-with-action-example.tsx?raw";
+import { CardColumnFooterExample } from "registry/default/examples/card-column-footer-example";
+import cardColumnFooterExampleSource from "registry/default/examples/card-column-footer-example.tsx?raw";
+import { CardMotionFooterExample } from "registry/default/examples/card-motion-footer-example";
+import cardMotionFooterExampleSource from "registry/default/examples/card-motion-footer-example.tsx?raw";
+import cardSource from "registry/default/ui/card.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardExample">
+      <CardExample />
+    </ComponentPreview>
+    <ComponentSource code={cardExampleSource} language="tsx" title="card-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 带操作按钮
+
+使用 `CardAction` 在头部放置操作按钮。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardWithActionExample">
+      <CardWithActionExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={cardWithActionExampleSource}
+      language="tsx"
+      title="card-with-action-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 纵向页脚
+
+在 `CardFooter` 上设置 `direction="column"`，让按钮纵向堆叠。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardColumnFooterExample">
+      <CardColumnFooterExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={cardColumnFooterExampleSource}
+      language="tsx"
+      title="card-column-footer-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 动效页脚
+
+可以用 `motion.div` 包裹页脚，并配合 `AnimatePresence`，在条件变化时为其进出添加动画。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardMotionFooterExample">
+      <CardMotionFooterExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={cardMotionFooterExampleSource}
+      language="tsx"
+      title="card-motion-footer-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={cardSource} language="tsx" />
+
+## API 参考
+
+### Card
+
+<PropsTable component="Card" />
+
+### CardHeader
+
+<PropsTable component="CardHeader" />
+
+### CardTitle
+
+<PropsTable component="CardTitle" />
+
+### CardDescription
+
+<PropsTable component="CardDescription" />
+
+### CardAction
+
+<PropsTable component="CardAction" />
+
+### CardBody
+
+`CardBody` 是 `CardPanel` 的别名。
+
+<PropsTable component="CardPanel" />
+
+### CardFooter
+
+<PropsTable component="CardFooter" />

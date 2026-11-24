@@ -1,0 +1,71 @@
+---
+title: 输入框
+description: 允许用户输入和编辑文本的输入框。
+component: Input
+registry: input
+---
+
+import { InputExample } from "registry/default/examples/input-default-example";
+import inputExampleSource from "registry/default/examples/input-default-example.tsx?raw";
+import { OutlineInputExample } from "registry/default/examples/input-outline-example";
+import outlineInputExampleSource from "registry/default/examples/input-outline-example.tsx?raw";
+import { InlineInputExample } from "registry/default/examples/input-inline-example";
+import inlineInputExampleSource from "registry/default/examples/input-inline-example.tsx?raw";
+import inputSource from "registry/default/ui/input.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InputExample">
+      <InputExample />
+    </ComponentPreview>
+    <ComponentSource code={inputExampleSource} language="tsx" title="input-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 变体
+
+可用变体：`default`、`outline`。
+
+#### 描边（Outline）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="OutlineInputExample">
+      <OutlineInputExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={outlineInputExampleSource}
+      language="tsx"
+      title="input-outline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 宽度
+
+默认情况下，输入框会拉伸填满容器（`block={true}`）。传入 `block={false}` 可限制宽度。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InlineInputExample">
+      <InlineInputExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={inlineInputExampleSource}
+      language="tsx"
+      title="input-inline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={inputSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Input" />

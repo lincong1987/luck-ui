@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-group-controlled-example",
+  "title": "Checkbox Group Controlled Example",
+  "description": "Atomic example for the Luck UI Checkbox component.",
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/checkbox-group-controlled-example.tsx",
+      "content": "import { useState } from \"react\";\r\nimport { Checkbox, CheckboxGroup } from \"registry/default/ui/checkbox\";\r\nexport function CheckboxGroupControlledExample() {\r\n  const [value, setValue] = useState<string[]>([\"design\"]);\r\n\r\n  return (\r\n    <div className=\"flex flex-col gap-3\">\r\n      <CheckboxGroup value={value} onValueChange={setValue}>\r\n        <label className=\"flex items-center gap-2 text-sm\">\r\n          <Checkbox value=\"design\" />\r\n          <span className=\"text-gray-900 dark:text-gray-100\">Design</span>\r\n        </label>\r\n        <label className=\"flex items-center gap-2 text-sm\">\r\n          <Checkbox value=\"engineering\" />\r\n          <span className=\"text-gray-900 dark:text-gray-100\">Engineering</span>\r\n        </label>\r\n        <label className=\"flex items-center gap-2 text-sm\">\r\n          <Checkbox value=\"marketing\" />\r\n          <span className=\"text-gray-900 dark:text-gray-100\">Marketing</span>\r\n        </label>\r\n      </CheckboxGroup>\r\n      <span className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n        Selected: {value.join(\", \") || \"None\"}\r\n      </span>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/checkbox-group-controlled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

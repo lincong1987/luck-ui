@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "title": "Button",
+  "description": "Luck UI Button component.",
+  "dependencies": [
+    "@base-ui/react",
+    "@phosphor-icons/react",
+    "class-variance-authority",
+    "motion"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/button.tsx",
+      "content": "import { Button as BaseButton } from \"@base-ui/react/button\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { SpinnerIcon } from \"@phosphor-icons/react\";\r\nimport { cva } from \"class-variance-authority\";\r\nimport type { VariantProps } from \"class-variance-authority\";\r\nimport { AnimatePresence, motion } from \"motion/react\";\r\n\r\nconst buttonVariants = cva(\r\n  \"font-regular data-disabled:pointer-not-allowed relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg text-sm whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] focus-visible:ring-ring not-data-disabled:active:scale-[0.98] aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-disabled:cursor-not-allowed data-disabled:opacity-50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\r\n  {\r\n    defaultVariants: {\r\n      size: \"default\",\r\n      variant: \"default\",\r\n    },\r\n    variants: {\r\n      size: {\r\n        default: \"h-9 px-4 py-2 has-[>svg]:px-3\",\r\n        icon: \"size-9\",\r\n        \"icon-sm\": \"size-8\",\r\n        lg: \"h-10 px-6 has-[>svg]:px-4\",\r\n        sm: \"h-8 gap-1.5 px-3 has-[>svg]:px-2.5\",\r\n      },\r\n      variant: {\r\n        default:\r\n          \"bg-primary text-primary-foreground not-data-disabled:hover:bg-primary-hover data-popup-open:bg-primary-hover\",\r\n        destructive:\r\n          \"bg-destructive text-destructive-foreground not-data-disabled:hover:bg-destructive-hover focus-visible:ring-destructive/30 data-popup-open:bg-destructive-hover\",\r\n        \"destructive-outline\":\r\n          \"border border-border text-destructive not-data-disabled:hover:bg-secondary focus-visible:border-destructive/60 focus-visible:ring-destructive/30 data-popup-open:bg-secondary\",\r\n        ghost:\r\n          \"bg-transparent text-foreground not-data-disabled:hover:bg-secondary data-popup-open:bg-secondary-hover\",\r\n        outline:\r\n          \"border border-border text-foreground not-data-disabled:hover:bg-secondary data-popup-open:bg-secondary\",\r\n        invert:\r\n          \"bg-muted text-foreground not-data-disabled:hover:bg-muted-hover data-popup-open:bg-muted-hover\",\r\n        secondary:\r\n          \"bg-secondary text-secondary-foreground not-data-disabled:hover:bg-secondary-hover data-popup-open:bg-secondary-hover\",\r\n      },\r\n    },\r\n  },\r\n);\r\n\r\ntype ButtonProps = BaseButton.Props &\r\n  VariantProps<typeof buttonVariants> & {\r\n    loading?: boolean;\r\n  };\r\n\r\nfunction Button({ variant, size, className, children, loading, disabled, ...props }: ButtonProps) {\r\n  return (\r\n    <BaseButton\r\n      className={cn(\r\n        buttonVariants({ className, size, variant }),\r\n        loading && \"data-disabled:cursor-wait\",\r\n      )}\r\n      disabled={loading || disabled}\r\n      data-slot=\"button\"\r\n      focusableWhenDisabled\r\n      {...props}\r\n    >\r\n      <motion.span\r\n        animate={{\r\n          filter: loading ? \"blur(4px)\" : \"blur(0px)\",\r\n          opacity: loading ? 0 : 1,\r\n          scale: loading ? 0.8 : 1,\r\n        }}\r\n        className=\"flex items-center gap-2\"\r\n        transition={{ duration: 0.2 }}\r\n        initial={false}\r\n      >\r\n        {children}\r\n      </motion.span>\r\n      <AnimatePresence initial={false}>\r\n        {loading && (\r\n          <motion.span\r\n            animate={{ filter: \"blur(0px)\", opacity: 1, scale: 1 }}\r\n            className=\"absolute inset-0 flex items-center justify-center\"\r\n            exit={{ filter: \"blur(4px)\", opacity: 0, scale: 0.8 }}\r\n            initial={{ filter: \"blur(4px)\", opacity: 0, scale: 0.8 }}\r\n            transition={{ duration: 0.2 }}\r\n          >\r\n            <SpinnerIcon className=\"size-4 animate-spin\" />\r\n          </motion.span>\r\n        )}\r\n      </AnimatePresence>\r\n    </BaseButton>\r\n  );\r\n}\r\nexport { Button, buttonVariants };\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/button.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

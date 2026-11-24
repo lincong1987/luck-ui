@@ -1,0 +1,121 @@
+---
+title: 按钮组
+description: 将一组相关按钮组合在一起并保持样式一致的容器。
+component: Button Group
+registry: button-group
+---
+
+import { ButtonGroupExample } from "registry/default/examples/button-group-default-example";
+import buttonGroupExampleSource from "registry/default/examples/button-group-default-example.tsx?raw";
+import { ButtonGroupOrientationExample } from "registry/default/examples/button-group-orientation-example";
+import buttonGroupOrientationExampleSource from "registry/default/examples/button-group-orientation-example.tsx?raw";
+import { ButtonGroupSeparatorExample } from "registry/default/examples/button-group-separator-example";
+import buttonGroupSeparatorExampleSource from "registry/default/examples/button-group-separator-example.tsx?raw";
+import { ButtonGroupTextExample } from "registry/default/examples/button-group-text-example";
+import buttonGroupTextExampleSource from "registry/default/examples/button-group-text-example.tsx?raw";
+import { ButtonGroupNestedExample } from "registry/default/examples/button-group-nested-example";
+import buttonGroupNestedExampleSource from "registry/default/examples/button-group-nested-example.tsx?raw";
+import buttonGroupSource from "registry/default/ui/button-group.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ButtonGroupExample">
+      <ButtonGroupExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={buttonGroupExampleSource}
+      language="tsx"
+      title="button-group-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 方向
+
+设置 `orientation="vertical"` 可将按钮纵向堆叠，而不是排成一行。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ButtonGroupOrientationExample">
+      <ButtonGroupOrientationExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={buttonGroupOrientationExampleSource}
+      language="tsx"
+      title="button-group-orientation-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 分隔线
+
+使用 `ButtonGroupSeparator` 在视觉上分隔按钮。`outline` 变体本身已有边框，因此分隔线更适合实心变体。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ButtonGroupSeparatorExample">
+      <ButtonGroupSeparatorExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={buttonGroupSeparatorExampleSource}
+      language="tsx"
+      title="button-group-separator-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 文本
+
+用 `ButtonGroupText` 显示静态前缀与后缀，也可以混入 `Input` 组成复合字段。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ButtonGroupTextExample">
+      <ButtonGroupTextExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={buttonGroupTextExampleSource}
+      language="tsx"
+      title="button-group-text-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 嵌套
+
+嵌套多个 `ButtonGroup`，可在不同的相关操作组之间留出间距。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ButtonGroupNestedExample">
+      <ButtonGroupNestedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={buttonGroupNestedExampleSource}
+      language="tsx"
+      title="button-group-nested-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={buttonGroupSource} language="tsx" />
+
+## API 参考
+
+### ButtonGroup
+
+<PropsTable component="ButtonGroup" />
+
+### ButtonGroupSeparator
+
+<PropsTable component="ButtonGroupSeparator" />
+
+### ButtonGroupText
+
+<PropsTable component="ButtonGroupText" />

@@ -1,0 +1,47 @@
+---
+title: 键盘按键
+description: 显示键盘按键与快捷键。
+component: Kbd
+registry: kbd
+---
+
+import { KbdExample } from "registry/default/examples/kbd-default-example";
+import kbdExampleSource from "registry/default/examples/kbd-default-example.tsx?raw";
+import { KbdGroupExample } from "registry/default/examples/kbd-group-example";
+import kbdGroupExampleSource from "registry/default/examples/kbd-group-example.tsx?raw";
+import kbdSource from "registry/default/ui/kbd.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="KbdExample">
+      <KbdExample />
+    </ComponentPreview>
+    <ComponentSource code={kbdExampleSource} language="tsx" title="kbd-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 分组
+
+将多个按键组合在一起，表示键盘快捷键。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="KbdGroupExample">
+      <KbdGroupExample />
+    </ComponentPreview>
+    <ComponentSource code={kbdGroupExampleSource} language="tsx" title="kbd-group-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={kbdSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Kbd" />
+<PropsTable component="KbdGroup" />

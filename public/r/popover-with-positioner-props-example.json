@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-with-positioner-props-example",
+  "title": "Popover With Positioner Props Example",
+  "description": "Atomic example for the Luck UI Popover component.",
+  "registryDependencies": [
+    "popover",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/popover-with-positioner-props-example.tsx",
+      "content": "import {\r\n  Popover,\r\n  PopoverBody,\r\n  PopoverContent,\r\n  PopoverHeader,\r\n  PopoverTitle,\r\n  PopoverTrigger,\r\n} from \"registry/default/ui/popover\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function PopoverWithPositionerPropsExample() {\r\n  return (\r\n    <Popover>\r\n      <PopoverTrigger render={<Button variant=\"outline\">Top Aligned</Button>} />\r\n      <PopoverContent positionerProps={{ side: \"top\", align: \"start\" }}>\r\n        <PopoverHeader>\r\n          <PopoverTitle>Positioned Popover</PopoverTitle>\r\n        </PopoverHeader>\r\n        <PopoverBody>\r\n          <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n            This popover is positioned above the trigger with start alignment.\r\n          </p>\r\n        </PopoverBody>\r\n      </PopoverContent>\r\n    </Popover>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/popover-with-positioner-props-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

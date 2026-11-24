@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-variants-example",
+  "title": "Toast Variants Example",
+  "description": "Atomic example for the Luck UI Toast component.",
+  "registryDependencies": [
+    "button",
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/toast-variants-example.tsx",
+      "content": "import { Button } from \"registry/default/ui/button\";\r\nimport { toastManager } from \"registry/default/ui/toast\";\r\nexport function ToastVariantsExample() {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-3\">\r\n      <Button\r\n        variant=\"outline\"\r\n        onClick={() => {\r\n          toastManager.add({\r\n            title: \"Update available\",\r\n            description: \"Version 1.3.0 is ready to install.\",\r\n            type: \"info\",\r\n            actionProps: {\r\n              children: \"Review\",\r\n              onClick: () => {\r\n                toastManager.add({\r\n                  title: \"Release notes opened\",\r\n                  description: \"You can review the changelog before upgrading.\",\r\n                  type: \"success\",\r\n                });\r\n              },\r\n            },\r\n          });\r\n        }}\r\n      >\r\n        Info\r\n      </Button>\r\n      <Button\r\n        variant=\"outline\"\r\n        onClick={() => {\r\n          toastManager.add({\r\n            title: \"Deployment failed\",\r\n            description: \"Reconnect your repository and try again.\",\r\n            type: \"error\",\r\n            actionProps: {\r\n              children: \"Retry\",\r\n              onClick: () => {\r\n                toastManager.add({\r\n                  title: \"Retry started\",\r\n                  description: \"We’re attempting the deployment again.\",\r\n                  type: \"loading\",\r\n                });\r\n              },\r\n            },\r\n          });\r\n        }}\r\n      >\r\n        Error\r\n      </Button>\r\n      <Button\r\n        variant=\"outline\"\r\n        onClick={() => {\r\n          toastManager.add({\r\n            title: \"Finishing sync\",\r\n            description: \"This toast stays visible until you dismiss it.\",\r\n            timeout: 0,\r\n            type: \"warning\",\r\n          });\r\n        }}\r\n      >\r\n        Persistent\r\n      </Button>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/toast-variants-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-submenu-example",
+  "title": "Menu Submenu Example",
+  "description": "Atomic example for the Luck UI Menu component.",
+  "registryDependencies": [
+    "menu",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/menu-submenu-example.tsx",
+      "content": "import {\r\n  Menu,\r\n  MenuTrigger,\r\n  MenuContent,\r\n  MenuItem,\r\n  MenuItemAddon,\r\n  MenuItemLabel,\r\n  MenuSeparator,\r\n  MenuSubmenu,\r\n  MenuSubmenuTrigger,\r\n} from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nimport { CaretRightIcon, UsersIcon } from \"@phosphor-icons/react\";\r\nexport function MenuSubmenuExample() {\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuItem>\r\n          <MenuItemLabel>New file</MenuItemLabel>\r\n        </MenuItem>\r\n        <MenuSubmenu>\r\n          <MenuSubmenuTrigger>\r\n            <MenuItemAddon>\r\n              <UsersIcon />\r\n            </MenuItemAddon>\r\n            <MenuItemLabel>Share with</MenuItemLabel>\r\n            <MenuItemAddon>\r\n              <CaretRightIcon />\r\n            </MenuItemAddon>\r\n          </MenuSubmenuTrigger>\r\n          <MenuContent>\r\n            <MenuItem>\r\n              <MenuItemLabel>Team</MenuItemLabel>\r\n            </MenuItem>\r\n            <MenuItem>\r\n              <MenuItemLabel>Organization</MenuItemLabel>\r\n            </MenuItem>\r\n            <MenuSeparator />\r\n            <MenuItem>\r\n              <MenuItemLabel>Get link</MenuItemLabel>\r\n            </MenuItem>\r\n          </MenuContent>\r\n        </MenuSubmenu>\r\n        <MenuSeparator />\r\n        <MenuItem>\r\n          <MenuItemLabel>Settings</MenuItemLabel>\r\n        </MenuItem>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/menu-submenu-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

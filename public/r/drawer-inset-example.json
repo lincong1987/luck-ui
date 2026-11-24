@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-inset-example",
+  "title": "Drawer Inset Example",
+  "description": "Atomic example for the Luck UI Drawer component.",
+  "registryDependencies": [
+    "drawer",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/drawer-inset-example.tsx",
+      "content": "import {\r\n  Drawer,\r\n  DrawerBody,\r\n  DrawerClose,\r\n  DrawerContent,\r\n  DrawerDescription,\r\n  DrawerFooter,\r\n  DrawerHeader,\r\n  DrawerTitle,\r\n  DrawerTrigger,\r\n} from \"registry/default/ui/drawer\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function DrawerInsetExample() {\r\n  return (\r\n    <Drawer>\r\n      <DrawerTrigger render={<Button variant=\"outline\">Open Inset Drawer</Button>} />\r\n      <DrawerContent variant=\"inset\" showBar className=\"max-w-3xl\">\r\n        <DrawerHeader>\r\n          <DrawerTitle>Confirm subscription</DrawerTitle>\r\n          <DrawerDescription>\r\n            The inset variant floats the drawer away from the screen edges.\r\n          </DrawerDescription>\r\n        </DrawerHeader>\r\n        <DrawerBody>\r\n          <p className=\"text-sm text-muted-foreground\">\r\n            You will be charged $9 per month. Cancel anytime from your account settings.\r\n          </p>\r\n        </DrawerBody>\r\n        <DrawerFooter direction=\"row\">\r\n          <DrawerClose render={<Button variant=\"secondary\">Cancel</Button>} />\r\n          <DrawerClose render={<Button>Subscribe</Button>} />\r\n        </DrawerFooter>\r\n      </DrawerContent>\r\n    </Drawer>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/drawer-inset-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

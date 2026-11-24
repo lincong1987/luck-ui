@@ -1,0 +1,90 @@
+---
+title: 开关
+description: 让用户开启或关闭某项设置的开关控件。
+component: Switch
+registry: switch
+---
+
+import { SwitchExample } from "registry/default/examples/switch-default-example";
+import switchExampleSource from "registry/default/examples/switch-default-example.tsx?raw";
+import { SwitchCheckedExample } from "registry/default/examples/switch-checked-example";
+import switchCheckedExampleSource from "registry/default/examples/switch-checked-example.tsx?raw";
+import { SwitchDisabledExample } from "registry/default/examples/switch-disabled-example";
+import switchDisabledExampleSource from "registry/default/examples/switch-disabled-example.tsx?raw";
+import { SwitchControlledExample } from "registry/default/examples/switch-controlled-example";
+import switchControlledExampleSource from "registry/default/examples/switch-controlled-example.tsx?raw";
+import switchSource from "registry/default/ui/switch.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SwitchExample">
+      <SwitchExample />
+    </ComponentPreview>
+    <ComponentSource code={switchExampleSource} language="tsx" title="switch-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 默认开启
+
+使用 `defaultChecked` 设置初始状态，而无需将组件变为受控组件。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SwitchCheckedExample">
+      <SwitchCheckedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={switchCheckedExampleSource}
+      language="tsx"
+      title="switch-checked-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 禁用
+
+使用 `disabled` 属性禁止交互。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SwitchDisabledExample">
+      <SwitchDisabledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={switchDisabledExampleSource}
+      language="tsx"
+      title="switch-disabled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 受控
+
+通过 `checked` 与 `onCheckedChange`，用 React 状态管理选中状态。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SwitchControlledExample">
+      <SwitchControlledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={switchControlledExampleSource}
+      language="tsx"
+      title="switch-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={switchSource} language="tsx" />
+
+## API 参考
+
+### Switch
+
+<PropsTable component="Switch" />

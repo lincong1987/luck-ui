@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-controlled-example",
+  "title": "Select Controlled Example",
+  "description": "Atomic example for the Luck UI Select component.",
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/select-controlled-example.tsx",
+      "content": "import {\r\n  Select,\r\n  SelectTrigger,\r\n  SelectContent,\r\n  SelectItem,\r\n  SelectValue,\r\n} from \"registry/default/ui/select\";\r\nimport { useState } from \"react\";\r\nexport function SelectControlledExample() {\r\n  const items = [\r\n    { value: \"typescript\", label: \"TypeScript\" },\r\n    { value: \"python\", label: \"Python\" },\r\n    { value: \"go\", label: \"Go\" },\r\n    { value: \"rust\", label: \"Rust\" },\r\n  ];\r\n\r\n  const [value, setValue] = useState(\"\");\r\n\r\n  return (\r\n    <div className=\"flex flex-col gap-3\">\r\n      <Select items={items} value={value} onValueChange={(v) => setValue(v ?? \"\")}>\r\n        <SelectTrigger variant=\"outline\" className=\"w-44\">\r\n          <SelectValue placeholder=\"Pick a language\" />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          {items.map((item) => (\r\n            <SelectItem key={item.value} value={item.value}>\r\n              {item.label}\r\n            </SelectItem>\r\n          ))}\r\n        </SelectContent>\r\n      </Select>\r\n      {value && <p className=\"text-sm text-gray-500\">Selected: {value}</p>}\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/select-controlled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

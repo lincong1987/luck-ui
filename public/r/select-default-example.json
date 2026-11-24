@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-default-example",
+  "title": "Select Default Example",
+  "description": "Atomic example for the Luck UI Select component.",
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/select-default-example.tsx",
+      "content": "import {\r\n  Select,\r\n  SelectTrigger,\r\n  SelectContent,\r\n  SelectItem,\r\n  SelectValue,\r\n} from \"registry/default/ui/select\";\r\nexport function SelectExample() {\r\n  const items = [\r\n    { value: \"apple\", label: \"Apple\" },\r\n    { value: \"banana\", label: \"Banana\" },\r\n    { value: \"blueberry\", label: \"Blueberry\" },\r\n    { value: \"grapes\", label: \"Grapes\" },\r\n    { value: \"pineapple\", label: \"Pineapple\" },\r\n  ];\r\n\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Select items={items}>\r\n        <SelectTrigger className=\"w-44\">\r\n          <SelectValue placeholder=\"Select a fruit\" />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          {items.map((item) => (\r\n            <SelectItem key={item.value} value={item.value}>\r\n              {item.label}\r\n            </SelectItem>\r\n          ))}\r\n        </SelectContent>\r\n      </Select>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/select-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

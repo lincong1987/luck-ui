@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-default-example",
+  "title": "Menu Default Example",
+  "description": "Atomic example for the Luck UI Menu component.",
+  "registryDependencies": [
+    "menu",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/menu-default-example.tsx",
+      "content": "import {\r\n  Menu,\r\n  MenuTrigger,\r\n  MenuContent,\r\n  MenuItem,\r\n  MenuItemLabel,\r\n  MenuSeparator,\r\n} from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function MenuExample() {\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuItem>\r\n          <MenuItemLabel>Profile</MenuItemLabel>\r\n        </MenuItem>\r\n        <MenuItem>\r\n          <MenuItemLabel>Settings</MenuItemLabel>\r\n        </MenuItem>\r\n        <MenuSeparator />\r\n        <MenuItem>\r\n          <MenuItemLabel>Log out</MenuItemLabel>\r\n        </MenuItem>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/menu-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

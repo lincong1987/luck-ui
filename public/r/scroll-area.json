@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area",
+  "title": "Scroll Area",
+  "description": "Luck UI Scroll Area component.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/scroll-area.tsx",
+      "content": "import { ScrollArea as BaseScrollArea } from \"@base-ui/react/scroll-area\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nfunction ScrollArea({\r\n  className,\r\n  children,\r\n  viewportProps,\r\n  scrollBarProps,\r\n  ...props\r\n}: {\r\n  viewportProps?: BaseScrollArea.Viewport.Props;\r\n  scrollBarProps?: BaseScrollArea.Scrollbar.Props;\r\n} & BaseScrollArea.Root.Props) {\r\n  return (\r\n    <BaseScrollArea.Root className={cn(\"size-full min-h-0\", className)} {...props}>\r\n      <BaseScrollArea.Viewport\r\n        {...viewportProps}\r\n        className={cn(\r\n          \"size-full overscroll-contain rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background data-has-overflow-y:pr-3\",\r\n          viewportProps?.className,\r\n        )}\r\n        data-slot=\"scroll-area-viewport\"\r\n      >\r\n        {children}\r\n      </BaseScrollArea.Viewport>\r\n      <ScrollBar orientation=\"vertical\" className={scrollBarProps?.className} />\r\n      <ScrollBar orientation=\"horizontal\" className={scrollBarProps?.className} />\r\n      <BaseScrollArea.Corner data-slot=\"scroll-area-corner\" />\r\n    </BaseScrollArea.Root>\r\n  );\r\n}\r\n\r\nfunction ScrollBar({\r\n  className,\r\n  orientation = \"vertical\",\r\n  ...props\r\n}: BaseScrollArea.Scrollbar.Props) {\r\n  return (\r\n    <BaseScrollArea.Scrollbar\r\n      className={cn(\r\n        \"pointer-events-none flex justify-center rounded opacity-0 transition-opacity delay-300 data-hovering:pointer-events-auto data-hovering:opacity-100 data-hovering:delay-0 data-hovering:duration-75 data-scrolling:pointer-events-auto data-scrolling:opacity-100 data-scrolling:delay-0 data-scrolling:duration-75\",\r\n        \"m-1 data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:flex-col data-[orientation=vertical]:w-1\",\r\n        className,\r\n      )}\r\n      data-slot=\"scroll-area-scrollbar\"\r\n      orientation={orientation}\r\n      {...props}\r\n    >\r\n      <BaseScrollArea.Thumb\r\n        className=\"relative flex-1 rounded-full bg-muted-foreground/30\"\r\n        data-slot=\"scroll-area-thumb\"\r\n      />\r\n    </BaseScrollArea.Scrollbar>\r\n  );\r\n}\r\n\r\nexport { ScrollArea, ScrollBar };\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/scroll-area.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

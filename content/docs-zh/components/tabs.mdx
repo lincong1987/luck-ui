@@ -1,0 +1,98 @@
+---
+title: 标签页
+description: 一组层叠的内容区块（即标签面板），每次只显示其中一个面板。
+component: Tabs
+registry: tabs
+---
+
+import { TabsExample } from "registry/default/examples/tabs-default-example";
+import tabsExampleSource from "registry/default/examples/tabs-default-example.tsx?raw";
+import { TabsUnderlineExample } from "registry/default/examples/tabs-underline-example";
+import tabsUnderlineExampleSource from "registry/default/examples/tabs-underline-example.tsx?raw";
+import { TabsSizesExample } from "registry/default/examples/tabs-sizes-example";
+import tabsSizesExampleSource from "registry/default/examples/tabs-sizes-example.tsx?raw";
+import { TabsVerticalExample } from "registry/default/examples/tabs-vertical-example";
+import tabsVerticalExampleSource from "registry/default/examples/tabs-vertical-example.tsx?raw";
+import tabsSource from "registry/default/ui/tabs.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsExample">
+      <TabsExample />
+    </ComponentPreview>
+    <ComponentSource code={tabsExampleSource} language="tsx" title="tabs-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 下划线变体
+
+使用 `underline` 变体，可获得基于边框的简洁指示样式。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsUnderlineExample">
+      <TabsUnderlineExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tabsUnderlineExampleSource}
+      language="tsx"
+      title="tabs-underline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 尺寸
+
+可用尺寸：`default`、`sm`、`lg`。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsSizesExample">
+      <TabsSizesExample />
+    </ComponentPreview>
+    <ComponentSource code={tabsSizesExampleSource} language="tsx" title="tabs-sizes-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+### 垂直排列
+
+在 `Tabs` 上设置 `orientation="vertical"`，标签与面板会并排排列。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TabsVerticalExample">
+      <TabsVerticalExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={tabsVerticalExampleSource}
+      language="tsx"
+      title="tabs-vertical-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={tabsSource} language="tsx" />
+
+## API 参考
+
+### Tabs
+
+<PropsTable component="Tabs" />
+
+### TabsList
+
+<PropsTable component="TabsList" />
+
+### TabsTab
+
+<PropsTable component="TabsTab" />
+
+### TabsPanel
+
+<PropsTable component="TabsPanel" />

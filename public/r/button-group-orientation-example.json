@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-orientation-example",
+  "title": "Button Group Orientation Example",
+  "description": "Atomic example for the Luck UI Button Group component.",
+  "registryDependencies": [
+    "button-group",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/button-group-orientation-example.tsx",
+      "content": "import { Button } from \"registry/default/ui/button\";\r\nimport { ButtonGroup } from \"registry/default/ui/button-group\";\r\nexport function ButtonGroupOrientationExample() {\r\n  return (\r\n    <ButtonGroup orientation=\"vertical\">\r\n      <Button variant=\"outline\">Top</Button>\r\n      <Button variant=\"outline\">Middle</Button>\r\n      <Button variant=\"outline\">Bottom</Button>\r\n    </ButtonGroup>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/button-group-orientation-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

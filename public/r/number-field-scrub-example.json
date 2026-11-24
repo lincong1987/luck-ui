@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "number-field-scrub-example",
+  "title": "Number Field Scrub Example",
+  "description": "Atomic example for the Luck UI Number Field component.",
+  "registryDependencies": [
+    "number-field"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/number-field-scrub-example.tsx",
+      "content": "import {\r\n  NumberField,\r\n  NumberFieldDecrement,\r\n  NumberFieldGroup,\r\n  NumberFieldIncrement,\r\n  NumberFieldInput,\r\n  NumberFieldScrubArea,\r\n  NumberFieldScrubAreaCursor,\r\n} from \"registry/default/ui/number-field\";\r\n\r\nexport function NumberFieldScrubExample() {\r\n  return (\r\n    <div className=\"w-full max-w-48\">\r\n      <NumberField defaultValue={100} id=\"scrub-amount\">\r\n        <NumberFieldScrubArea>\r\n          <label\r\n            htmlFor=\"scrub-amount\"\r\n            className=\"cursor-ew-resize text-sm font-medium text-foreground select-none\"\r\n          >\r\n            Amount\r\n          </label>\r\n          <NumberFieldScrubAreaCursor />\r\n        </NumberFieldScrubArea>\r\n        <NumberFieldGroup className=\"mt-1.5\">\r\n          <NumberFieldDecrement />\r\n          <NumberFieldInput />\r\n          <NumberFieldIncrement />\r\n        </NumberFieldGroup>\r\n      </NumberField>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/number-field-scrub-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

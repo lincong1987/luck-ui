@@ -1,0 +1,108 @@
+---
+title: 滑块
+description: 用于选择一个值或一对值的范围控件。
+component: Slider
+registry: slider
+---
+
+import Slider from "registry/default/ui/slider";
+import { SliderExample } from "registry/default/examples/slider-default-example";
+import sliderExampleSource from "registry/default/examples/slider-default-example.tsx?raw";
+import { RangeSliderExample } from "registry/default/examples/slider-range-example";
+import rangeSliderExampleSource from "registry/default/examples/slider-range-example.tsx?raw";
+import { SteppedSliderExample } from "registry/default/examples/slider-stepped-example";
+import steppedSliderExampleSource from "registry/default/examples/slider-stepped-example.tsx?raw";
+import { DisabledSliderExample } from "registry/default/examples/slider-disabled-example";
+import disabledSliderExampleSource from "registry/default/examples/slider-disabled-example.tsx?raw";
+import { ControlledSliderExample } from "registry/default/examples/slider-controlled-example";
+import controlledSliderExampleSource from "registry/default/examples/slider-controlled-example.tsx?raw";
+import sliderSource from "registry/default/ui/slider.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SliderExample">
+      <SliderExample />
+    </ComponentPreview>
+    <ComponentSource code={sliderExampleSource} language="tsx" title="slider-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 范围
+
+向 `defaultValue` 传入数组，即可渲染带多个滑块的范围内滑块。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="RangeSliderExample">
+      <RangeSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={rangeSliderExampleSource}
+      language="tsx"
+      title="slider-range-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 步长
+
+使用 `step` 控制数值之间的增量。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SteppedSliderExample">
+      <SteppedSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={steppedSliderExampleSource}
+      language="tsx"
+      title="slider-stepped-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 禁用
+
+使用 `disabled` 属性禁止交互。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DisabledSliderExample">
+      <DisabledSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={disabledSliderExampleSource}
+      language="tsx"
+      title="slider-disabled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 受控
+
+通过 `value` 与 `onValueChange`，用 React 状态管理滑块的值。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ControlledSliderExample">
+      <ControlledSliderExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={controlledSliderExampleSource}
+      language="tsx"
+      title="slider-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={sliderSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Slider" />

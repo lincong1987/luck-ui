@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-separator-example",
+  "title": "Button Group Separator Example",
+  "description": "Atomic example for the Luck UI Button Group component.",
+  "registryDependencies": [
+    "button-group",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/button-group-separator-example.tsx",
+      "content": "import { Button } from \"registry/default/ui/button\";\r\nimport { ButtonGroup, ButtonGroupSeparator } from \"registry/default/ui/button-group\";\r\nexport function ButtonGroupSeparatorExample() {\r\n  return (\r\n    <ButtonGroup>\r\n      <Button>Copy</Button>\r\n      <ButtonGroupSeparator />\r\n      <Button>Paste</Button>\r\n    </ButtonGroup>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/button-group-separator-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-disabled-example",
+  "title": "Radio Disabled Example",
+  "description": "Atomic example for the Luck UI Radio component.",
+  "registryDependencies": [
+    "radio"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/radio-disabled-example.tsx",
+      "content": "import { RadioGroup, Radio } from \"registry/default/ui/radio\";\r\nexport function RadioDisabledExample() {\r\n  return (\r\n    <RadioGroup defaultValue=\"system\">\r\n      <label className=\"flex items-center gap-2 text-sm\">\r\n        <Radio value=\"system\" />\r\n        System\r\n      </label>\r\n      <label className=\"flex items-center gap-2 text-sm\">\r\n        <Radio value=\"light\" disabled />\r\n        Light\r\n      </label>\r\n      <label className=\"flex items-center gap-2 text-sm\">\r\n        <Radio value=\"dark\" />\r\n        Dark\r\n      </label>\r\n    </RadioGroup>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/radio-disabled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

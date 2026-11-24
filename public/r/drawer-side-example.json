@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-side-example",
+  "title": "Drawer Side Example",
+  "description": "Atomic example for the Luck UI Drawer component.",
+  "registryDependencies": [
+    "drawer",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/drawer-side-example.tsx",
+      "content": "import {\r\n  Drawer,\r\n  DrawerBody,\r\n  DrawerContent,\r\n  DrawerDescription,\r\n  DrawerHeader,\r\n  DrawerTitle,\r\n  DrawerTrigger,\r\n} from \"registry/default/ui/drawer\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function DrawerSideExample() {\r\n  return (\r\n    <Drawer position=\"right\">\r\n      <DrawerTrigger render={<Button variant=\"outline\">Open Side Drawer</Button>} />\r\n      <DrawerContent showCloseButton>\r\n        <DrawerHeader>\r\n          <DrawerTitle>Notifications</DrawerTitle>\r\n          <DrawerDescription>You have 3 unread notifications.</DrawerDescription>\r\n        </DrawerHeader>\r\n        <DrawerBody>\r\n          {Array.from({ length: 3 }).map((_, i) => (\r\n            <div key={i} className=\"rounded-lg border border-border p-3 text-sm\">\r\n              <p className=\"font-medium\">New activity</p>\r\n              <p className=\"text-muted-foreground\">Someone interacted with your post.</p>\r\n            </div>\r\n          ))}\r\n        </DrawerBody>\r\n      </DrawerContent>\r\n    </Drawer>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/drawer-side-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

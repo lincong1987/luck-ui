@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-multi-select-example",
+  "title": "Combobox Multi Select Example",
+  "description": "Atomic example for the Luck UI Combobox component.",
+  "registryDependencies": [
+    "combobox"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/combobox-multi-select-example.tsx",
+      "content": "import {\r\n  Combobox,\r\n  ComboboxContent,\r\n  ComboboxItem,\r\n  ComboboxList,\r\n  ComboboxInput,\r\n  ComboboxValue,\r\n  ComboboxChip,\r\n} from \"registry/default/ui/combobox\";\r\nimport { useState } from \"react\";\r\nconst fruits = [\r\n  { value: \"apple\", label: \"Apple\" },\r\n  { value: \"banana\", label: \"Banana\" },\r\n  { value: \"blueberry\", label: \"Blueberry\" },\r\n  { value: \"grapes\", label: \"Grapes\" },\r\n  { value: \"pineapple\", label: \"Pineapple\" },\r\n];\r\nexport function ComboboxMultiSelectExample() {\r\n  const [value, setValue] = useState<(typeof fruits)[number][]>([]);\r\n\r\n  return (\r\n    <div className=\"flex flex-col gap-3\">\r\n      <Combobox items={fruits} value={value} onValueChange={(v) => setValue(v ?? [])} multiple>\r\n        <ComboboxInput\r\n          className=\"w-56\"\r\n          placeholder={value.length > 0 ? \"\" : \"Select fruits\"}\r\n          showRemove={false}\r\n        >\r\n          <ComboboxValue>\r\n            {(selectedValue: (typeof fruits)[number][]) =>\r\n              selectedValue.map((item) => (\r\n                <ComboboxChip key={item.value}>{item.label}</ComboboxChip>\r\n              ))\r\n            }\r\n          </ComboboxValue>\r\n        </ComboboxInput>\r\n        <ComboboxContent>\r\n          <ComboboxList>\r\n            {(item: (typeof fruits)[number]) => (\r\n              <ComboboxItem key={item.value} value={item}>\r\n                {item.label}\r\n              </ComboboxItem>\r\n            )}\r\n          </ComboboxList>\r\n        </ComboboxContent>\r\n      </Combobox>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/combobox-multi-select-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

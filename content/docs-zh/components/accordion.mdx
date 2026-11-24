@@ -1,0 +1,87 @@
+---
+title: 手风琴
+description: 一组纵向排列的交互式标题，每项可展开显示对应的内容区块。
+component: Accordion
+registry: accordion
+---
+
+import { AccordionExample } from "registry/default/examples/accordion-default-example";
+import accordionExampleSource from "registry/default/examples/accordion-default-example.tsx?raw";
+import { AccordionMultipleExample } from "registry/default/examples/accordion-multiple-example";
+import accordionMultipleExampleSource from "registry/default/examples/accordion-multiple-example.tsx?raw";
+import { AccordionDisabledExample } from "registry/default/examples/accordion-disabled-example";
+import accordionDisabledExampleSource from "registry/default/examples/accordion-disabled-example.tsx?raw";
+import accordionSource from "registry/default/ui/accordion.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AccordionExample">
+      <AccordionExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={accordionExampleSource}
+      language="tsx"
+      title="accordion-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 多项展开
+
+通过 `multiple` 属性允许同时打开多个条目。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AccordionMultipleExample">
+      <AccordionMultipleExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={accordionMultipleExampleSource}
+      language="tsx"
+      title="accordion-multiple-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 禁用单项
+
+在对应的 `AccordionItem` 上设置 `disabled` 即可禁用该区块。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AccordionDisabledExample">
+      <AccordionDisabledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={accordionDisabledExampleSource}
+      language="tsx"
+      title="accordion-disabled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={accordionSource} language="tsx" />
+
+## API 参考
+
+### Accordion
+
+<PropsTable component="Accordion" />
+
+### AccordionItem
+
+<PropsTable component="AccordionItem" />
+
+### AccordionTrigger
+
+<PropsTable component="AccordionTrigger" />
+
+### AccordionContent
+
+<PropsTable component="AccordionContent" />

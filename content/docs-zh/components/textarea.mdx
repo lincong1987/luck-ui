@@ -1,0 +1,75 @@
+---
+title: 多行文本框
+description: 允许多行输入和编辑较长文本的文本域。
+component: Textarea
+registry: textarea
+---
+
+import { TextareaExample } from "registry/default/examples/textarea-default-example";
+import textareaExampleSource from "registry/default/examples/textarea-default-example.tsx?raw";
+import { OutlineTextareaExample } from "registry/default/examples/textarea-outline-example";
+import outlineTextareaExampleSource from "registry/default/examples/textarea-outline-example.tsx?raw";
+import { InlineTextareaExample } from "registry/default/examples/textarea-inline-example";
+import inlineTextareaExampleSource from "registry/default/examples/textarea-inline-example.tsx?raw";
+import textareaSource from "registry/default/ui/textarea.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TextareaExample">
+      <TextareaExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={textareaExampleSource}
+      language="tsx"
+      title="textarea-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 变体
+
+可用变体：`default`、`outline`。
+
+#### 描边（Outline）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="OutlineTextareaExample">
+      <OutlineTextareaExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={outlineTextareaExampleSource}
+      language="tsx"
+      title="textarea-outline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 宽度
+
+默认情况下，文本域会拉伸填满容器（`block={true}`）。传入 `block={false}` 可限制宽度。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InlineTextareaExample">
+      <InlineTextareaExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={inlineTextareaExampleSource}
+      language="tsx"
+      title="textarea-inline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={textareaSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Textarea" />

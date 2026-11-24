@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-with-items-example",
+  "title": "Select With Items Example",
+  "description": "Atomic example for the Luck UI Select component.",
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/select-with-items-example.tsx",
+      "content": "import {\r\n  Select,\r\n  SelectTrigger,\r\n  SelectContent,\r\n  SelectItem,\r\n  SelectValue,\r\n} from \"registry/default/ui/select\";\r\nexport function SelectWithItemsExample() {\r\n  const items = [\r\n    { value: \"utc\", label: \"UTC\" },\r\n    { value: \"est\", label: \"Eastern Time\" },\r\n    { value: \"cst\", label: \"Central Time\" },\r\n    { value: \"mst\", label: \"Mountain Time\" },\r\n    { value: \"pst\", label: \"Pacific Time\" },\r\n    { value: \"jst\", label: \"Japan Standard Time\" },\r\n  ];\r\n\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Select items={items} defaultValue=\"utc\">\r\n        <SelectTrigger variant=\"outline\" className=\"w-56\">\r\n          <SelectValue placeholder=\"Select time zone\" />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          {items.map((item) => (\r\n            <SelectItem key={item.value} value={item.value}>\r\n              {item.label}\r\n            </SelectItem>\r\n          ))}\r\n        </SelectContent>\r\n      </Select>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/select-with-items-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

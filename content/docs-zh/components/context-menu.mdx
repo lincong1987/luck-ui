@@ -1,0 +1,211 @@
+---
+title: 上下文菜单
+description: 右键单击（或长按）区域时显示的操作或链接菜单。
+component: ContextMenu
+registry: context-menu
+---
+
+import { ContextMenuExample } from "registry/default/examples/context-menu-default-example";
+import contextMenuExampleSource from "registry/default/examples/context-menu-default-example.tsx?raw";
+import { ContextMenuWithIconsExample } from "registry/default/examples/context-menu-with-icons-example";
+import contextMenuWithIconsExampleSource from "registry/default/examples/context-menu-with-icons-example.tsx?raw";
+import { ContextMenuWithKbdExample } from "registry/default/examples/context-menu-with-kbd-example";
+import contextMenuWithKbdExampleSource from "registry/default/examples/context-menu-with-kbd-example.tsx?raw";
+import { ContextMenuCheckboxExample } from "registry/default/examples/context-menu-checkbox-example";
+import contextMenuCheckboxExampleSource from "registry/default/examples/context-menu-checkbox-example.tsx?raw";
+import { ContextMenuRadioExample } from "registry/default/examples/context-menu-radio-example";
+import contextMenuRadioExampleSource from "registry/default/examples/context-menu-radio-example.tsx?raw";
+import { ContextMenuSubmenuExample } from "registry/default/examples/context-menu-submenu-example";
+import contextMenuSubmenuExampleSource from "registry/default/examples/context-menu-submenu-example.tsx?raw";
+import { ContextMenuComplexExample } from "registry/default/examples/context-menu-complex-example";
+import contextMenuComplexExampleSource from "registry/default/examples/context-menu-complex-example.tsx?raw";
+import contextMenuSource from "registry/default/ui/context-menu.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ContextMenuExample">
+      <ContextMenuExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={contextMenuExampleSource}
+      language="tsx"
+      title="context-menu-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 带附属内容
+
+用 `ContextMenuItemAddon` 添加图标、文本或其他补充内容。放在 `ContextMenuItemLabel` 之前为前置附属内容，放在标签之后为后置附属内容。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ContextMenuWithIconsExample">
+      <ContextMenuWithIconsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={contextMenuWithIconsExampleSource}
+      language="tsx"
+      title="context-menu-with-icons-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 带快捷键
+
+将 `Kbd` 放入后置的 `ContextMenuItemAddon` 中即可显示键盘快捷键。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ContextMenuWithKbdExample">
+      <ContextMenuWithKbdExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={contextMenuWithKbdExampleSource}
+      language="tsx"
+      title="context-menu-with-kbd-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 复选框项
+
+使用 `ContextMenuCheckboxItem` 表示可切换的选项。
+
+> **注意：** 复选框指示器会占用前置附属内容列。请避免再添加前置的 `ContextMenuItemAddon`；如需补充内容，请放在 `ContextMenuItemLabel` 之后。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ContextMenuCheckboxExample">
+      <ContextMenuCheckboxExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={contextMenuCheckboxExampleSource}
+      language="tsx"
+      title="context-menu-checkbox-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 单选项
+
+使用 `ContextMenuRadioGroup` 与 `ContextMenuRadioItem` 表示互斥选项。
+
+> **注意：** 单选指示器会占用前置附属内容列。请避免再添加前置的 `ContextMenuItemAddon`；如需补充内容，请放在 `ContextMenuItemLabel` 之后。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ContextMenuRadioExample">
+      <ContextMenuRadioExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={contextMenuRadioExampleSource}
+      language="tsx"
+      title="context-menu-radio-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 子菜单
+
+使用 `ContextMenuSubmenu` 与 `ContextMenuSubmenuTrigger` 嵌套菜单。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ContextMenuSubmenuExample">
+      <ContextMenuSubmenuExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={contextMenuSubmenuExampleSource}
+      language="tsx"
+      title="context-menu-submenu-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 完整上下文菜单
+
+一个完整的上下文菜单，组合了分组、图标、键盘快捷键、链接、子菜单、单选项、复选框项以及危险操作。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ContextMenuComplexExample">
+      <ContextMenuComplexExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={contextMenuComplexExampleSource}
+      language="tsx"
+      title="context-menu-complex-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={contextMenuSource} language="tsx" />
+
+## API 参考
+
+### ContextMenu
+
+<PropsTable component="ContextMenu" />
+
+### ContextMenuTrigger
+
+<PropsTable component="ContextMenuTrigger" />
+
+### ContextMenuContent
+
+<PropsTable component="ContextMenuContent" />
+
+### ContextMenuItem
+
+<PropsTable component="ContextMenuItem" />
+
+### ContextMenuLinkItem
+
+<PropsTable component="ContextMenuLinkItem" />
+
+### ContextMenuGroup
+
+<PropsTable component="ContextMenuGroup" />
+
+### ContextMenuGroupLabel
+
+<PropsTable component="ContextMenuGroupLabel" />
+
+### ContextMenuSeparator
+
+<PropsTable component="ContextMenuSeparator" />
+
+### ContextMenuItemAddon
+
+<PropsTable component="ContextMenuItemAddon" />
+
+### ContextMenuItemLabel
+
+<PropsTable component="ContextMenuItemLabel" />
+
+### ContextMenuSubmenu
+
+<PropsTable component="ContextMenuSubmenu" />
+
+### ContextMenuSubmenuTrigger
+
+<PropsTable component="ContextMenuSubmenuTrigger" />
+
+### ContextMenuRadioGroup
+
+<PropsTable component="ContextMenuRadioGroup" />
+
+### ContextMenuRadioItem
+
+<PropsTable component="ContextMenuRadioItem" />
+
+### ContextMenuCheckboxItem
+
+<PropsTable component="ContextMenuCheckboxItem" />

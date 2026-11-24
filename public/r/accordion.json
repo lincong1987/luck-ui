@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion",
+  "title": "Accordion",
+  "description": "Luck UI Accordion component.",
+  "dependencies": [
+    "@base-ui/react",
+    "@phosphor-icons/react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/accordion.tsx",
+      "content": "import { Accordion as BaseAccordion } from \"@base-ui/react/accordion\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { CaretDownIcon } from \"@phosphor-icons/react/dist/ssr\";\r\n\r\nfunction Accordion({ className, ...props }: BaseAccordion.Root.Props) {\r\n  return (\r\n    <BaseAccordion.Root\r\n      data-slot=\"accordion\"\r\n      className={cn(\"rounded-2xl bg-muted\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction AccordionItem({ className, ...props }: BaseAccordion.Item.Props) {\r\n  return (\r\n    <BaseAccordion.Item\r\n      className={cn(\"border-b border-border last:border-b-0\", className)}\r\n      data-slot=\"accordion-item\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction AccordionTrigger({ className, children, ...props }: BaseAccordion.Trigger.Props) {\r\n  return (\r\n    <BaseAccordion.Header className=\"flex\" data-slot=\"accordion-header\">\r\n      <BaseAccordion.Trigger\r\n        className={cn(\r\n          \"group flex flex-1 items-center justify-between gap-4 px-4 pt-4 pb-4 text-left text-sm font-medium text-foreground transition-[color,padding-bottom] duration-200 ease-out outline-none hover:text-foreground/80 focus-visible:ring-2 focus-visible:ring-ring data-disabled:pointer-events-none data-disabled:opacity-50 data-panel-open:pb-2\",\r\n          className,\r\n        )}\r\n        data-slot=\"accordion-trigger\"\r\n        {...props}\r\n      >\r\n        {children}\r\n        <CaretDownIcon\r\n          aria-hidden\r\n          className=\"size-4 shrink-0 text-muted-foreground transition-transform duration-200 group-data-panel-open:rotate-180\"\r\n        />\r\n      </BaseAccordion.Trigger>\r\n    </BaseAccordion.Header>\r\n  );\r\n}\r\n\r\nfunction AccordionContent({ className, children, ...props }: BaseAccordion.Panel.Props) {\r\n  return (\r\n    <BaseAccordion.Panel\r\n      className=\"h-(--accordion-panel-height) overflow-hidden text-sm text-muted-foreground transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0\"\r\n      data-slot=\"accordion-content\"\r\n      {...props}\r\n    >\r\n      <div className={cn(\"px-4 pb-4\", className)}>{children}</div>\r\n    </BaseAccordion.Panel>\r\n  );\r\n}\r\n\r\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent };\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/accordion.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

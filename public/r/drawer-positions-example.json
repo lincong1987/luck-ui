@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-positions-example",
+  "title": "Drawer Positions Example",
+  "description": "Atomic example for the Luck UI Drawer component.",
+  "registryDependencies": [
+    "drawer",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/drawer-positions-example.tsx",
+      "content": "import {\r\n  Drawer,\r\n  DrawerBody,\r\n  DrawerContent,\r\n  DrawerDescription,\r\n  DrawerHeader,\r\n  DrawerTitle,\r\n  DrawerTrigger,\r\n} from \"registry/default/ui/drawer\";\r\nimport { Button } from \"registry/default/ui/button\";\r\n\r\nconst positions = [\"top\", \"right\", \"bottom\", \"left\"] as const;\r\n\r\nexport function DrawerPositionsExample() {\r\n  return (\r\n    <div className=\"flex flex-wrap gap-2\">\r\n      {positions.map((position) => (\r\n        <Drawer key={position} position={position}>\r\n          <DrawerTrigger render={<Button variant=\"outline\" className=\"capitalize\" />}>\r\n            {position}\r\n          </DrawerTrigger>\r\n          <DrawerContent showBar>\r\n            <DrawerHeader>\r\n              <DrawerTitle className=\"capitalize\">{position} drawer</DrawerTitle>\r\n              <DrawerDescription>This drawer slides in from the {position} edge.</DrawerDescription>\r\n            </DrawerHeader>\r\n            <DrawerBody>\r\n              <p className=\"text-sm text-muted-foreground\">\r\n                The swipe direction adapts automatically to the chosen position.\r\n              </p>\r\n            </DrawerBody>\r\n          </DrawerContent>\r\n        </Drawer>\r\n      ))}\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/drawer-positions-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

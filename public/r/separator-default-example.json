@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-default-example",
+  "title": "Separator Default Example",
+  "description": "Atomic example for the Luck UI Separator component.",
+  "registryDependencies": [
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/separator-default-example.tsx",
+      "content": "import { Separator } from \"registry/default/ui/separator\";\r\nexport function SeparatorExample() {\r\n  return (\r\n    <div className=\"w-full max-w-xs space-y-4\">\r\n      <div className=\"space-y-1\">\r\n        <p className=\"text-sm font-medium\">Project Settings</p>\r\n        <p className=\"text-sm text-muted-foreground\">Manage your project preferences.</p>\r\n      </div>\r\n      <Separator />\r\n      <div className=\"flex h-5 items-center gap-4 text-sm\">\r\n        <span>Profile</span>\r\n        <Separator orientation=\"vertical\" />\r\n        <span>Settings</span>\r\n        <Separator orientation=\"vertical\" />\r\n        <span>Help</span>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/separator-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

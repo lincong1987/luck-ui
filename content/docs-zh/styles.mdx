@@ -1,0 +1,125 @@
+---
+title: 颜色
+description: 设计系统中使用的语义颜色令牌。
+---
+
+import luckCssSource from "registry/default/styles/style.css?raw";
+
+颜色决定设计系统的视觉基调。Luck UI 的调色板以暖灰与橙色为核心，并在 OKLCH 色彩空间中扩展为完整色阶，以保证浅色与暗色模式下的亮度一致性与可访问性。
+
+灰色带有细微的暖色倾向——比中性灰更暖，又不像 Tailwind 的 Stone 那样明显——为整体奠定平衡的基础。橙色作为主强调色，为调色板注入活力与温度；红色与绿色则分别承担危险与成功的反馈。
+
+## 灰色
+
+用于文本、背景、边框与细微填充的暖灰色阶，覆盖浅色与暗色模式。
+
+<ColorScale name="gray" />
+
+## 红色
+
+用于危险操作、错误与警告状态的红色色阶。
+
+<ColorScale name="red" />
+
+## 绿色
+
+用于成功与确认状态的绿色色阶。
+
+<ColorScale name="green" />
+
+## 橙色
+
+主强调色，用于焦点环、激活状态与引用块强调。
+
+<ColorScale name="orange" />
+
+## 语义令牌
+
+这些 CSS 变量映射到上方的色阶，并通过 `data-theme` 属性在浅色与暗色模式之间切换。
+
+### 背景
+
+<div class="not-prose grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <ColorToken name="background" description="页面背景" />
+  <ColorToken name="foreground" description="主要文本颜色" />
+  <ColorToken name="card" description="卡片表面背景" />
+  <ColorToken name="card-foreground" description="卡片表面上的文本" />
+  <ColorToken name="popover" description="弹出框表面背景" />
+  <ColorToken name="popover-foreground" description="弹出框内的文本" />
+  <ColorToken name="dialog" description="对话框表面背景" />
+  <ColorToken name="dialog-foreground" description="对话框内的文本" />
+  <ColorToken name="field" description="输入类控件的半透明填充" />
+</div>
+
+### 操作
+
+<div class="not-prose grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <ColorToken name="primary" description="主按钮 / 主操作背景" />
+  <ColorToken name="primary-foreground" description="主操作上的文本" />
+  <ColorToken name="secondary" description="次要按钮 / 弱化操作背景" />
+  <ColorToken name="secondary-foreground" description="次要操作上的文本" />
+</div>
+
+### 状态
+
+<div class="not-prose grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <ColorToken name="muted" description="弱化 / 细微背景" />
+  <ColorToken name="muted-foreground" description="弱化背景上的文本" />
+  <ColorToken name="accent" description="强调高亮背景" />
+  <ColorToken name="accent-foreground" description="强调高亮上的文本" />
+  <ColorToken name="destructive" description="危险操作背景" />
+  <ColorToken name="destructive-foreground" description="危险操作上的文本" />
+</div>
+
+### 边框与焦点
+
+<div class="not-prose grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <ColorToken name="border" description="默认边框颜色" />
+  <ColorToken name="ring" description="焦点环颜色" />
+</div>
+
+像 `text-gray-500`、`bg-gray-100`、`border-gray-200`、`text-green-600` 以及 `dark:` 变体这样的常用 Tailwind 工具类，都会映射到 Luck UI 底层的主题令牌。
+
+## 交互状态
+
+每个表面令牌都为可交互元素配备了 `-hover` 与 `-active` 伴随令牌。这里没有用透明度淡化基础色——那样会与背后的内容不可预测地叠加，让多层表面变得浑浊——而是借助 `color-mix` 从基础令牌推导出固定、不透明的状态色。每个不透明表面都向 `--foreground` 混合，因此同一套公式在浅色模式下会加深颜色，在暗色模式下会自动提亮（像 `primary` 这样的实心填充则改为向自身的前景色混合）。最终得到的是真实、不透明的变化，无论背景如何都清晰可辨。
+
+直接把它们当作 Tailwind 工具类使用——例如 `hover:bg-primary-hover`、`data-popup-open:bg-secondary-active` 等——这样明暗逻辑就留在主题里，无需在每个组件中重复声明。
+
+<div class="not-prose grid grid-cols-1 gap-2 sm:grid-cols-3">
+  <ColorToken name="background" description="基础" />
+  <ColorToken name="background-hover" description="悬停" />
+  <ColorToken name="background-active" description="激活" />
+  <ColorToken name="card" description="基础" />
+  <ColorToken name="card-hover" description="悬停" />
+  <ColorToken name="card-active" description="激活" />
+  <ColorToken name="popover" description="基础" />
+  <ColorToken name="popover-hover" description="悬停" />
+  <ColorToken name="popover-active" description="激活" />
+  <ColorToken name="dialog" description="基础" />
+  <ColorToken name="dialog-hover" description="悬停" />
+  <ColorToken name="dialog-active" description="激活" />
+  <ColorToken name="primary" description="基础" />
+  <ColorToken name="primary-hover" description="悬停" />
+  <ColorToken name="primary-active" description="激活" />
+  <ColorToken name="secondary" description="基础（叠加着色）" />
+  <ColorToken name="secondary-hover" description="悬停" />
+  <ColorToken name="secondary-active" description="激活" />
+  <ColorToken name="muted" description="基础" />
+  <ColorToken name="muted-hover" description="悬停" />
+  <ColorToken name="muted-active" description="激活" />
+  <ColorToken name="accent" description="基础" />
+  <ColorToken name="accent-hover" description="悬停" />
+  <ColorToken name="accent-active" description="激活" />
+  <ColorToken name="destructive" description="基础" />
+  <ColorToken name="destructive-hover" description="悬停" />
+  <ColorToken name="destructive-active" description="激活" />
+</div>
+
+`secondary`（以及基于它的 `ghost` / `outline` 表面）有意保留基于透明度的做法：它是一层用于叠加在不同背景上的着色，因此其 `-hover` 与 `-active` 状态加深透明度，而不是换成实色。
+
+## 安装
+
+将下面的 CSS 代码复制到全局样式表，并包在能根据 `data-theme` 属性应用相应配色方案的选择器中。
+
+<CodeBlock code={luckCssSource} language="css" />

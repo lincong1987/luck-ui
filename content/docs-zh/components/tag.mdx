@@ -1,0 +1,97 @@
+---
+title: 标签
+description: 显示徽标或标签的组件。
+component: Tag
+registry: tag
+---
+
+import { TagExample } from "registry/default/examples/tag-default-example";
+import tagExampleSource from "registry/default/examples/tag-default-example.tsx?raw";
+import { SecondaryTagExample } from "registry/default/examples/tag-secondary-example";
+import secondaryTagExampleSource from "registry/default/examples/tag-secondary-example.tsx?raw";
+import { OutlineTagExample } from "registry/default/examples/tag-outline-example";
+import outlineTagExampleSource from "registry/default/examples/tag-outline-example.tsx?raw";
+import { TagSizesExample } from "registry/default/examples/tag-sizes-example";
+import tagSizesExampleSource from "registry/default/examples/tag-sizes-example.tsx?raw";
+import { TagInMenuExample } from "registry/default/examples/tag-in-menu-example";
+import tagInMenuExampleSource from "registry/default/examples/tag-in-menu-example.tsx?raw";
+import tagSource from "registry/default/ui/tag.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TagExample">
+      <TagExample />
+    </ComponentPreview>
+    <ComponentSource code={tagExampleSource} language="tsx" title="tag-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 变体
+
+#### 次要（Secondary）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SecondaryTagExample">
+      <SecondaryTagExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={secondaryTagExampleSource}
+      language="tsx"
+      title="tag-secondary-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+#### 描边（Outline）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="OutlineTagExample">
+      <OutlineTagExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={outlineTagExampleSource}
+      language="tsx"
+      title="tag-outline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 尺寸
+
+可用尺寸：`default`、`sm`、`lg`。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TagSizesExample">
+      <TagSizesExample />
+    </ComponentPreview>
+    <ComponentSource code={tagSizesExampleSource} language="tsx" title="tag-sizes-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+### 在菜单中
+
+在 `MenuItem` 内使用标签，以突出状态或分类。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="TagInMenuExample">
+      <TagInMenuExample />
+    </ComponentPreview>
+    <ComponentSource code={tagInMenuExampleSource} language="tsx" title="tag-in-menu-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={tagSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Tag" />

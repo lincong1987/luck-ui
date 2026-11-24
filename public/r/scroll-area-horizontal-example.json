@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-horizontal-example",
+  "title": "Scroll Area Horizontal Example",
+  "description": "Atomic example for the Luck UI Scroll Area component.",
+  "registryDependencies": [
+    "scroll-area"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/scroll-area-horizontal-example.tsx",
+      "content": "import { ScrollArea } from \"registry/default/ui/scroll-area\";\r\nexport function ScrollAreaHorizontalExample() {\r\n  return (\r\n    <div className=\"flex items-start justify-center\">\r\n      <ScrollArea className=\"w-72 rounded-md bg-muted whitespace-nowrap\">\r\n        <div className=\"flex w-max gap-4 p-4\">\r\n          {Array.from({ length: 10 }, (_, i) => (\r\n            <div\r\n              key={i}\r\n              className=\"flex h-16 w-32 shrink-0 items-center justify-center rounded-md bg-secondary text-sm font-medium\"\r\n            >\r\n              Item {i + 1}\r\n            </div>\r\n          ))}\r\n        </div>\r\n      </ScrollArea>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/scroll-area-horizontal-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

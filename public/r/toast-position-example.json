@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-position-example",
+  "title": "Toast Position Example",
+  "description": "Atomic example for the Luck UI Toast component.",
+  "registryDependencies": [
+    "button",
+    "select",
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/toast-position-example.tsx",
+      "content": "import { Toast } from \"@base-ui/react/toast\";\r\nimport { useState } from \"react\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nimport {\r\n  Select,\r\n  SelectContent,\r\n  SelectItem,\r\n  SelectTrigger,\r\n  SelectValue,\r\n} from \"registry/default/ui/select\";\r\nimport { ToastProvider, type ToastPosition } from \"registry/default/ui/toast\";\r\nconst positionedToastManager = Toast.createToastManager();\r\nconst POSITIONS: ToastPosition[] = [\r\n  \"top-left\",\r\n  \"top-center\",\r\n  \"top-right\",\r\n  \"bottom-left\",\r\n  \"bottom-center\",\r\n  \"bottom-right\",\r\n];\r\nconst POSITION_ITEMS = POSITIONS.map((value) => ({\r\n  value,\r\n  label: value.replace(\"-\", \" \"),\r\n}));\r\nexport function ToastPositionExample() {\r\n  const [position, setPosition] = useState<ToastPosition>(\"bottom-right\");\r\n\r\n  return (\r\n    <ToastProvider position={position} toastManager={positionedToastManager}>\r\n      <div className=\"flex flex-col items-start gap-3\">\r\n        <Select\r\n          items={POSITION_ITEMS}\r\n          value={position}\r\n          onValueChange={(value) => {\r\n            if (value) {\r\n              setPosition(value as ToastPosition);\r\n            }\r\n          }}\r\n        >\r\n          <SelectTrigger variant=\"outline\" className=\"w-44\">\r\n            <SelectValue placeholder=\"Select a position\" />\r\n          </SelectTrigger>\r\n          <SelectContent>\r\n            {POSITION_ITEMS.map((item) => (\r\n              <SelectItem key={item.value} value={item.value}>\r\n                {item.label}\r\n              </SelectItem>\r\n            ))}\r\n          </SelectContent>\r\n        </Select>\r\n        <Button\r\n          variant=\"outline\"\r\n          onClick={() => {\r\n            positionedToastManager.add({\r\n              title: \"Position updated\",\r\n              description: `This toast is rendered at ${position}.`,\r\n              type: \"info\",\r\n            });\r\n          }}\r\n        >\r\n          Show positioned toast\r\n        </Button>\r\n      </div>\r\n    </ToastProvider>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/toast-position-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

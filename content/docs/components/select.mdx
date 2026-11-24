@@ -1,0 +1,129 @@
+---
+title: Select
+description: Displays a dropdown list of options for the user to pick from.
+component: Select
+registry: select
+---
+
+import { SelectExample } from "registry/default/examples/select-default-example";
+import selectExampleSource from "registry/default/examples/select-default-example.tsx?raw";
+import { SelectVariantsExample } from "registry/default/examples/select-variants-example";
+import selectVariantsExampleSource from "registry/default/examples/select-variants-example.tsx?raw";
+import { SelectWithGroupsExample } from "registry/default/examples/select-with-groups-example";
+import selectWithGroupsExampleSource from "registry/default/examples/select-with-groups-example.tsx?raw";
+import { SelectControlledExample } from "registry/default/examples/select-controlled-example";
+import selectControlledExampleSource from "registry/default/examples/select-controlled-example.tsx?raw";
+import { SelectWithItemsExample } from "registry/default/examples/select-with-items-example";
+import selectWithItemsExampleSource from "registry/default/examples/select-with-items-example.tsx?raw";
+import selectSource from "registry/default/ui/select.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SelectExample">
+      <SelectExample />
+    </ComponentPreview>
+    <ComponentSource code={selectExampleSource} language="tsx" title="select-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### Trigger variants
+
+The trigger supports the same `variant` and `size` props as `Button`.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SelectVariantsExample">
+      <SelectVariantsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={selectVariantsExampleSource}
+      language="tsx"
+      title="select-variants-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### With separator
+
+Use `SelectSeparator` to visually group related options.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SelectWithGroupsExample">
+      <SelectWithGroupsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={selectWithGroupsExampleSource}
+      language="tsx"
+      title="select-with-groups-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Controlled
+
+Manage the selected value with React state.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SelectControlledExample">
+      <SelectControlledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={selectControlledExampleSource}
+      language="tsx"
+      title="select-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### With items prop
+
+Pass an `items` array to `Select` so `SelectValue` renders the matching label instead of the raw value.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SelectWithItemsExample">
+      <SelectWithItemsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={selectWithItemsExampleSource}
+      language="tsx"
+      title="select-with-items-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={selectSource} language="tsx" />
+
+## API Reference
+
+### Select
+
+<PropsTable component="Select" />
+
+### SelectTrigger
+
+<PropsTable component="SelectTrigger" />
+
+### SelectContent
+
+<PropsTable component="SelectContent" />
+
+### SelectItem
+
+<PropsTable component="SelectItem" />
+
+### SelectValue
+
+<PropsTable component="SelectValue" />
+
+### SelectSeparator
+
+<PropsTable component="SelectSeparator" />

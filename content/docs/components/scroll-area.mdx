@@ -1,0 +1,60 @@
+---
+title: Scroll Area
+description: A scrollable container with custom-styled scrollbars.
+component: Scroll Area
+registry: scroll-area
+---
+
+import { ScrollAreaExample } from "registry/default/examples/scroll-area-default-example";
+import scrollAreaExampleSource from "registry/default/examples/scroll-area-default-example.tsx?raw";
+import { ScrollAreaHorizontalExample } from "registry/default/examples/scroll-area-horizontal-example";
+import scrollAreaHorizontalExampleSource from "registry/default/examples/scroll-area-horizontal-example.tsx?raw";
+import scrollAreaSource from "registry/default/ui/scroll-area.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ScrollAreaExample">
+      <ScrollAreaExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={scrollAreaExampleSource}
+      language="tsx"
+      title="scroll-area-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### Horizontal scrolling
+
+Use the same `ScrollArea` component for horizontally scrollable content. Scrollbars automatically adapt to the content direction.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ScrollAreaHorizontalExample">
+      <ScrollAreaHorizontalExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={scrollAreaHorizontalExampleSource}
+      language="tsx"
+      title="scroll-area-horizontal-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={scrollAreaSource} language="tsx" />
+
+## API Reference
+
+### ScrollArea
+
+<PropsTable component="ScrollArea" />
+
+### ScrollBar
+
+<PropsTable component="ScrollBar" />

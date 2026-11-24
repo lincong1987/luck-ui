@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-default-example",
+  "title": "Slider Default Example",
+  "description": "Atomic example for the Luck UI Slider component.",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/slider-default-example.tsx",
+      "content": "import Slider from \"registry/default/ui/slider\";\r\nexport function SliderExample() {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Slider aria-label=\"Volume\" defaultValue={40} />\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/slider-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

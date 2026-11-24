@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-group-example",
+  "title": "KBD Group Example",
+  "description": "Atomic example for the Luck UI KBD component.",
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/kbd-group-example.tsx",
+      "content": "import { Kbd, KbdGroup } from \"registry/default/ui/kbd\";\r\n\r\nexport function KbdGroupExample() {\r\n  return (\r\n    <div className=\"flex items-center gap-4\">\r\n      <KbdGroup>\r\n        <Kbd>⌘</Kbd>\r\n        <span className=\"text-muted-foreground\">+</span>\r\n        <Kbd>K</Kbd>\r\n      </KbdGroup>\r\n      <KbdGroup>\r\n        <Kbd>Ctrl</Kbd>\r\n        <span className=\"text-muted-foreground\">+</span>\r\n        <Kbd>Shift</Kbd>\r\n        <span className=\"text-muted-foreground\">+</span>\r\n        <Kbd>B</Kbd>\r\n      </KbdGroup>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/kbd-group-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

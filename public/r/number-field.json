@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "number-field",
+  "title": "Number Field",
+  "description": "Luck UI Number Field component.",
+  "dependencies": [
+    "@base-ui/react",
+    "@phosphor-icons/react",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/number-field.tsx",
+      "content": "import { NumberField as BaseNumberField } from \"@base-ui/react\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { cva } from \"class-variance-authority\";\r\nimport type { VariantProps } from \"class-variance-authority\";\r\nimport { MinusIcon, PlusIcon } from \"@phosphor-icons/react\";\r\n\r\nconst NumberField = BaseNumberField.Root;\r\n\r\nconst numberFieldGroupVariants = cva(\r\n  \"flex w-full min-w-0 items-center overflow-visible rounded-lg bg-field text-foreground data-disabled:cursor-not-allowed data-disabled:opacity-50\",\r\n  {\r\n    defaultVariants: {\r\n      size: \"default\",\r\n    },\r\n    variants: {\r\n      size: {\r\n        sm: \"h-8 text-sm\",\r\n        default: \"h-9 text-sm\",\r\n        lg: \"h-10 text-base\",\r\n      },\r\n    },\r\n  },\r\n);\r\n\r\nfunction NumberFieldGroup({\r\n  className,\r\n  size,\r\n  ...props\r\n}: BaseNumberField.Group.Props & VariantProps<typeof numberFieldGroupVariants>) {\r\n  return (\r\n    <BaseNumberField.Group\r\n      className={cn(numberFieldGroupVariants({ size }), className)}\r\n      data-slot=\"number-field-group\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction NumberFieldInput({ className, ...props }: BaseNumberField.Input.Props) {\r\n  return (\r\n    <BaseNumberField.Input\r\n      className={cn(\r\n        \"z-10 h-full min-w-0 flex-1 border border-border bg-transparent px-3 text-center tabular-nums transition-all duration-150 outline-none placeholder:text-muted-foreground not-data-disabled:hover:border-accent focus-visible:border-accent focus-visible:ring-[3px] focus-visible:ring-ring disabled:cursor-not-allowed\",\r\n        className,\r\n      )}\r\n      data-slot=\"number-field-input\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nconst numberFieldStepperClassName =\r\n  \"flex h-full shrink-0 bg-background cursor-default items-center justify-center self-stretch px-2.5 text-muted-foreground not-data-disabled:hover:bg-background-hover not-data-disabled:hover:text-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:size-4 border border-border\";\r\n\r\nfunction NumberFieldDecrement({ children, className, ...props }: BaseNumberField.Decrement.Props) {\r\n  return (\r\n    <BaseNumberField.Decrement\r\n      className={cn(\r\n        numberFieldStepperClassName,\r\n        \"rounded-l-lg rounded-r-none border-r-0\",\r\n        className,\r\n      )}\r\n      data-slot=\"number-field-decrement\"\r\n      aria-label=\"Decrease\"\r\n      {...props}\r\n    >\r\n      {children ?? <MinusIcon />}\r\n    </BaseNumberField.Decrement>\r\n  );\r\n}\r\n\r\nfunction NumberFieldIncrement({ children, className, ...props }: BaseNumberField.Increment.Props) {\r\n  return (\r\n    <BaseNumberField.Increment\r\n      className={cn(\r\n        numberFieldStepperClassName,\r\n        \"rounded-l-none rounded-r-lg border-l-0\",\r\n        className,\r\n      )}\r\n      data-slot=\"number-field-increment\"\r\n      aria-label=\"Increase\"\r\n      {...props}\r\n    >\r\n      {children ?? <PlusIcon />}\r\n    </BaseNumberField.Increment>\r\n  );\r\n}\r\n\r\nfunction NumberFieldScrubArea({ className, ...props }: BaseNumberField.ScrubArea.Props) {\r\n  return (\r\n    <BaseNumberField.ScrubArea\r\n      className={cn(\"cursor-ew-resize select-none\", className)}\r\n      data-slot=\"number-field-scrub-area\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction NumberFieldScrubAreaCursor({\r\n  className,\r\n  ...props\r\n}: BaseNumberField.ScrubAreaCursor.Props) {\r\n  return (\r\n    <BaseNumberField.ScrubAreaCursor\r\n      className={cn(\"drop-shadow-sm\", className)}\r\n      data-slot=\"number-field-scrub-area-cursor\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport {\r\n  NumberField,\r\n  NumberFieldGroup,\r\n  NumberFieldInput,\r\n  NumberFieldDecrement,\r\n  NumberFieldIncrement,\r\n  NumberFieldScrubArea,\r\n  NumberFieldScrubAreaCursor,\r\n};\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/number-field.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

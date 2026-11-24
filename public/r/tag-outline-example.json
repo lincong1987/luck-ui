@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tag-outline-example",
+  "title": "Tag Outline Example",
+  "description": "Atomic example for the Luck UI Tag component.",
+  "registryDependencies": [
+    "tag"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/tag-outline-example.tsx",
+      "content": "import { Tag } from \"registry/default/ui/tag\";\r\nexport function OutlineTagExample() {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Tag variant=\"outline\">Outline</Tag>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/tag-outline-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

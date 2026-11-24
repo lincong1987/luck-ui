@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-default-example",
+  "title": "Dialog Default Example",
+  "description": "Atomic example for the Luck UI Dialog component.",
+  "registryDependencies": [
+    "dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/dialog-default-example.tsx",
+      "content": "import {\r\n  Dialog,\r\n  DialogBody,\r\n  DialogClose,\r\n  DialogContent,\r\n  DialogDescription,\r\n  DialogFooter,\r\n  DialogHeader,\r\n  DialogTitle,\r\n  DialogTrigger,\r\n} from \"registry/default/ui/dialog\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function DialogExample() {\r\n  return (\r\n    <Dialog>\r\n      <DialogTrigger render={<Button variant=\"outline\">Open Dialog</Button>} />\r\n      <DialogContent>\r\n        <DialogHeader>\r\n          <DialogTitle>Confirm Action</DialogTitle>\r\n          <DialogDescription>\r\n            Are you sure you want to proceed? This action cannot be undone.\r\n          </DialogDescription>\r\n        </DialogHeader>\r\n        <DialogBody>\r\n          <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n            Additional context or details about the action can go here.\r\n          </p>\r\n        </DialogBody>\r\n        <DialogFooter>\r\n          <DialogClose render={<Button variant=\"secondary\">Cancel</Button>} />\r\n          <Button>Continue</Button>\r\n        </DialogFooter>\r\n      </DialogContent>\r\n    </Dialog>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/dialog-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

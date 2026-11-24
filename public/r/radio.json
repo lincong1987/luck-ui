@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio",
+  "title": "Radio",
+  "description": "Luck UI Radio component.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/radio.tsx",
+      "content": "import { Radio as RadioPrimitive } from \"@base-ui/react/radio\";\r\nimport { RadioGroup as RadioGroupPrimitive } from \"@base-ui/react/radio-group\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nfunction RadioGroup({ className, ...props }: RadioGroupPrimitive.Props) {\r\n  return (\r\n    <RadioGroupPrimitive\r\n      className={cn(\"flex flex-col gap-3\", className)}\r\n      data-slot=\"radio-group\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction Radio({ className, ...props }: RadioPrimitive.Root.Props) {\r\n  return (\r\n    <RadioPrimitive.Root\r\n      className={cn(\r\n        \"relative inline-flex size-4 shrink-0 items-center justify-center rounded-full border border-border bg-muted outline-none not-data-checked:not-data-disabled:hover:bg-muted-hover focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/48 data-disabled:cursor-not-allowed data-disabled:opacity-50 dark:aria-invalid:ring-destructive/24\",\r\n        \"data-checked:border-black/10 data-checked:bg-accent\",\r\n        className,\r\n      )}\r\n      data-slot=\"radio\"\r\n      {...props}\r\n    >\r\n      <RadioPrimitive.Indicator\r\n        keepMounted\r\n        className={cn(\r\n          \"absolute top-1/2 right-1/2 flex size-2 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-accent-foreground ring ring-black/5 data-unchecked:hidden\",\r\n          \"transition-all\",\r\n          \"data-starting-style:scale-75\",\r\n          \"data-ending-style:scale-75\",\r\n        )}\r\n        data-slot=\"radio-indicator\"\r\n      />\r\n    </RadioPrimitive.Root>\r\n  );\r\n}\r\n\r\nexport { RadioGroup, Radio, Radio as RadioGroupItem };\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/radio.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

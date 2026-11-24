@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-with-groups-example",
+  "title": "Combobox With Groups Example",
+  "description": "Atomic example for the Luck UI Combobox component.",
+  "registryDependencies": [
+    "combobox"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/combobox-with-groups-example.tsx",
+      "content": "import {\r\n  Combobox,\r\n  ComboboxContent,\r\n  ComboboxItem,\r\n  ComboboxList,\r\n  ComboboxTrigger,\r\n  ComboboxValue,\r\n  ComboboxGroup,\r\n  ComboboxGroupLabel,\r\n} from \"registry/default/ui/combobox\";\r\nexport function ComboboxWithGroupsExample() {\r\n  const frontend = [\r\n    { value: \"react\", label: \"React\" },\r\n    { value: \"vue\", label: \"Vue\" },\r\n    { value: \"svelte\", label: \"Svelte\" },\r\n  ];\r\n\r\n  const backend = [\r\n    { value: \"next\", label: \"Next.js\" },\r\n    { value: \"nuxt\", label: \"Nuxt\" },\r\n    { value: \"astro\", label: \"Astro\" },\r\n  ];\r\n\r\n  const allItems = [\r\n    { group: \"Frontend\", items: frontend },\r\n    { group: \"Backend\", items: backend },\r\n  ];\r\n\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Combobox items={allItems}>\r\n        <ComboboxTrigger className=\"w-56\">\r\n          <ComboboxValue placeholder=\"Select a framework\" />\r\n        </ComboboxTrigger>\r\n        <ComboboxContent>\r\n          <ComboboxList>\r\n            {(group: (typeof allItems)[number]) => (\r\n              <ComboboxGroup key={group.group}>\r\n                <ComboboxGroupLabel>{group.group}</ComboboxGroupLabel>\r\n                {group.items.map((item) => (\r\n                  <ComboboxItem key={item.value} value={item.value}>\r\n                    {item.label}\r\n                  </ComboboxItem>\r\n                ))}\r\n              </ComboboxGroup>\r\n            )}\r\n          </ComboboxList>\r\n        </ComboboxContent>\r\n      </Combobox>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/combobox-with-groups-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

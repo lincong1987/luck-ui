@@ -1,0 +1,59 @@
+---
+title: 简介
+description: 开始使用 Luck UI：一套基于 Base UI 打造的温暖风格组件库。
+---
+
+import luckCssSource from "registry/default/styles/style.css?raw";
+
+## 为什么选择 Luck UI？
+
+**Luck UI** 是一个基于 [Base UI](https://base-ui.com) 原语构建、使用 [Tailwind CSS v4](https://tailwindcss.com) 设置样式的 React 组件库。它提供可访问、可定制的组件，视觉风格温暖而亲切。
+
+设计围绕温暖与亲和展开：以暖灰与橙色为主的调色板，搭配较大的圆角。目标是打造富有人的温度、令人愿意靠近的界面——适合面向消费者的产品，而不是信息密集、数据繁重的仪表盘。
+
+动效系统偏好平滑、自然的过渡与细微的交互反馈，在提升精致感的同时不分散对内容的注意力。
+
+## 前置要求
+
+在使用 Luck UI 组件之前，请确认项目已具备以下条件：
+
+- React 19
+- Tailwind CSS 4
+- `@base-ui/react`
+- `@phosphor-icons/react`
+- `motion`
+
+## 安装
+
+### 1. 添加 Tailwind 与 Base UI
+
+按照适用于你所使用框架的 [Tailwind CSS v4 安装指南](https://tailwindcss.com/docs/installation) 和 [Base UI 快速开始](https://base-ui.com/react/overview/quick-start) 完成配置。
+
+### 2. 复制主题
+
+将 CSS 变量复制到全局样式表中。它们定义了温暖的配色以及所有组件共用的语义令牌。
+
+<CodeBlock code={luckCssSource} language="css" />
+
+<Callout type="info">
+  完整可用的令牌与色阶参考请见 [颜色](/zh/docs/styles) 页面。
+</Callout>
+
+### 3. 添加工具函数
+
+将 `cn` 辅助函数复制到项目中：
+
+<CodeBlock code={`import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`} language="ts" />
+
+### 4. 复制组件
+
+浏览 [组件](/zh/docs/components/button) 部分，把任意组件的源码复制到项目中。每个组件都是一个自包含文件，没有隐藏依赖。
+
+## 暗色模式
+
+在 `<html>` 元素上设置 `data-theme="dark"` 属性即可切换暗色模式。所有语义令牌都会在浅色与暗色环境之间自动适配。

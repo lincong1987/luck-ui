@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-default-example",
+  "title": "Popover Default Example",
+  "description": "Atomic example for the Luck UI Popover component.",
+  "registryDependencies": [
+    "popover",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/popover-default-example.tsx",
+      "content": "import {\r\n  Popover,\r\n  PopoverBody,\r\n  PopoverContent,\r\n  PopoverHeader,\r\n  PopoverTitle,\r\n  PopoverTrigger,\r\n} from \"registry/default/ui/popover\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function PopoverExample() {\r\n  return (\r\n    <Popover>\r\n      <PopoverTrigger render={<Button variant=\"outline\">Open Popover</Button>} />\r\n      <PopoverContent>\r\n        <PopoverHeader>\r\n          <PopoverTitle>Notifications</PopoverTitle>\r\n        </PopoverHeader>\r\n        <PopoverBody>\r\n          <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n            You are all caught up. Good job!\r\n          </p>\r\n        </PopoverBody>\r\n      </PopoverContent>\r\n    </Popover>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/popover-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

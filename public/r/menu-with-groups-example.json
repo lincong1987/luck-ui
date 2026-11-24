@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-with-groups-example",
+  "title": "Menu With Groups Example",
+  "description": "Atomic example for the Luck UI Menu component.",
+  "registryDependencies": [
+    "menu",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/menu-with-groups-example.tsx",
+      "content": "import {\r\n  Menu,\r\n  MenuTrigger,\r\n  MenuContent,\r\n  MenuItem,\r\n  MenuItemAddon,\r\n  MenuItemLabel,\r\n  MenuGroup,\r\n  MenuGroupLabel,\r\n  MenuSeparator,\r\n} from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nimport { UserIcon, BellIcon, ShieldIcon, FileTextIcon } from \"@phosphor-icons/react\";\r\nexport function MenuWithGroupsExample() {\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuGroup>\r\n          <MenuGroupLabel>Account</MenuGroupLabel>\r\n          <MenuItem>\r\n            <MenuItemAddon>\r\n              <UserIcon />\r\n            </MenuItemAddon>\r\n            <MenuItemLabel>Profile</MenuItemLabel>\r\n          </MenuItem>\r\n          <MenuItem>\r\n            <MenuItemAddon>\r\n              <BellIcon />\r\n            </MenuItemAddon>\r\n            <MenuItemLabel>Notifications</MenuItemLabel>\r\n          </MenuItem>\r\n        </MenuGroup>\r\n        <MenuSeparator />\r\n        <MenuGroup>\r\n          <MenuGroupLabel>Preferences</MenuGroupLabel>\r\n          <MenuItem>\r\n            <MenuItemAddon>\r\n              <ShieldIcon />\r\n            </MenuItemAddon>\r\n            <MenuItemLabel>Privacy</MenuItemLabel>\r\n          </MenuItem>\r\n          <MenuItem>\r\n            <MenuItemAddon>\r\n              <FileTextIcon />\r\n            </MenuItemAddon>\r\n            <MenuItemLabel>Terms</MenuItemLabel>\r\n          </MenuItem>\r\n        </MenuGroup>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/menu-with-groups-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

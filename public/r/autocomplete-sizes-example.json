@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "autocomplete-sizes-example",
+  "title": "Autocomplete Sizes Example",
+  "description": "Atomic example for the Luck UI Autocomplete component.",
+  "registryDependencies": [
+    "autocomplete"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/autocomplete-sizes-example.tsx",
+      "content": "import {\r\n  Autocomplete,\r\n  AutocompleteContent,\r\n  AutocompleteEmpty,\r\n  AutocompleteInput,\r\n  AutocompleteInputGroup,\r\n  AutocompleteItem,\r\n  AutocompleteList,\r\n} from \"registry/default/ui/autocomplete\";\r\n\r\nconst cities = [\"Amsterdam\", \"Berlin\", \"London\", \"Madrid\", \"Paris\", \"Rome\", \"Vienna\"];\r\n\r\nexport function AutocompleteSizesExample() {\r\n  return (\r\n    <div className=\"flex w-full max-w-64 flex-col gap-4\">\r\n      {([\"sm\", \"default\", \"lg\"] as const).map((size) => (\r\n        <Autocomplete key={size} items={cities}>\r\n          <AutocompleteInputGroup size={size}>\r\n            <AutocompleteInput placeholder={`Search (${size})`} />\r\n          </AutocompleteInputGroup>\r\n          <AutocompleteContent>\r\n            <AutocompleteEmpty>No cities found.</AutocompleteEmpty>\r\n            <AutocompleteList>\r\n              {(item: string) => (\r\n                <AutocompleteItem key={item} value={item}>\r\n                  {item}\r\n                </AutocompleteItem>\r\n              )}\r\n            </AutocompleteList>\r\n          </AutocompleteContent>\r\n        </Autocomplete>\r\n      ))}\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/autocomplete-sizes-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

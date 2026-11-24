@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tag-in-menu-example",
+  "title": "Tag In Menu Example",
+  "description": "Atomic example for the Luck UI Tag component.",
+  "registryDependencies": [
+    "tag",
+    "menu",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/tag-in-menu-example.tsx",
+      "content": "import { Tag } from \"registry/default/ui/tag\";\r\nimport { Menu, MenuContent, MenuItem, MenuItemLabel, MenuTrigger } from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function TagInMenuExample() {\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuItem>\r\n          <MenuItemLabel>Profile</MenuItemLabel>\r\n          <Tag size=\"sm\" variant=\"secondary\">\r\n            New\r\n          </Tag>\r\n        </MenuItem>\r\n        <MenuItem>\r\n          <MenuItemLabel>Settings</MenuItemLabel>\r\n          <Tag size=\"sm\" variant=\"outline\">\r\n            Beta\r\n          </Tag>\r\n        </MenuItem>\r\n        <MenuItem>\r\n          <MenuItemLabel>Billing</MenuItemLabel>\r\n        </MenuItem>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/tag-in-menu-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

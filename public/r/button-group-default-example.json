@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-default-example",
+  "title": "Button Group Default Example",
+  "description": "Atomic example for the Luck UI Button Group component.",
+  "registryDependencies": [
+    "button-group",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/button-group-default-example.tsx",
+      "content": "import { Button } from \"registry/default/ui/button\";\r\nimport { ButtonGroup } from \"registry/default/ui/button-group\";\r\nexport function ButtonGroupExample() {\r\n  return (\r\n    <ButtonGroup>\r\n      <Button variant=\"outline\">Previous</Button>\r\n      <Button variant=\"outline\">Next</Button>\r\n    </ButtonGroup>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/button-group-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

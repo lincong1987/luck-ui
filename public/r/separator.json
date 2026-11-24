@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "title": "Separator",
+  "description": "Luck UI Separator component.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/separator.tsx",
+      "content": "import { Separator as BaseSeparator } from \"@base-ui/react/separator\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport function Separator({ className, ...props }: BaseSeparator.Props) {\r\n  return (\r\n    <BaseSeparator\r\n      className={cn(\r\n        \"shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px data-[orientation=vertical]:not-[[class^='h-']]:not-[[class*='_h-']]:self-stretch\",\r\n        className,\r\n      )}\r\n      data-slot=\"separator\"\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/separator.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

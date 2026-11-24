@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-promise-example",
+  "title": "Toast Promise Example",
+  "description": "Atomic example for the Luck UI Toast component.",
+  "registryDependencies": [
+    "button",
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/toast-promise-example.tsx",
+      "content": "import { Button } from \"registry/default/ui/button\";\r\nimport { toastManager } from \"registry/default/ui/toast\";\r\nfunction sleep(ms: number) {\r\n  return new Promise((resolve) => {\r\n    setTimeout(resolve, ms);\r\n  });\r\n}\r\nexport function ToastPromiseExample() {\r\n  return (\r\n    <Button\r\n      variant=\"outline\"\r\n      onClick={() => {\r\n        void toastManager.promise(sleep(1500), {\r\n          loading: {\r\n            title: \"Uploading asset\",\r\n            description: \"Please wait while we process your file.\",\r\n            type: \"loading\",\r\n          },\r\n          success: {\r\n            title: \"Upload complete\",\r\n            description: \"The asset is ready to use in your library.\",\r\n            type: \"success\",\r\n          },\r\n          error: {\r\n            title: \"Upload failed\",\r\n            description: \"Try again after checking your network connection.\",\r\n            type: \"error\",\r\n          },\r\n        });\r\n      }}\r\n    >\r\n      Run async toast\r\n    </Button>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/toast-promise-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

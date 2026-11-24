@@ -1,0 +1,69 @@
+---
+title: 切换按钮
+description: 可在开启与关闭两种状态间切换的按钮。
+component: Toggle
+registry: toggle
+---
+
+import { ToggleExample } from "registry/default/examples/toggle-default-example";
+import toggleExampleSource from "registry/default/examples/toggle-default-example.tsx?raw";
+import { ToggleSizesExample } from "registry/default/examples/toggle-sizes-example";
+import toggleSizesExampleSource from "registry/default/examples/toggle-sizes-example.tsx?raw";
+import { ToggleWithIconsExample } from "registry/default/examples/toggle-with-icons-example";
+import toggleWithIconsExampleSource from "registry/default/examples/toggle-with-icons-example.tsx?raw";
+import toggleSource from "registry/default/ui/toggle.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToggleExample">
+      <ToggleExample />
+    </ComponentPreview>
+    <ComponentSource code={toggleExampleSource} language="tsx" title="toggle-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 尺寸
+
+可用尺寸：`default`、`sm`、`lg`。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToggleSizesExample">
+      <ToggleSizesExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={toggleSizesExampleSource}
+      language="tsx"
+      title="toggle-sizes-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 带图标
+
+在工具栏和格式控制中，可在切换按钮内放置图标。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToggleWithIconsExample">
+      <ToggleWithIconsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={toggleWithIconsExampleSource}
+      language="tsx"
+      title="toggle-with-icons-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={toggleSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Toggle" />

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "autocomplete-default-example",
+  "title": "Autocomplete Default Example",
+  "description": "Atomic example for the Luck UI Autocomplete component.",
+  "registryDependencies": [
+    "autocomplete"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/autocomplete-default-example.tsx",
+      "content": "import {\r\n  Autocomplete,\r\n  AutocompleteContent,\r\n  AutocompleteEmpty,\r\n  AutocompleteInput,\r\n  AutocompleteInputGroup,\r\n  AutocompleteItem,\r\n  AutocompleteList,\r\n} from \"registry/default/ui/autocomplete\";\r\n\r\nconst fruits = [\r\n  \"Apple\",\r\n  \"Banana\",\r\n  \"Blueberry\",\r\n  \"Cherry\",\r\n  \"Grapes\",\r\n  \"Mango\",\r\n  \"Orange\",\r\n  \"Peach\",\r\n  \"Pineapple\",\r\n  \"Strawberry\",\r\n];\r\n\r\nexport function AutocompleteExample() {\r\n  return (\r\n    <div className=\"w-full max-w-64\">\r\n      <Autocomplete items={fruits}>\r\n        <AutocompleteInputGroup>\r\n          <AutocompleteInput placeholder=\"Search a fruit\" />\r\n        </AutocompleteInputGroup>\r\n        <AutocompleteContent>\r\n          <AutocompleteEmpty>No fruits found.</AutocompleteEmpty>\r\n          <AutocompleteList>\r\n            {(item: string) => (\r\n              <AutocompleteItem key={item} value={item}>\r\n                {item}\r\n              </AutocompleteItem>\r\n            )}\r\n          </AutocompleteList>\r\n        </AutocompleteContent>\r\n      </Autocomplete>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/autocomplete-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

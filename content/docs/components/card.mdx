@@ -1,0 +1,116 @@
+---
+title: Card
+description: A container for grouping related content and actions.
+component: Card
+registry: card
+---
+
+import { CardExample } from "registry/default/examples/card-default-example";
+import cardExampleSource from "registry/default/examples/card-default-example.tsx?raw";
+import { CardWithActionExample } from "registry/default/examples/card-with-action-example";
+import cardWithActionExampleSource from "registry/default/examples/card-with-action-example.tsx?raw";
+import { CardColumnFooterExample } from "registry/default/examples/card-column-footer-example";
+import cardColumnFooterExampleSource from "registry/default/examples/card-column-footer-example.tsx?raw";
+import { CardMotionFooterExample } from "registry/default/examples/card-motion-footer-example";
+import cardMotionFooterExampleSource from "registry/default/examples/card-motion-footer-example.tsx?raw";
+import cardSource from "registry/default/ui/card.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardExample">
+      <CardExample />
+    </ComponentPreview>
+    <ComponentSource code={cardExampleSource} language="tsx" title="card-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### With action
+
+Use `CardAction` to place an action button in the header.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardWithActionExample">
+      <CardWithActionExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={cardWithActionExampleSource}
+      language="tsx"
+      title="card-with-action-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Column footer
+
+Use `direction="column"` on `CardFooter` to stack buttons vertically.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardColumnFooterExample">
+      <CardColumnFooterExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={cardColumnFooterExampleSource}
+      language="tsx"
+      title="card-column-footer-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Motion footer
+
+You can wrap the footer in `motion.div` with `AnimatePresence` to animate it in and out when conditions change.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CardMotionFooterExample">
+      <CardMotionFooterExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={cardMotionFooterExampleSource}
+      language="tsx"
+      title="card-motion-footer-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={cardSource} language="tsx" />
+
+## API Reference
+
+### Card
+
+<PropsTable component="Card" />
+
+### CardHeader
+
+<PropsTable component="CardHeader" />
+
+### CardTitle
+
+<PropsTable component="CardTitle" />
+
+### CardDescription
+
+<PropsTable component="CardDescription" />
+
+### CardAction
+
+<PropsTable component="CardAction" />
+
+### CardBody
+
+`CardBody` is an alias for `CardPanel`.
+
+<PropsTable component="CardPanel" />
+
+### CardFooter
+
+<PropsTable component="CardFooter" />

@@ -1,0 +1,137 @@
+---
+title: 数字输入框
+description: 带步进按钮、键盘增减、拖拽调节与本地化格式的数字输入框。
+component: NumberField
+registry: number-field
+---
+
+import { NumberFieldExample } from "registry/default/examples/number-field-default-example";
+import numberFieldExampleSource from "registry/default/examples/number-field-default-example.tsx?raw";
+import { NumberFieldSizesExample } from "registry/default/examples/number-field-sizes-example";
+import numberFieldSizesExampleSource from "registry/default/examples/number-field-sizes-example.tsx?raw";
+import { NumberFieldControlledExample } from "registry/default/examples/number-field-controlled-example";
+import numberFieldControlledExampleSource from "registry/default/examples/number-field-controlled-example.tsx?raw";
+import { NumberFieldFormatExample } from "registry/default/examples/number-field-format-example";
+import numberFieldFormatExampleSource from "registry/default/examples/number-field-format-example.tsx?raw";
+import { NumberFieldScrubExample } from "registry/default/examples/number-field-scrub-example";
+import numberFieldScrubExampleSource from "registry/default/examples/number-field-scrub-example.tsx?raw";
+import numberFieldSource from "registry/default/ui/number-field.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="NumberFieldExample">
+      <NumberFieldExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={numberFieldExampleSource}
+      language="tsx"
+      title="number-field-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 尺寸
+
+在 `NumberFieldGroup` 上使用 `size` 属性，可在 `sm`、`default` 和 `lg` 之间切换。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="NumberFieldSizesExample">
+      <NumberFieldSizesExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={numberFieldSizesExampleSource}
+      language="tsx"
+      title="number-field-sizes-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 受控
+
+通过 `value` 与 `onValueChange`，用 React 状态管理数值。输入为空时，值为 `null`。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="NumberFieldControlledExample">
+      <NumberFieldControlledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={numberFieldControlledExampleSource}
+      language="tsx"
+      title="number-field-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 格式化
+
+向 `format` 传入 `Intl.NumberFormatOptions`，即可显示货币、百分比或单位。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="NumberFieldFormatExample">
+      <NumberFieldFormatExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={numberFieldFormatExampleSource}
+      language="tsx"
+      title="number-field-format-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 拖拽调节区域
+
+用 `NumberFieldScrubArea` 包裹标签，用户即可横向拖动来改变数值。拖拽时 `NumberFieldScrubAreaCursor` 会渲染一个虚拟光标。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="NumberFieldScrubExample">
+      <NumberFieldScrubExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={numberFieldScrubExampleSource}
+      language="tsx"
+      title="number-field-scrub-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={numberFieldSource} language="tsx" />
+
+## API 参考
+
+### NumberField
+
+<PropsTable component="NumberField" />
+
+### NumberFieldGroup
+
+<PropsTable component="NumberFieldGroup" />
+
+### NumberFieldInput
+
+<PropsTable component="NumberFieldInput" />
+
+### NumberFieldDecrement
+
+<PropsTable component="NumberFieldDecrement" />
+
+### NumberFieldIncrement
+
+<PropsTable component="NumberFieldIncrement" />
+
+### NumberFieldScrubArea
+
+<PropsTable component="NumberFieldScrubArea" />
+
+### NumberFieldScrubAreaCursor
+
+<PropsTable component="NumberFieldScrubAreaCursor" />

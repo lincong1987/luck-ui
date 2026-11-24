@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-group-default-example",
+  "title": "Input Group Default Example",
+  "description": "Atomic example for the Luck UI Input Group component.",
+  "registryDependencies": [
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/input-group-default-example.tsx",
+      "content": "import { MagnifyingGlassIcon } from \"@phosphor-icons/react\";\r\nimport { InputGroup, InputGroupAddon, InputGroupInput } from \"registry/default/ui/input-group\";\r\nexport function InputGroupExample() {\r\n  return (\r\n    <div className=\"flex w-full max-w-sm flex-wrap items-center gap-4\">\r\n      <InputGroup>\r\n        <InputGroupInput placeholder=\"Search components...\" />\r\n        <InputGroupAddon>\r\n          <MagnifyingGlassIcon />\r\n        </InputGroupAddon>\r\n      </InputGroup>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/input-group-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

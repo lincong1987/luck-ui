@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-default-example",
+  "title": "Toast Default Example",
+  "description": "Atomic example for the Luck UI Toast component.",
+  "registryDependencies": [
+    "button",
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/toast-default-example.tsx",
+      "content": "import { Button } from \"registry/default/ui/button\";\r\nimport { toastManager } from \"registry/default/ui/toast\";\r\nexport function ToastExample() {\r\n  return (\r\n    <Button\r\n      variant=\"outline\"\r\n      onClick={() => {\r\n        toastManager.add({\r\n          title: \"Changes saved\",\r\n          description: \"Your profile settings have been updated.\",\r\n          type: \"success\",\r\n        });\r\n      }}\r\n    >\r\n      Show toast\r\n    </Button>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/toast-default-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

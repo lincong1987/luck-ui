@@ -1,0 +1,192 @@
+---
+title: 按钮
+description: 显示按钮或外观与按钮一致的组件。
+component: Button
+registry: button
+---
+
+import { ButtonExample } from "registry/default/examples/button-default-example";
+import buttonExampleSource from "registry/default/examples/button-default-example.tsx?raw";
+import { SecondaryButtonExample } from "registry/default/examples/button-secondary-example";
+import secondaryButtonExampleSource from "registry/default/examples/button-secondary-example.tsx?raw";
+import { OutlineButtonExample } from "registry/default/examples/button-outline-example";
+import outlineButtonExampleSource from "registry/default/examples/button-outline-example.tsx?raw";
+import { GhostButtonExample } from "registry/default/examples/button-ghost-example";
+import ghostButtonExampleSource from "registry/default/examples/button-ghost-example.tsx?raw";
+import { DestructiveButtonExample } from "registry/default/examples/button-destructive-example";
+import destructiveButtonExampleSource from "registry/default/examples/button-destructive-example.tsx?raw";
+import { DestructiveOutlineButtonExample } from "registry/default/examples/button-destructive-outline-example";
+import destructiveOutlineButtonExampleSource from "registry/default/examples/button-destructive-outline-example.tsx?raw";
+import { LoadingButtonExample } from "registry/default/examples/button-loading-example";
+import loadingButtonExampleSource from "registry/default/examples/button-loading-example.tsx?raw";
+import { InvertButtonExample } from "registry/default/examples/button-invert-example";
+import invertButtonExampleSource from "registry/default/examples/button-invert-example.tsx?raw";
+import { IconButtonExample } from "registry/default/examples/button-icon-example";
+import iconButtonExampleSource from "registry/default/examples/button-icon-example.tsx?raw";
+import { ButtonSizesExample } from "registry/default/examples/button-sizes-example";
+import buttonSizesExampleSource from "registry/default/examples/button-sizes-example.tsx?raw";
+import buttonSource from "registry/default/ui/button.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ButtonExample">
+      <ButtonExample />
+    </ComponentPreview>
+    <ComponentSource code={buttonExampleSource} language="tsx" title="button-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 变体
+
+#### 次要（Secondary）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="SecondaryButtonExample">
+      <SecondaryButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={secondaryButtonExampleSource}
+      language="tsx"
+      title="button-secondary-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+#### 描边（Outline）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="OutlineButtonExample">
+      <OutlineButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={outlineButtonExampleSource}
+      language="tsx"
+      title="button-outline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+#### 幽灵（Ghost）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="GhostButtonExample">
+      <GhostButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={ghostButtonExampleSource}
+      language="tsx"
+      title="button-ghost-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+#### 危险（Destructive）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DestructiveButtonExample">
+      <DestructiveButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={destructiveButtonExampleSource}
+      language="tsx"
+      title="button-destructive-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+#### 危险描边（Destructive outline）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DestructiveOutlineButtonExample">
+      <DestructiveOutlineButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={destructiveOutlineButtonExampleSource}
+      language="tsx"
+      title="button-destructive-outline-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+#### 反色（Invert）
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InvertButtonExample">
+      <InvertButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={invertButtonExampleSource}
+      language="tsx"
+      title="button-invert-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 尺寸
+
+可用尺寸：`default`、`sm`、`lg`、`icon`、`icon-sm`。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ButtonSizesExample">
+      <ButtonSizesExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={buttonSizesExampleSource}
+      language="tsx"
+      title="button-sizes-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 图标
+
+使用 `icon` 或 `icon-sm` 尺寸，并在按钮内放置 SVG 图标。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="IconButtonExample">
+      <IconButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={iconButtonExampleSource}
+      language="tsx"
+      title="button-icon-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 加载状态
+
+传入 `loading` 属性可显示加载指示器并模糊按钮内容：
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="LoadingButtonExample">
+      <LoadingButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={loadingButtonExampleSource}
+      language="tsx"
+      title="button-loading-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={buttonSource} language="tsx" />
+
+## API 参考
+
+<PropsTable component="Button" />

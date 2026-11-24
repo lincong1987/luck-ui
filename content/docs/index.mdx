@@ -1,0 +1,59 @@
+---
+title: Introduction
+description: Getting started with Luck UI — a warm component library built on Base UI.
+---
+
+import luckCssSource from "registry/default/styles/style.css?raw";
+
+## Why Luck UI?
+
+**Luck UI** is a React component library built on [Base UI](https://base-ui.com) primitives and styled with [Tailwind CSS v4](https://tailwindcss.com). It provides accessible, customizable components with a warm, approachable aesthetic.
+
+The design centers on warmth and friendliness, using a palette of warm grays and oranges alongside large rounded corners. The goal is to create interfaces that feel human and inviting — ideal for consumer-facing products rather than dense, data-heavy dashboards.
+
+The motion system favors smooth, natural transitions and subtle micro-interactions that add polish without distracting from the content.
+
+## Prerequisites
+
+Before using Luck UI components, ensure your project is set up with:
+
+- React 19
+- Tailwind CSS 4
+- `@base-ui/react`
+- `@phosphor-icons/react`
+- `motion`
+
+## Installation
+
+### 1. Add Tailwind and Base UI
+
+Follow the [Tailwind CSS v4 installation guide](https://tailwindcss.com/docs/installation) and the [Base UI quick start](https://base-ui.com/react/overview/quick-start) for your framework.
+
+### 2. Copy the theme
+
+Copy the CSS variables into your global stylesheet. These define the warm color palette and semantic tokens used by all components.
+
+<CodeBlock code={luckCssSource} language="css" />
+
+<Callout type="info">
+  See the [Colors](/docs/styles) page for a full reference of all available tokens and scales.
+</Callout>
+
+### 3. Add utilities
+
+Copy the `cn` helper into your project:
+
+<CodeBlock code={`import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`} language="ts" />
+
+### 4. Copy components
+
+Browse the [Components](/docs/components/button) section and copy any component source into your project. Each component is a self-contained file with no hidden dependencies.
+
+## Dark mode
+
+Dark mode is toggled by setting the `data-theme="dark"` attribute on the `<html>` element. All semantic tokens automatically adapt between light and dark contexts.

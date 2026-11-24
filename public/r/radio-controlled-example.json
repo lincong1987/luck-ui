@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-controlled-example",
+  "title": "Radio Controlled Example",
+  "description": "Atomic example for the Luck UI Radio component.",
+  "registryDependencies": [
+    "radio"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/radio-controlled-example.tsx",
+      "content": "import { useState } from \"react\";\r\nimport { RadioGroup, Radio } from \"registry/default/ui/radio\";\r\nexport function RadioControlledExample() {\r\n  const [value, setValue] = useState(\"system\");\r\n\r\n  return (\r\n    <div className=\"flex flex-col gap-4\">\r\n      <RadioGroup value={value} onValueChange={setValue}>\r\n        <label className=\"flex items-center gap-2 text-sm\">\r\n          <Radio value=\"system\" />\r\n          System\r\n        </label>\r\n        <label className=\"flex items-center gap-2 text-sm\">\r\n          <Radio value=\"light\" />\r\n          Light\r\n        </label>\r\n        <label className=\"flex items-center gap-2 text-sm\">\r\n          <Radio value=\"dark\" />\r\n          Dark\r\n        </label>\r\n      </RadioGroup>\r\n      <span className=\"text-sm text-gray-600 dark:text-gray-400\">Selected: {value}</span>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/radio-controlled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

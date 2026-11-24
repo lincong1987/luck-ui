@@ -1,0 +1,130 @@
+---
+title: 对话框
+description: 覆盖在主窗口或其他对话框窗口之上的窗口。
+component: Dialog
+registry: dialog
+---
+
+import { DialogExample } from "registry/default/examples/dialog-default-example";
+import dialogExampleSource from "registry/default/examples/dialog-default-example.tsx?raw";
+import { DialogNestedExample } from "registry/default/examples/dialog-nested-example";
+import dialogNestedExampleSource from "registry/default/examples/dialog-nested-example.tsx?raw";
+import { DialogNoCloseButtonExample } from "registry/default/examples/dialog-no-close-button-example";
+import dialogNoCloseButtonExampleSource from "registry/default/examples/dialog-no-close-button-example.tsx?raw";
+import { DialogRowFooterExample } from "registry/default/examples/dialog-row-footer-example";
+import dialogRowFooterExampleSource from "registry/default/examples/dialog-row-footer-example.tsx?raw";
+import dialogSource from "registry/default/ui/dialog.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogExample">
+      <DialogExample />
+    </ComponentPreview>
+    <ComponentSource code={dialogExampleSource} language="tsx" title="dialog-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 隐藏关闭按钮
+
+在 `DialogHeader` 上设置 `closeButton={false}` 可隐藏默认的关闭按钮。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogNoCloseButtonExample">
+      <DialogNoCloseButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={dialogNoCloseButtonExampleSource}
+      language="tsx"
+      title="dialog-no-close-button-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 嵌套对话框
+
+对话框可以相互嵌套。子对话框打开时，可用 `data-nested-dialog-open` 与 `--nested-dialogs` 在视觉上弱化父对话框。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogNestedExample">
+      <DialogNestedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={dialogNestedExampleSource}
+      language="tsx"
+      title="dialog-nested-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 横向页脚
+
+在 `DialogFooter` 上设置 `direction="row"`，让按钮横向排列。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogRowFooterExample">
+      <DialogRowFooterExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={dialogRowFooterExampleSource}
+      language="tsx"
+      title="dialog-row-footer-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={dialogSource} language="tsx" />
+
+## API 参考
+
+### Dialog
+
+<PropsTable component="Dialog" />
+
+### DialogTrigger
+
+<PropsTable component="DialogTrigger" />
+
+### DialogContent
+
+<PropsTable component="DialogContent" />
+
+### DialogHeader
+
+<PropsTable component="DialogHeader" />
+
+### DialogBody
+
+<PropsTable component="DialogBody" />
+
+### DialogFooter
+
+<PropsTable component="DialogFooter" />
+
+### DialogTitle
+
+<PropsTable component="DialogTitle" />
+
+### DialogDescription
+
+<PropsTable component="DialogDescription" />
+
+### DialogBackdrop
+
+<PropsTable component="DialogBackdrop" />
+
+### DialogClose
+
+<PropsTable component="DialogClose" />
+
+### DialogPortal
+
+<PropsTable component="DialogPortal" />

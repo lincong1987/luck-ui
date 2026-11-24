@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-with-kbd-example",
+  "title": "Menu With Kbd Example",
+  "description": "Atomic example for the Luck UI Menu component.",
+  "registryDependencies": [
+    "menu",
+    "button",
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/menu-with-kbd-example.tsx",
+      "content": "import {\r\n  Menu,\r\n  MenuTrigger,\r\n  MenuContent,\r\n  MenuItem,\r\n  MenuItemAddon,\r\n  MenuItemLabel,\r\n  MenuSeparator,\r\n} from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nimport { Kbd } from \"registry/default/ui/kbd\";\r\n\r\nexport function MenuWithKbdExample() {\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuItem>\r\n          <MenuItemLabel>New tab</MenuItemLabel>\r\n          <MenuItemAddon>\r\n            <Kbd>⌘T</Kbd>\r\n          </MenuItemAddon>\r\n        </MenuItem>\r\n        <MenuItem>\r\n          <MenuItemLabel>New window</MenuItemLabel>\r\n          <MenuItemAddon>\r\n            <Kbd>⌘N</Kbd>\r\n          </MenuItemAddon>\r\n        </MenuItem>\r\n        <MenuItem>\r\n          <MenuItemLabel>Downloads</MenuItemLabel>\r\n          <MenuItemAddon>\r\n            <Kbd>⌘J</Kbd>\r\n          </MenuItemAddon>\r\n        </MenuItem>\r\n        <MenuSeparator />\r\n        <MenuItem>\r\n          <MenuItemLabel>Settings</MenuItemLabel>\r\n          <MenuItemAddon>\r\n            <Kbd>⌘,</Kbd>\r\n          </MenuItemAddon>\r\n        </MenuItem>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/menu-with-kbd-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

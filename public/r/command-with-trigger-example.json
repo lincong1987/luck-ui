@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-with-trigger-example",
+  "title": "Command With Trigger Example",
+  "description": "Atomic example for the Luck UI Command component.",
+  "registryDependencies": [
+    "command",
+    "input-group",
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/command-with-trigger-example.tsx",
+      "content": "import { ArrowsClockwiseIcon, GitBranchIcon, TerminalIcon, TrashIcon } from \"@phosphor-icons/react\";\r\nimport {\r\n  Command,\r\n  CommandContent,\r\n  CommandEmpty,\r\n  CommandInput,\r\n  CommandItem,\r\n  CommandItemLabel,\r\n  CommandList,\r\n  CommandShortcut,\r\n  CommandTrigger,\r\n} from \"registry/default/ui/command\";\r\nimport { InputGroup, InputGroupAddon, InputGroupButton } from \"registry/default/ui/input-group\";\r\nimport { Kbd } from \"registry/default/ui/kbd\";\r\n\r\nconst commands = [\r\n  { icon: GitBranchIcon, label: \"Branch\", shortcut: \"B\", value: \"branch\" },\r\n  { icon: TerminalIcon, label: \"Terminal\", shortcut: \"T\", value: \"terminal\" },\r\n  { icon: ArrowsClockwiseIcon, label: \"Resume\", shortcut: \"R\", value: \"resume\" },\r\n  { icon: TrashIcon, label: \"Clear\", shortcut: \"C\", value: \"clear\" },\r\n];\r\n\r\ntype CommandItemValue = (typeof commands)[number];\r\n\r\nexport function CommandWithTriggerExample() {\r\n  return (\r\n    <div className=\"w-full max-w-md\">\r\n      <Command items={commands}>\r\n        <InputGroup>\r\n          <CommandInput placeholder=\"Type / or press the button\" />\r\n          <InputGroupAddon align=\"inline-end\">\r\n            <CommandTrigger\r\n              aria-label=\"Open commands\"\r\n              render={<InputGroupButton size=\"icon-xs\" variant=\"ghost\" />}\r\n            >\r\n              <span className=\"text-sm font-medium\">/</span>\r\n            </CommandTrigger>\r\n          </InputGroupAddon>\r\n        </InputGroup>\r\n        <CommandContent>\r\n          <CommandEmpty>No commands found.</CommandEmpty>\r\n          <CommandList>\r\n            {(command: CommandItemValue) => (\r\n              <CommandItem key={command.value} value={command}>\r\n                <command.icon />\r\n                <CommandItemLabel>{command.label}</CommandItemLabel>\r\n                <CommandShortcut>\r\n                  <Kbd>⌘</Kbd>\r\n                  <Kbd>{command.shortcut}</Kbd>\r\n                </CommandShortcut>\r\n              </CommandItem>\r\n            )}\r\n          </CommandList>\r\n        </CommandContent>\r\n      </Command>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/command-with-trigger-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

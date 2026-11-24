@@ -1,0 +1,133 @@
+---
+title: 输入框组
+description: 可组合的输入容器，用于放置图标、文本、按钮和多行控件。
+component: Input Group
+registry: input-group
+---
+
+import { InputGroupExample } from "registry/default/examples/input-group-default-example";
+import inputGroupExampleSource from "registry/default/examples/input-group-default-example.tsx?raw";
+import { InputGroupWithButtonExample } from "registry/default/examples/input-group-with-button-example";
+import inputGroupWithButtonExampleSource from "registry/default/examples/input-group-with-button-example.tsx?raw";
+import { InputGroupWithTextExample } from "registry/default/examples/input-group-with-text-example";
+import inputGroupWithTextExampleSource from "registry/default/examples/input-group-with-text-example.tsx?raw";
+import { InputGroupTextareaExample } from "registry/default/examples/input-group-textarea-example";
+import inputGroupTextareaExampleSource from "registry/default/examples/input-group-textarea-example.tsx?raw";
+import { AgentChatInputGroupExample } from "registry/default/examples/input-group-agent-chat-example";
+import agentChatInputGroupExampleSource from "registry/default/examples/input-group-agent-chat-example.tsx?raw";
+import inputGroupSource from "registry/default/ui/input-group.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InputGroupExample">
+      <InputGroupExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={inputGroupExampleSource}
+      language="tsx"
+      title="input-group-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 按钮
+
+在附属内容中使用 `InputGroupButton`，放置属于该字段的紧凑操作。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InputGroupWithButtonExample">
+      <InputGroupWithButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={inputGroupWithButtonExampleSource}
+      language="tsx"
+      title="input-group-with-button-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 文本
+
+用 `InputGroupText` 显示静态前缀、后缀、键盘提示和短标签。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InputGroupWithTextExample">
+      <InputGroupWithTextExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={inputGroupWithTextExampleSource}
+      language="tsx"
+      title="input-group-with-text-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 多行文本
+
+控件需要多行输入时，使用 `InputGroupTextarea`。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="InputGroupTextareaExample">
+      <InputGroupTextareaExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={inputGroupTextareaExampleSource}
+      language="tsx"
+      title="input-group-textarea-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 智能体对话
+
+常见的智能体聊天输入器，包含附件、模式控制、语音输入和提交操作。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AgentChatInputGroupExample">
+      <AgentChatInputGroupExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={agentChatInputGroupExampleSource}
+      language="tsx"
+      title="input-group-agent-chat-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={inputGroupSource} language="tsx" />
+
+## API 参考
+
+### InputGroup
+
+<PropsTable component="InputGroup" />
+
+### InputGroupInput
+
+<PropsTable component="InputGroupInput" />
+
+### InputGroupTextarea
+
+<PropsTable component="InputGroupTextarea" />
+
+### InputGroupAddon
+
+<PropsTable component="InputGroupAddon" />
+
+### InputGroupButton
+
+<PropsTable component="InputGroupButton" />
+
+### InputGroupText
+
+<PropsTable component="InputGroupText" />

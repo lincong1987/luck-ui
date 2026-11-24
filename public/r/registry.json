@@ -1,0 +1,2393 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "luck-ui",
+  "homepage": "https://github.com/lincong1987/luck-ui",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utils",
+      "description": "Shared className utility.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/default/lib/utils.ts",
+          "type": "registry:lib",
+          "target": "@lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "Luck Theme",
+      "description": "Luck UI Tailwind CSS variables and base styles.",
+      "files": [
+        {
+          "path": "registry/default/styles/style.css",
+          "type": "registry:style"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Luck UI Accordion component.",
+      "files": [
+        {
+          "path": "registry/default/ui/accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/accordion.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react"]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "Luck UI Alert Dialog component.",
+      "files": [
+        {
+          "path": "registry/default/ui/alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert-dialog.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "autocomplete",
+      "type": "registry:ui",
+      "title": "Autocomplete",
+      "description": "Luck UI Autocomplete component.",
+      "files": [
+        {
+          "path": "registry/default/ui/autocomplete.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/autocomplete.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react", "class-variance-authority"]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Luck UI Avatar component.",
+      "files": [
+        {
+          "path": "registry/default/ui/avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Luck UI Button component.",
+      "files": [
+        {
+          "path": "registry/default/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": [
+        "@base-ui/react",
+        "@phosphor-icons/react",
+        "class-variance-authority",
+        "motion"
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "description": "Luck UI Button Group component.",
+      "files": [
+        {
+          "path": "registry/default/ui/button-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button-group.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "separator"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Luck UI Card component.",
+      "files": [
+        {
+          "path": "registry/default/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Luck UI Checkbox component.",
+      "files": [
+        {
+          "path": "registry/default/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "motion"]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Luck UI Combobox component.",
+      "files": [
+        {
+          "path": "registry/default/ui/combobox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/combobox.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "tag"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react"]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Luck UI Dialog component.",
+      "files": [
+        {
+          "path": "registry/default/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react"]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "Luck UI Drawer component.",
+      "files": [
+        {
+          "path": "registry/default/ui/drawer.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/drawer.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button", "scroll-area"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react"]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Luck UI Input component.",
+      "files": [
+        {
+          "path": "registry/default/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "Luck UI Input Group component.",
+      "files": [
+        {
+          "path": "registry/default/ui/input-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-group.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button", "input", "textarea"],
+      "dependencies": ["class-variance-authority"]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "KBD",
+      "description": "Luck UI KBD component.",
+      "files": [
+        {
+          "path": "registry/default/ui/kbd.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/kbd.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": []
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "title": "Menu",
+      "description": "Luck UI Menu component.",
+      "files": [
+        {
+          "path": "registry/default/ui/menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/menu.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react", "class-variance-authority"]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Luck UI Command component.",
+      "files": [
+        {
+          "path": "registry/default/ui/command.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/command.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "input-group", "scroll-area"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "Luck UI Context Menu component.",
+      "files": [
+        {
+          "path": "registry/default/ui/context-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/context-menu.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react", "class-variance-authority"]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "Luck UI Number Field component.",
+      "files": [
+        {
+          "path": "registry/default/ui/number-field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/number-field.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react", "class-variance-authority"]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Luck UI Popover component.",
+      "files": [
+        {
+          "path": "registry/default/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react"]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "title": "Radio",
+      "description": "Luck UI Radio component.",
+      "files": [
+        {
+          "path": "registry/default/ui/radio.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/radio.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Luck UI Scroll Area component.",
+      "files": [
+        {
+          "path": "registry/default/ui/scroll-area.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/scroll-area.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Luck UI Select component.",
+      "files": [
+        {
+          "path": "registry/default/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react", "class-variance-authority"]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Luck UI Separator component.",
+      "files": [
+        {
+          "path": "registry/default/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Luck UI Slider component.",
+      "files": [
+        {
+          "path": "registry/default/ui/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Luck UI Switch component.",
+      "files": [
+        {
+          "path": "registry/default/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Luck UI Tabs component.",
+      "files": [
+        {
+          "path": "registry/default/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"]
+    },
+    {
+      "name": "tag",
+      "type": "registry:ui",
+      "title": "Tag",
+      "description": "Luck UI Tag component.",
+      "files": [
+        {
+          "path": "registry/default/ui/tag.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tag.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Luck UI Textarea component.",
+      "files": [
+        {
+          "path": "registry/default/ui/textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["class-variance-authority"]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "Luck UI Toast component.",
+      "files": [
+        {
+          "path": "registry/default/ui/toast.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toast.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button"],
+      "dependencies": ["@base-ui/react", "@phosphor-icons/react"]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "Luck UI Toggle component.",
+      "files": [
+        {
+          "path": "registry/default/ui/toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Luck UI Tooltip component.",
+      "files": [
+        {
+          "path": "registry/default/ui/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["@base-ui/react"]
+    },
+    {
+      "name": "accordion-default-example",
+      "type": "registry:component",
+      "title": "Accordion Default Example",
+      "description": "Atomic example for the Luck UI Accordion component.",
+      "registryDependencies": ["accordion"],
+      "files": [
+        {
+          "path": "registry/default/examples/accordion-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/accordion-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-multiple-example",
+      "type": "registry:component",
+      "title": "Accordion Multiple Example",
+      "description": "Atomic example for the Luck UI Accordion component.",
+      "registryDependencies": ["accordion"],
+      "files": [
+        {
+          "path": "registry/default/examples/accordion-multiple-example.tsx",
+          "type": "registry:component",
+          "target": "components/accordion-multiple-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-disabled-example",
+      "type": "registry:component",
+      "title": "Accordion Disabled Example",
+      "description": "Atomic example for the Luck UI Accordion component.",
+      "registryDependencies": ["accordion"],
+      "files": [
+        {
+          "path": "registry/default/examples/accordion-disabled-example.tsx",
+          "type": "registry:component",
+          "target": "components/accordion-disabled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-default-example",
+      "type": "registry:component",
+      "title": "Alert Dialog Default Example",
+      "description": "Atomic example for the Luck UI Alert Dialog component.",
+      "registryDependencies": ["alert-dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/alert-dialog-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/alert-dialog-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-destructive-example",
+      "type": "registry:component",
+      "title": "Alert Dialog Destructive Example",
+      "description": "Atomic example for the Luck UI Alert Dialog component.",
+      "registryDependencies": ["alert-dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/alert-dialog-destructive-example.tsx",
+          "type": "registry:component",
+          "target": "components/alert-dialog-destructive-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "autocomplete-default-example",
+      "type": "registry:component",
+      "title": "Autocomplete Default Example",
+      "description": "Atomic example for the Luck UI Autocomplete component.",
+      "registryDependencies": ["autocomplete"],
+      "files": [
+        {
+          "path": "registry/default/examples/autocomplete-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/autocomplete-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "autocomplete-with-clear-example",
+      "type": "registry:component",
+      "title": "Autocomplete With Clear Example",
+      "description": "Atomic example for the Luck UI Autocomplete component.",
+      "registryDependencies": ["autocomplete"],
+      "files": [
+        {
+          "path": "registry/default/examples/autocomplete-with-clear-example.tsx",
+          "type": "registry:component",
+          "target": "components/autocomplete-with-clear-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "autocomplete-sizes-example",
+      "type": "registry:component",
+      "title": "Autocomplete Sizes Example",
+      "description": "Atomic example for the Luck UI Autocomplete component.",
+      "registryDependencies": ["autocomplete"],
+      "files": [
+        {
+          "path": "registry/default/examples/autocomplete-sizes-example.tsx",
+          "type": "registry:component",
+          "target": "components/autocomplete-sizes-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "autocomplete-with-groups-example",
+      "type": "registry:component",
+      "title": "Autocomplete With Groups Example",
+      "description": "Atomic example for the Luck UI Autocomplete component.",
+      "registryDependencies": ["autocomplete"],
+      "files": [
+        {
+          "path": "registry/default/examples/autocomplete-with-groups-example.tsx",
+          "type": "registry:component",
+          "target": "components/autocomplete-with-groups-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "autocomplete-async-example",
+      "type": "registry:component",
+      "title": "Autocomplete Async Example",
+      "description": "Atomic example for the Luck UI Autocomplete component.",
+      "registryDependencies": ["autocomplete"],
+      "files": [
+        {
+          "path": "registry/default/examples/autocomplete-async-example.tsx",
+          "type": "registry:component",
+          "target": "components/autocomplete-async-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "avatar-default-example",
+      "type": "registry:component",
+      "title": "Avatar Default Example",
+      "description": "Atomic example for the Luck UI Avatar component.",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "registry/default/examples/avatar-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/avatar-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "avatar-fallback-example",
+      "type": "registry:component",
+      "title": "Avatar Fallback Example",
+      "description": "Atomic example for the Luck UI Avatar component.",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "registry/default/examples/avatar-fallback-example.tsx",
+          "type": "registry:component",
+          "target": "components/avatar-fallback-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "avatar-sizes-example",
+      "type": "registry:component",
+      "title": "Avatar Sizes Example",
+      "description": "Atomic example for the Luck UI Avatar component.",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "registry/default/examples/avatar-sizes-example.tsx",
+          "type": "registry:component",
+          "target": "components/avatar-sizes-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-default-example",
+      "type": "registry:component",
+      "title": "Button Default Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-secondary-example",
+      "type": "registry:component",
+      "title": "Button Secondary Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-secondary-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-secondary-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-outline-example",
+      "type": "registry:component",
+      "title": "Button Outline Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-outline-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-outline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-ghost-example",
+      "type": "registry:component",
+      "title": "Button Ghost Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-ghost-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-ghost-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-destructive-example",
+      "type": "registry:component",
+      "title": "Button Destructive Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-destructive-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-destructive-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-destructive-outline-example",
+      "type": "registry:component",
+      "title": "Button Destructive Outline Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-destructive-outline-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-destructive-outline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-loading-example",
+      "type": "registry:component",
+      "title": "Button Loading Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-loading-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-loading-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-invert-example",
+      "type": "registry:component",
+      "title": "Button Invert Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-invert-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-invert-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-icon-example",
+      "type": "registry:component",
+      "title": "Button Icon Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-icon-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-icon-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-sizes-example",
+      "type": "registry:component",
+      "title": "Button Sizes Example",
+      "description": "Atomic example for the Luck UI Button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-sizes-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-sizes-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-group-default-example",
+      "type": "registry:component",
+      "title": "Button Group Default Example",
+      "description": "Atomic example for the Luck UI Button Group component.",
+      "registryDependencies": ["button-group", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-group-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-group-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-group-orientation-example",
+      "type": "registry:component",
+      "title": "Button Group Orientation Example",
+      "description": "Atomic example for the Luck UI Button Group component.",
+      "registryDependencies": ["button-group", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-group-orientation-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-group-orientation-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-group-separator-example",
+      "type": "registry:component",
+      "title": "Button Group Separator Example",
+      "description": "Atomic example for the Luck UI Button Group component.",
+      "registryDependencies": ["button-group", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-group-separator-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-group-separator-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-group-text-example",
+      "type": "registry:component",
+      "title": "Button Group Text Example",
+      "description": "Atomic example for the Luck UI Button Group component.",
+      "registryDependencies": ["button-group", "button", "input"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-group-text-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-group-text-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-group-nested-example",
+      "type": "registry:component",
+      "title": "Button Group Nested Example",
+      "description": "Atomic example for the Luck UI Button Group component.",
+      "registryDependencies": ["button-group", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/button-group-nested-example.tsx",
+          "type": "registry:component",
+          "target": "components/button-group-nested-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card-default-example",
+      "type": "registry:component",
+      "title": "Card Default Example",
+      "description": "Atomic example for the Luck UI Card component.",
+      "registryDependencies": ["card", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/card-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/card-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card-with-action-example",
+      "type": "registry:component",
+      "title": "Card With Action Example",
+      "description": "Atomic example for the Luck UI Card component.",
+      "registryDependencies": ["card", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/card-with-action-example.tsx",
+          "type": "registry:component",
+          "target": "components/card-with-action-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card-column-footer-example",
+      "type": "registry:component",
+      "title": "Card Column Footer Example",
+      "description": "Atomic example for the Luck UI Card component.",
+      "registryDependencies": ["card", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/card-column-footer-example.tsx",
+          "type": "registry:component",
+          "target": "components/card-column-footer-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card-motion-footer-example",
+      "type": "registry:component",
+      "title": "Card Motion Footer Example",
+      "description": "Atomic example for the Luck UI Card component.",
+      "registryDependencies": ["card", "button", "input"],
+      "files": [
+        {
+          "path": "registry/default/examples/card-motion-footer-example.tsx",
+          "type": "registry:component",
+          "target": "components/card-motion-footer-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-default-example",
+      "type": "registry:component",
+      "title": "Checkbox Default Example",
+      "description": "Atomic example for the Luck UI Checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-checked-example",
+      "type": "registry:component",
+      "title": "Checkbox Checked Example",
+      "description": "Atomic example for the Luck UI Checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-checked-example.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-checked-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-disabled-example",
+      "type": "registry:component",
+      "title": "Checkbox Disabled Example",
+      "description": "Atomic example for the Luck UI Checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-disabled-example.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-disabled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-controlled-example",
+      "type": "registry:component",
+      "title": "Checkbox Controlled Example",
+      "description": "Atomic example for the Luck UI Checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-group-example",
+      "type": "registry:component",
+      "title": "Checkbox Group Example",
+      "description": "Atomic example for the Luck UI Checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-group-example.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-group-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-group-controlled-example",
+      "type": "registry:component",
+      "title": "Checkbox Group Controlled Example",
+      "description": "Atomic example for the Luck UI Checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-group-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-group-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-group-indeterminate-example",
+      "type": "registry:component",
+      "title": "Checkbox Group Indeterminate Example",
+      "description": "Atomic example for the Luck UI Checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-group-indeterminate-example.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-group-indeterminate-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-default-example",
+      "type": "registry:component",
+      "title": "Combobox Default Example",
+      "description": "Atomic example for the Luck UI Combobox component.",
+      "registryDependencies": ["combobox"],
+      "files": [
+        {
+          "path": "registry/default/examples/combobox-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/combobox-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-with-input-example",
+      "type": "registry:component",
+      "title": "Combobox With Input Example",
+      "description": "Atomic example for the Luck UI Combobox component.",
+      "registryDependencies": ["combobox"],
+      "files": [
+        {
+          "path": "registry/default/examples/combobox-with-input-example.tsx",
+          "type": "registry:component",
+          "target": "components/combobox-with-input-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-with-groups-example",
+      "type": "registry:component",
+      "title": "Combobox With Groups Example",
+      "description": "Atomic example for the Luck UI Combobox component.",
+      "registryDependencies": ["combobox"],
+      "files": [
+        {
+          "path": "registry/default/examples/combobox-with-groups-example.tsx",
+          "type": "registry:component",
+          "target": "components/combobox-with-groups-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-multi-select-example",
+      "type": "registry:component",
+      "title": "Combobox Multi Select Example",
+      "description": "Atomic example for the Luck UI Combobox component.",
+      "registryDependencies": ["combobox"],
+      "files": [
+        {
+          "path": "registry/default/examples/combobox-multi-select-example.tsx",
+          "type": "registry:component",
+          "target": "components/combobox-multi-select-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-controlled-example",
+      "type": "registry:component",
+      "title": "Combobox Controlled Example",
+      "description": "Atomic example for the Luck UI Combobox component.",
+      "registryDependencies": ["combobox"],
+      "files": [
+        {
+          "path": "registry/default/examples/combobox-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/combobox-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog-default-example",
+      "type": "registry:component",
+      "title": "Dialog Default Example",
+      "description": "Atomic example for the Luck UI Dialog component.",
+      "registryDependencies": ["dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/dialog-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/dialog-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog-no-close-button-example",
+      "type": "registry:component",
+      "title": "Dialog No Close Button Example",
+      "description": "Atomic example for the Luck UI Dialog component.",
+      "registryDependencies": ["dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/dialog-no-close-button-example.tsx",
+          "type": "registry:component",
+          "target": "components/dialog-no-close-button-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog-nested-example",
+      "type": "registry:component",
+      "title": "Dialog Nested Example",
+      "description": "Atomic example for the Luck UI Dialog component.",
+      "registryDependencies": ["dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/dialog-nested-example.tsx",
+          "type": "registry:component",
+          "target": "components/dialog-nested-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog-row-footer-example",
+      "type": "registry:component",
+      "title": "Dialog Row Footer Example",
+      "description": "Atomic example for the Luck UI Dialog component.",
+      "registryDependencies": ["dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/dialog-row-footer-example.tsx",
+          "type": "registry:component",
+          "target": "components/dialog-row-footer-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer-default-example",
+      "type": "registry:component",
+      "title": "Drawer Default Example",
+      "description": "Atomic example for the Luck UI Drawer component.",
+      "registryDependencies": ["drawer", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/drawer-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/drawer-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer-side-example",
+      "type": "registry:component",
+      "title": "Drawer Side Example",
+      "description": "Atomic example for the Luck UI Drawer component.",
+      "registryDependencies": ["drawer", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/drawer-side-example.tsx",
+          "type": "registry:component",
+          "target": "components/drawer-side-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer-positions-example",
+      "type": "registry:component",
+      "title": "Drawer Positions Example",
+      "description": "Atomic example for the Luck UI Drawer component.",
+      "registryDependencies": ["drawer", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/drawer-positions-example.tsx",
+          "type": "registry:component",
+          "target": "components/drawer-positions-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer-inset-example",
+      "type": "registry:component",
+      "title": "Drawer Inset Example",
+      "description": "Atomic example for the Luck UI Drawer component.",
+      "registryDependencies": ["drawer", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/drawer-inset-example.tsx",
+          "type": "registry:component",
+          "target": "components/drawer-inset-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer-nested-example",
+      "type": "registry:component",
+      "title": "Drawer Nested Example",
+      "description": "Atomic example for the Luck UI Drawer component.",
+      "registryDependencies": ["drawer", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/drawer-nested-example.tsx",
+          "type": "registry:component",
+          "target": "components/drawer-nested-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-default-example",
+      "type": "registry:component",
+      "title": "Input Default Example",
+      "description": "Atomic example for the Luck UI Input component.",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-outline-example",
+      "type": "registry:component",
+      "title": "Input Outline Example",
+      "description": "Atomic example for the Luck UI Input component.",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-outline-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-outline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-inline-example",
+      "type": "registry:component",
+      "title": "Input Inline Example",
+      "description": "Atomic example for the Luck UI Input component.",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-inline-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-inline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-group-default-example",
+      "type": "registry:component",
+      "title": "Input Group Default Example",
+      "description": "Atomic example for the Luck UI Input Group component.",
+      "registryDependencies": ["input-group"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-group-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-group-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-button-example",
+      "type": "registry:component",
+      "title": "Input Group With Button Example",
+      "description": "Atomic example for the Luck UI Input Group component.",
+      "registryDependencies": ["input-group"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-group-with-button-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-group-with-button-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-text-example",
+      "type": "registry:component",
+      "title": "Input Group With Text Example",
+      "description": "Atomic example for the Luck UI Input Group component.",
+      "registryDependencies": ["input-group"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-group-with-text-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-group-with-text-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-group-textarea-example",
+      "type": "registry:component",
+      "title": "Input Group Textarea Example",
+      "description": "Atomic example for the Luck UI Input Group component.",
+      "registryDependencies": ["input-group"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-group-textarea-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-group-textarea-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-group-agent-chat-example",
+      "type": "registry:component",
+      "title": "Input Group Agent Chat Example",
+      "description": "Atomic example for the Luck UI Input Group component.",
+      "registryDependencies": ["input-group", "select", "toggle"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-group-agent-chat-example.tsx",
+          "type": "registry:component",
+          "target": "components/input-group-agent-chat-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kbd-default-example",
+      "type": "registry:component",
+      "title": "KBD Default Example",
+      "description": "Atomic example for the Luck UI KBD component.",
+      "registryDependencies": ["kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/kbd-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/kbd-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kbd-group-example",
+      "type": "registry:component",
+      "title": "KBD Group Example",
+      "description": "Atomic example for the Luck UI KBD component.",
+      "registryDependencies": ["kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/kbd-group-example.tsx",
+          "type": "registry:component",
+          "target": "components/kbd-group-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command-default-example",
+      "type": "registry:component",
+      "title": "Command Default Example",
+      "description": "Atomic example for the Luck UI Command component.",
+      "registryDependencies": ["command", "input-group"],
+      "files": [
+        {
+          "path": "registry/default/examples/command-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/command-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command-agent-chat-example",
+      "type": "registry:component",
+      "title": "Command Agent Chat Example",
+      "description": "Atomic example for the Luck UI Command component.",
+      "registryDependencies": ["command", "input-group"],
+      "files": [
+        {
+          "path": "registry/default/examples/command-agent-chat-example.tsx",
+          "type": "registry:component",
+          "target": "components/command-agent-chat-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command-with-trigger-example",
+      "type": "registry:component",
+      "title": "Command With Trigger Example",
+      "description": "Atomic example for the Luck UI Command component.",
+      "registryDependencies": ["command", "input-group", "kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/command-with-trigger-example.tsx",
+          "type": "registry:component",
+          "target": "components/command-with-trigger-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command-mention-example",
+      "type": "registry:component",
+      "title": "Command Mention Example",
+      "description": "Atomic example for the Luck UI Command component.",
+      "registryDependencies": ["command", "input-group", "avatar"],
+      "files": [
+        {
+          "path": "registry/default/examples/command-mention-example.tsx",
+          "type": "registry:component",
+          "target": "components/command-mention-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-default-example",
+      "type": "registry:component",
+      "title": "Context Menu Default Example",
+      "description": "Atomic example for the Luck UI Context Menu component.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-with-icons-example",
+      "type": "registry:component",
+      "title": "Context Menu With Icons Example",
+      "description": "Atomic example for the Luck UI Context Menu component.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-with-icons-example.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-with-icons-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-with-kbd-example",
+      "type": "registry:component",
+      "title": "Context Menu With Kbd Example",
+      "description": "Atomic example for the Luck UI Context Menu component.",
+      "registryDependencies": ["context-menu", "kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-with-kbd-example.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-with-kbd-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-checkbox-example",
+      "type": "registry:component",
+      "title": "Context Menu Checkbox Example",
+      "description": "Atomic example for the Luck UI Context Menu component.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-checkbox-example.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-checkbox-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-radio-example",
+      "type": "registry:component",
+      "title": "Context Menu Radio Example",
+      "description": "Atomic example for the Luck UI Context Menu component.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-radio-example.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-radio-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-submenu-example",
+      "type": "registry:component",
+      "title": "Context Menu Submenu Example",
+      "description": "Atomic example for the Luck UI Context Menu component.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-submenu-example.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-submenu-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-complex-example",
+      "type": "registry:component",
+      "title": "Context Menu Complex Example",
+      "description": "Comprehensive example showcasing all Luck UI Context Menu subcomponents.",
+      "registryDependencies": ["context-menu", "kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-complex-example.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-complex-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-default-example",
+      "type": "registry:component",
+      "title": "Menu Default Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-with-icons-example",
+      "type": "registry:component",
+      "title": "Menu With Icons Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-with-icons-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-with-icons-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-with-kbd-example",
+      "type": "registry:component",
+      "title": "Menu With Kbd Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button", "kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-with-kbd-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-with-kbd-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-with-groups-example",
+      "type": "registry:component",
+      "title": "Menu With Groups Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-with-groups-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-with-groups-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-checkbox-example",
+      "type": "registry:component",
+      "title": "Menu Checkbox Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-checkbox-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-checkbox-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-radio-example",
+      "type": "registry:component",
+      "title": "Menu Radio Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-radio-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-radio-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-destructive-example",
+      "type": "registry:component",
+      "title": "Menu Destructive Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-destructive-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-destructive-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-submenu-example",
+      "type": "registry:component",
+      "title": "Menu Submenu Example",
+      "description": "Atomic example for the Luck UI Menu component.",
+      "registryDependencies": ["menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-submenu-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-submenu-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-complex-example",
+      "type": "registry:component",
+      "title": "Menu Complex Example",
+      "description": "Comprehensive example showcasing all Luck UI Menu subcomponents.",
+      "registryDependencies": ["menu", "button", "kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/menu-complex-example.tsx",
+          "type": "registry:component",
+          "target": "components/menu-complex-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field-default-example",
+      "type": "registry:component",
+      "title": "Number Field Default Example",
+      "description": "Atomic example for the Luck UI Number Field component.",
+      "registryDependencies": ["number-field"],
+      "files": [
+        {
+          "path": "registry/default/examples/number-field-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/number-field-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field-sizes-example",
+      "type": "registry:component",
+      "title": "Number Field Sizes Example",
+      "description": "Atomic example for the Luck UI Number Field component.",
+      "registryDependencies": ["number-field"],
+      "files": [
+        {
+          "path": "registry/default/examples/number-field-sizes-example.tsx",
+          "type": "registry:component",
+          "target": "components/number-field-sizes-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field-controlled-example",
+      "type": "registry:component",
+      "title": "Number Field Controlled Example",
+      "description": "Atomic example for the Luck UI Number Field component.",
+      "registryDependencies": ["number-field"],
+      "files": [
+        {
+          "path": "registry/default/examples/number-field-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/number-field-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field-format-example",
+      "type": "registry:component",
+      "title": "Number Field Format Example",
+      "description": "Atomic example for the Luck UI Number Field component.",
+      "registryDependencies": ["number-field"],
+      "files": [
+        {
+          "path": "registry/default/examples/number-field-format-example.tsx",
+          "type": "registry:component",
+          "target": "components/number-field-format-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field-scrub-example",
+      "type": "registry:component",
+      "title": "Number Field Scrub Example",
+      "description": "Atomic example for the Luck UI Number Field component.",
+      "registryDependencies": ["number-field"],
+      "files": [
+        {
+          "path": "registry/default/examples/number-field-scrub-example.tsx",
+          "type": "registry:component",
+          "target": "components/number-field-scrub-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover-default-example",
+      "type": "registry:component",
+      "title": "Popover Default Example",
+      "description": "Atomic example for the Luck UI Popover component.",
+      "registryDependencies": ["popover", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/popover-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/popover-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover-no-close-button-example",
+      "type": "registry:component",
+      "title": "Popover No Close Button Example",
+      "description": "Atomic example for the Luck UI Popover component.",
+      "registryDependencies": ["popover", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/popover-no-close-button-example.tsx",
+          "type": "registry:component",
+          "target": "components/popover-no-close-button-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover-with-positioner-props-example",
+      "type": "registry:component",
+      "title": "Popover With Positioner Props Example",
+      "description": "Atomic example for the Luck UI Popover component.",
+      "registryDependencies": ["popover", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/popover-with-positioner-props-example.tsx",
+          "type": "registry:component",
+          "target": "components/popover-with-positioner-props-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-default-example",
+      "type": "registry:component",
+      "title": "Radio Default Example",
+      "description": "Atomic example for the Luck UI Radio component.",
+      "registryDependencies": ["radio"],
+      "files": [
+        {
+          "path": "registry/default/examples/radio-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/radio-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-disabled-example",
+      "type": "registry:component",
+      "title": "Radio Disabled Example",
+      "description": "Atomic example for the Luck UI Radio component.",
+      "registryDependencies": ["radio"],
+      "files": [
+        {
+          "path": "registry/default/examples/radio-disabled-example.tsx",
+          "type": "registry:component",
+          "target": "components/radio-disabled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-controlled-example",
+      "type": "registry:component",
+      "title": "Radio Controlled Example",
+      "description": "Atomic example for the Luck UI Radio component.",
+      "registryDependencies": ["radio"],
+      "files": [
+        {
+          "path": "registry/default/examples/radio-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/radio-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-item-example",
+      "type": "registry:component",
+      "title": "Radio Group Item Example",
+      "description": "Atomic example for the Luck UI Radio component.",
+      "registryDependencies": ["radio"],
+      "files": [
+        {
+          "path": "registry/default/examples/radio-group-item-example.tsx",
+          "type": "registry:component",
+          "target": "components/radio-group-item-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-default-example",
+      "type": "registry:component",
+      "title": "Scroll Area Default Example",
+      "description": "Atomic example for the Luck UI Scroll Area component.",
+      "registryDependencies": ["scroll-area"],
+      "files": [
+        {
+          "path": "registry/default/examples/scroll-area-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/scroll-area-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-horizontal-example",
+      "type": "registry:component",
+      "title": "Scroll Area Horizontal Example",
+      "description": "Atomic example for the Luck UI Scroll Area component.",
+      "registryDependencies": ["scroll-area"],
+      "files": [
+        {
+          "path": "registry/default/examples/scroll-area-horizontal-example.tsx",
+          "type": "registry:component",
+          "target": "components/scroll-area-horizontal-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-default-example",
+      "type": "registry:component",
+      "title": "Select Default Example",
+      "description": "Atomic example for the Luck UI Select component.",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "registry/default/examples/select-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/select-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-variants-example",
+      "type": "registry:component",
+      "title": "Select Variants Example",
+      "description": "Atomic example for the Luck UI Select component.",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "registry/default/examples/select-variants-example.tsx",
+          "type": "registry:component",
+          "target": "components/select-variants-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-with-groups-example",
+      "type": "registry:component",
+      "title": "Select With Groups Example",
+      "description": "Atomic example for the Luck UI Select component.",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "registry/default/examples/select-with-groups-example.tsx",
+          "type": "registry:component",
+          "target": "components/select-with-groups-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-controlled-example",
+      "type": "registry:component",
+      "title": "Select Controlled Example",
+      "description": "Atomic example for the Luck UI Select component.",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "registry/default/examples/select-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/select-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-with-items-example",
+      "type": "registry:component",
+      "title": "Select With Items Example",
+      "description": "Atomic example for the Luck UI Select component.",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "registry/default/examples/select-with-items-example.tsx",
+          "type": "registry:component",
+          "target": "components/select-with-items-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "separator-default-example",
+      "type": "registry:component",
+      "title": "Separator Default Example",
+      "description": "Atomic example for the Luck UI Separator component.",
+      "registryDependencies": ["separator"],
+      "files": [
+        {
+          "path": "registry/default/examples/separator-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/separator-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider-default-example",
+      "type": "registry:component",
+      "title": "Slider Default Example",
+      "description": "Atomic example for the Luck UI Slider component.",
+      "registryDependencies": ["slider"],
+      "files": [
+        {
+          "path": "registry/default/examples/slider-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/slider-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider-range-example",
+      "type": "registry:component",
+      "title": "Slider Range Example",
+      "description": "Atomic example for the Luck UI Slider component.",
+      "registryDependencies": ["slider"],
+      "files": [
+        {
+          "path": "registry/default/examples/slider-range-example.tsx",
+          "type": "registry:component",
+          "target": "components/slider-range-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider-stepped-example",
+      "type": "registry:component",
+      "title": "Slider Stepped Example",
+      "description": "Atomic example for the Luck UI Slider component.",
+      "registryDependencies": ["slider"],
+      "files": [
+        {
+          "path": "registry/default/examples/slider-stepped-example.tsx",
+          "type": "registry:component",
+          "target": "components/slider-stepped-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider-disabled-example",
+      "type": "registry:component",
+      "title": "Slider Disabled Example",
+      "description": "Atomic example for the Luck UI Slider component.",
+      "registryDependencies": ["slider"],
+      "files": [
+        {
+          "path": "registry/default/examples/slider-disabled-example.tsx",
+          "type": "registry:component",
+          "target": "components/slider-disabled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider-controlled-example",
+      "type": "registry:component",
+      "title": "Slider Controlled Example",
+      "description": "Atomic example for the Luck UI Slider component.",
+      "registryDependencies": ["slider"],
+      "files": [
+        {
+          "path": "registry/default/examples/slider-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/slider-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch-default-example",
+      "type": "registry:component",
+      "title": "Switch Default Example",
+      "description": "Atomic example for the Luck UI Switch component.",
+      "registryDependencies": ["switch"],
+      "files": [
+        {
+          "path": "registry/default/examples/switch-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/switch-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch-checked-example",
+      "type": "registry:component",
+      "title": "Switch Checked Example",
+      "description": "Atomic example for the Luck UI Switch component.",
+      "registryDependencies": ["switch"],
+      "files": [
+        {
+          "path": "registry/default/examples/switch-checked-example.tsx",
+          "type": "registry:component",
+          "target": "components/switch-checked-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch-disabled-example",
+      "type": "registry:component",
+      "title": "Switch Disabled Example",
+      "description": "Atomic example for the Luck UI Switch component.",
+      "registryDependencies": ["switch"],
+      "files": [
+        {
+          "path": "registry/default/examples/switch-disabled-example.tsx",
+          "type": "registry:component",
+          "target": "components/switch-disabled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch-controlled-example",
+      "type": "registry:component",
+      "title": "Switch Controlled Example",
+      "description": "Atomic example for the Luck UI Switch component.",
+      "registryDependencies": ["switch"],
+      "files": [
+        {
+          "path": "registry/default/examples/switch-controlled-example.tsx",
+          "type": "registry:component",
+          "target": "components/switch-controlled-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs-default-example",
+      "type": "registry:component",
+      "title": "Tabs Default Example",
+      "description": "Atomic example for the Luck UI Tabs component.",
+      "registryDependencies": ["tabs"],
+      "files": [
+        {
+          "path": "registry/default/examples/tabs-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/tabs-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs-underline-example",
+      "type": "registry:component",
+      "title": "Tabs Underline Example",
+      "description": "Atomic example for the Luck UI Tabs component.",
+      "registryDependencies": ["tabs"],
+      "files": [
+        {
+          "path": "registry/default/examples/tabs-underline-example.tsx",
+          "type": "registry:component",
+          "target": "components/tabs-underline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs-sizes-example",
+      "type": "registry:component",
+      "title": "Tabs Sizes Example",
+      "description": "Atomic example for the Luck UI Tabs component.",
+      "registryDependencies": ["tabs"],
+      "files": [
+        {
+          "path": "registry/default/examples/tabs-sizes-example.tsx",
+          "type": "registry:component",
+          "target": "components/tabs-sizes-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs-vertical-example",
+      "type": "registry:component",
+      "title": "Tabs Vertical Example",
+      "description": "Atomic example for the Luck UI Tabs component.",
+      "registryDependencies": ["tabs"],
+      "files": [
+        {
+          "path": "registry/default/examples/tabs-vertical-example.tsx",
+          "type": "registry:component",
+          "target": "components/tabs-vertical-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tag-default-example",
+      "type": "registry:component",
+      "title": "Tag Default Example",
+      "description": "Atomic example for the Luck UI Tag component.",
+      "registryDependencies": ["tag"],
+      "files": [
+        {
+          "path": "registry/default/examples/tag-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/tag-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tag-secondary-example",
+      "type": "registry:component",
+      "title": "Tag Secondary Example",
+      "description": "Atomic example for the Luck UI Tag component.",
+      "registryDependencies": ["tag"],
+      "files": [
+        {
+          "path": "registry/default/examples/tag-secondary-example.tsx",
+          "type": "registry:component",
+          "target": "components/tag-secondary-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tag-outline-example",
+      "type": "registry:component",
+      "title": "Tag Outline Example",
+      "description": "Atomic example for the Luck UI Tag component.",
+      "registryDependencies": ["tag"],
+      "files": [
+        {
+          "path": "registry/default/examples/tag-outline-example.tsx",
+          "type": "registry:component",
+          "target": "components/tag-outline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tag-sizes-example",
+      "type": "registry:component",
+      "title": "Tag Sizes Example",
+      "description": "Atomic example for the Luck UI Tag component.",
+      "registryDependencies": ["tag"],
+      "files": [
+        {
+          "path": "registry/default/examples/tag-sizes-example.tsx",
+          "type": "registry:component",
+          "target": "components/tag-sizes-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tag-in-menu-example",
+      "type": "registry:component",
+      "title": "Tag In Menu Example",
+      "description": "Atomic example for the Luck UI Tag component.",
+      "registryDependencies": ["tag", "menu", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/tag-in-menu-example.tsx",
+          "type": "registry:component",
+          "target": "components/tag-in-menu-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea-default-example",
+      "type": "registry:component",
+      "title": "Textarea Default Example",
+      "description": "Atomic example for the Luck UI Textarea component.",
+      "registryDependencies": ["textarea"],
+      "files": [
+        {
+          "path": "registry/default/examples/textarea-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/textarea-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea-outline-example",
+      "type": "registry:component",
+      "title": "Textarea Outline Example",
+      "description": "Atomic example for the Luck UI Textarea component.",
+      "registryDependencies": ["textarea"],
+      "files": [
+        {
+          "path": "registry/default/examples/textarea-outline-example.tsx",
+          "type": "registry:component",
+          "target": "components/textarea-outline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea-inline-example",
+      "type": "registry:component",
+      "title": "Textarea Inline Example",
+      "description": "Atomic example for the Luck UI Textarea component.",
+      "registryDependencies": ["textarea"],
+      "files": [
+        {
+          "path": "registry/default/examples/textarea-inline-example.tsx",
+          "type": "registry:component",
+          "target": "components/textarea-inline-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast-default-example",
+      "type": "registry:component",
+      "title": "Toast Default Example",
+      "description": "Atomic example for the Luck UI Toast component.",
+      "registryDependencies": ["button", "toast"],
+      "files": [
+        {
+          "path": "registry/default/examples/toast-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/toast-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast-variants-example",
+      "type": "registry:component",
+      "title": "Toast Variants Example",
+      "description": "Atomic example for the Luck UI Toast component.",
+      "registryDependencies": ["button", "toast"],
+      "files": [
+        {
+          "path": "registry/default/examples/toast-variants-example.tsx",
+          "type": "registry:component",
+          "target": "components/toast-variants-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast-promise-example",
+      "type": "registry:component",
+      "title": "Toast Promise Example",
+      "description": "Atomic example for the Luck UI Toast component.",
+      "registryDependencies": ["button", "toast"],
+      "files": [
+        {
+          "path": "registry/default/examples/toast-promise-example.tsx",
+          "type": "registry:component",
+          "target": "components/toast-promise-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast-position-example",
+      "type": "registry:component",
+      "title": "Toast Position Example",
+      "description": "Atomic example for the Luck UI Toast component.",
+      "registryDependencies": ["button", "select", "toast"],
+      "files": [
+        {
+          "path": "registry/default/examples/toast-position-example.tsx",
+          "type": "registry:component",
+          "target": "components/toast-position-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle-default-example",
+      "type": "registry:component",
+      "title": "Toggle Default Example",
+      "description": "Atomic example for the Luck UI Toggle component.",
+      "registryDependencies": ["toggle"],
+      "files": [
+        {
+          "path": "registry/default/examples/toggle-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/toggle-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle-sizes-example",
+      "type": "registry:component",
+      "title": "Toggle Sizes Example",
+      "description": "Atomic example for the Luck UI Toggle component.",
+      "registryDependencies": ["toggle"],
+      "files": [
+        {
+          "path": "registry/default/examples/toggle-sizes-example.tsx",
+          "type": "registry:component",
+          "target": "components/toggle-sizes-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle-with-icons-example",
+      "type": "registry:component",
+      "title": "Toggle With Icons Example",
+      "description": "Atomic example for the Luck UI Toggle component.",
+      "registryDependencies": ["toggle"],
+      "files": [
+        {
+          "path": "registry/default/examples/toggle-with-icons-example.tsx",
+          "type": "registry:component",
+          "target": "components/toggle-with-icons-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-default-example",
+      "type": "registry:component",
+      "title": "Tooltip Default Example",
+      "description": "Atomic example for the Luck UI Tooltip component.",
+      "registryDependencies": ["tooltip", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/tooltip-default-example.tsx",
+          "type": "registry:component",
+          "target": "components/tooltip-default-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-positioned-example",
+      "type": "registry:component",
+      "title": "Tooltip Positioned Example",
+      "description": "Atomic example for the Luck UI Tooltip component.",
+      "registryDependencies": ["tooltip", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/tooltip-positioned-example.tsx",
+          "type": "registry:component",
+          "target": "components/tooltip-positioned-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-with-delay-example",
+      "type": "registry:component",
+      "title": "Tooltip With Delay Example",
+      "description": "Atomic example for the Luck UI Tooltip component.",
+      "registryDependencies": ["tooltip", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/tooltip-with-delay-example.tsx",
+          "type": "registry:component",
+          "target": "components/tooltip-with-delay-example.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-animated-example",
+      "type": "registry:component",
+      "title": "Tooltip Animated Example",
+      "description": "Atomic example for the Luck UI Tooltip component.",
+      "registryDependencies": ["tooltip", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/tooltip-animated-example.tsx",
+          "type": "registry:component",
+          "target": "components/tooltip-animated-example.tsx"
+        }
+      ]
+    }
+  ]
+}

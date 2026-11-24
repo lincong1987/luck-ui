@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-row-footer-example",
+  "title": "Dialog Row Footer Example",
+  "description": "Atomic example for the Luck UI Dialog component.",
+  "registryDependencies": [
+    "dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/dialog-row-footer-example.tsx",
+      "content": "import {\r\n  Dialog,\r\n  DialogBody,\r\n  DialogClose,\r\n  DialogContent,\r\n  DialogDescription,\r\n  DialogFooter,\r\n  DialogHeader,\r\n  DialogTitle,\r\n  DialogTrigger,\r\n} from \"registry/default/ui/dialog\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function DialogRowFooterExample() {\r\n  return (\r\n    <Dialog>\r\n      <DialogTrigger render={<Button variant=\"outline\">Row Footer</Button>} />\r\n      <DialogContent>\r\n        <DialogHeader>\r\n          <DialogTitle>Save Changes</DialogTitle>\r\n          <DialogDescription>Your changes will be saved to the cloud.</DialogDescription>\r\n        </DialogHeader>\r\n        <DialogBody>\r\n          <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n            Review your changes before confirming.\r\n          </p>\r\n        </DialogBody>\r\n        <DialogFooter direction=\"row\">\r\n          <DialogClose render={<Button variant=\"secondary\">Cancel</Button>} />\r\n          <Button>Save</Button>\r\n        </DialogFooter>\r\n      </DialogContent>\r\n    </Dialog>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/dialog-row-footer-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

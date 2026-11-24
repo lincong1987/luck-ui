@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-disabled-example",
+  "title": "Checkbox Disabled Example",
+  "description": "Atomic example for the Luck UI Checkbox component.",
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/checkbox-disabled-example.tsx",
+      "content": "import { Checkbox } from \"registry/default/ui/checkbox\";\r\nexport function CheckboxDisabledExample() {\r\n  return (\r\n    <div className=\"flex items-center gap-4\">\r\n      <Checkbox disabled />\r\n      <Checkbox defaultChecked disabled />\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/checkbox-disabled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

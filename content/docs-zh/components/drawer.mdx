@@ -1,0 +1,157 @@
+---
+title: 抽屉
+description: 从屏幕边缘滑入的面板，支持滑动关闭手势。
+component: Drawer
+registry: drawer
+---
+
+import { DrawerExample } from "registry/default/examples/drawer-default-example";
+import drawerExampleSource from "registry/default/examples/drawer-default-example.tsx?raw";
+import { DrawerSideExample } from "registry/default/examples/drawer-side-example";
+import drawerSideExampleSource from "registry/default/examples/drawer-side-example.tsx?raw";
+import { DrawerPositionsExample } from "registry/default/examples/drawer-positions-example";
+import drawerPositionsExampleSource from "registry/default/examples/drawer-positions-example.tsx?raw";
+import { DrawerInsetExample } from "registry/default/examples/drawer-inset-example";
+import drawerInsetExampleSource from "registry/default/examples/drawer-inset-example.tsx?raw";
+import { DrawerNestedExample } from "registry/default/examples/drawer-nested-example";
+import drawerNestedExampleSource from "registry/default/examples/drawer-nested-example.tsx?raw";
+import drawerSource from "registry/default/ui/drawer.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DrawerExample">
+      <DrawerExample />
+    </ComponentPreview>
+    <ComponentSource code={drawerExampleSource} language="tsx" title="drawer-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 侧边抽屉
+
+将 `position` 设为 `"left"` 或 `"right"`，抽屉会从侧边滑入。`swipeDirection` 会根据位置自动推导。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DrawerSideExample">
+      <DrawerSideExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={drawerSideExampleSource}
+      language="tsx"
+      title="drawer-side-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 位置
+
+抽屉可以停靠在任意边缘：`top`、`right`、`bottom` 或 `left`。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DrawerPositionsExample">
+      <DrawerPositionsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={drawerPositionsExampleSource}
+      language="tsx"
+      title="drawer-positions-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 内嵌
+
+在 `DrawerContent` 上设置 `variant="inset"`，抽屉会与屏幕边缘保持距离，四角均为圆角。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DrawerInsetExample">
+      <DrawerInsetExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={drawerInsetExampleSource}
+      language="tsx"
+      title="drawer-inset-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 嵌套
+
+在抽屉内容中再渲染一个 `Drawer` 即可实现嵌套。子抽屉打开时，父抽屉会缩小并退到其后。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DrawerNestedExample">
+      <DrawerNestedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={drawerNestedExampleSource}
+      language="tsx"
+      title="drawer-nested-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={drawerSource} language="tsx" />
+
+## API 参考
+
+### Drawer
+
+<PropsTable component="Drawer" />
+
+### DrawerTrigger
+
+<PropsTable component="DrawerTrigger" />
+
+### DrawerContent
+
+<PropsTable component="DrawerContent" />
+
+### DrawerHeader
+
+<PropsTable component="DrawerHeader" />
+
+### DrawerBody
+
+<PropsTable component="DrawerBody" />
+
+### DrawerFooter
+
+<PropsTable component="DrawerFooter" />
+
+### DrawerTitle
+
+<PropsTable component="DrawerTitle" />
+
+### DrawerDescription
+
+<PropsTable component="DrawerDescription" />
+
+### DrawerBar
+
+<PropsTable component="DrawerBar" />
+
+### DrawerSwipeArea
+
+<PropsTable component="DrawerSwipeArea" />
+
+### DrawerBackdrop
+
+<PropsTable component="DrawerBackdrop" />
+
+### DrawerClose
+
+<PropsTable component="DrawerClose" />
+
+### DrawerPortal
+
+<PropsTable component="DrawerPortal" />

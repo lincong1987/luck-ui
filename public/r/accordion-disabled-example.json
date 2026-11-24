@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-disabled-example",
+  "title": "Accordion Disabled Example",
+  "description": "Atomic example for the Luck UI Accordion component.",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/accordion-disabled-example.tsx",
+      "content": "import {\r\n  Accordion,\r\n  AccordionItem,\r\n  AccordionTrigger,\r\n  AccordionContent,\r\n} from \"registry/default/ui/accordion\";\r\n\r\nexport function AccordionDisabledExample() {\r\n  return (\r\n    <Accordion className=\"w-full max-w-md\" defaultValue={[\"item-1\"]}>\r\n      <AccordionItem value=\"item-1\">\r\n        <AccordionTrigger>Available section</AccordionTrigger>\r\n        <AccordionContent>This item can be toggled open and closed as usual.</AccordionContent>\r\n      </AccordionItem>\r\n      <AccordionItem value=\"item-2\" disabled>\r\n        <AccordionTrigger>Disabled section</AccordionTrigger>\r\n        <AccordionContent>\r\n          You should not be able to read this because the item is disabled.\r\n        </AccordionContent>\r\n      </AccordionItem>\r\n      <AccordionItem value=\"item-3\">\r\n        <AccordionTrigger>Another available section</AccordionTrigger>\r\n        <AccordionContent>This item is interactive just like the first one.</AccordionContent>\r\n      </AccordionItem>\r\n    </Accordion>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/accordion-disabled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

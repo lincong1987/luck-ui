@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-menu-with-icons-example",
+  "title": "Context Menu With Icons Example",
+  "description": "Atomic example for the Luck UI Context Menu component.",
+  "registryDependencies": [
+    "context-menu"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/context-menu-with-icons-example.tsx",
+      "content": "import {\r\n  ContextMenu,\r\n  ContextMenuTrigger,\r\n  ContextMenuContent,\r\n  ContextMenuItem,\r\n  ContextMenuItemAddon,\r\n  ContextMenuItemLabel,\r\n  ContextMenuSeparator,\r\n} from \"registry/default/ui/context-menu\";\r\nimport { CopyIcon, PencilIcon, ShareIcon, TrashIcon } from \"@phosphor-icons/react\";\r\n\r\nexport function ContextMenuWithIconsExample() {\r\n  return (\r\n    <ContextMenu>\r\n      <ContextMenuTrigger className=\"flex h-36 w-72 items-center justify-center rounded-xl border border-dashed text-sm text-muted-foreground\">\r\n        Right click here\r\n      </ContextMenuTrigger>\r\n      <ContextMenuContent>\r\n        <ContextMenuItem>\r\n          <ContextMenuItemAddon>\r\n            <PencilIcon />\r\n          </ContextMenuItemAddon>\r\n          <ContextMenuItemLabel>Edit</ContextMenuItemLabel>\r\n        </ContextMenuItem>\r\n        <ContextMenuItem>\r\n          <ContextMenuItemAddon>\r\n            <CopyIcon />\r\n          </ContextMenuItemAddon>\r\n          <ContextMenuItemLabel>Duplicate</ContextMenuItemLabel>\r\n        </ContextMenuItem>\r\n        <ContextMenuItem>\r\n          <ContextMenuItemAddon>\r\n            <ShareIcon />\r\n          </ContextMenuItemAddon>\r\n          <ContextMenuItemLabel>Share</ContextMenuItemLabel>\r\n        </ContextMenuItem>\r\n        <ContextMenuSeparator />\r\n        <ContextMenuItem variant=\"destructive\">\r\n          <ContextMenuItemAddon>\r\n            <TrashIcon />\r\n          </ContextMenuItemAddon>\r\n          <ContextMenuItemLabel>Delete</ContextMenuItemLabel>\r\n        </ContextMenuItem>\r\n      </ContextMenuContent>\r\n    </ContextMenu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/context-menu-with-icons-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

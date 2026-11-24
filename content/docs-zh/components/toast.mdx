@@ -1,0 +1,120 @@
+---
+title: 消息提示
+description: 用于状态更新、操作反馈与异步结果提示的临时通知堆栈。
+component: Toast
+registry: toast
+---
+
+import { ToastExample } from "registry/default/examples/toast-default-example";
+import toastExampleSource from "registry/default/examples/toast-default-example.tsx?raw";
+import { ToastVariantsExample } from "registry/default/examples/toast-variants-example";
+import toastVariantsExampleSource from "registry/default/examples/toast-variants-example.tsx?raw";
+import { ToastPromiseExample } from "registry/default/examples/toast-promise-example";
+import toastPromiseExampleSource from "registry/default/examples/toast-promise-example.tsx?raw";
+import { ToastPositionExample } from "registry/default/examples/toast-position-example";
+import toastPositionExampleSource from "registry/default/examples/toast-position-example.tsx?raw";
+import toastSource from "registry/default/ui/toast.tsx?raw";
+
+export const toastSetupSource = `import { ToastProvider } from "registry/default/ui/toast";
+
+export function AppShell() {
+  return (
+    <ToastProvider position="bottom-right">
+      <App />
+    </ToastProvider>
+  );
+}`;
+
+export const toastTriggerSource = `import { toastManager } from "registry/default/ui/toast";
+
+toastManager.add({
+title: "Changes saved",
+description: "Your preferences are now up to date.",
+type: "success",
+});`;
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToastExample">
+      <ToastExample />
+    </ComponentPreview>
+    <ComponentSource code={toastExampleSource} language="tsx" title="toast-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+Toast 使用共享的 `toastManager`，因此只需在应用外壳附近渲染一次 `ToastProvider`，之后即可在任意位置触发通知。
+
+### 类型与操作
+
+用 `type` 字段选择内置图标，传入 `actionProps` 可渲染内联操作按钮。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToastVariantsExample">
+      <ToastVariantsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={toastVariantsExampleSource}
+      language="tsx"
+      title="toast-variants-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 位置
+
+向 `ToastProvider` 传入 `position` 属性，可将通知堆栈放置在屏幕任意边缘或中央。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToastPositionExample">
+      <ToastPositionExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={toastPositionExampleSource}
+      language="tsx"
+      title="toast-position-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Promise 状态
+
+使用 `toastManager.promise(...)`，可让加载、成功与错误反馈都关联到同一个异步流程。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToastPromiseExample">
+      <ToastPromiseExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={toastPromiseExampleSource}
+      language="tsx"
+      title="toast-promise-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 用法
+
+挂载一次 Provider：
+
+<CodeBlock code={toastSetupSource} language="tsx" />
+
+在能导入管理器的任意位置触发 Toast：
+
+<CodeBlock code={toastTriggerSource} language="tsx" />
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={toastSource} language="tsx" />
+
+## API 参考
+
+### ToastProvider
+
+<PropsTable component="ToastProvider" />

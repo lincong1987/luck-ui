@@ -1,0 +1,131 @@
+---
+title: Dialog
+description: A window overlaid on either the primary window or another dialog window.
+component: Dialog
+registry: dialog
+---
+
+import { DialogExample } from "registry/default/examples/dialog-default-example";
+import dialogExampleSource from "registry/default/examples/dialog-default-example.tsx?raw";
+import { DialogNestedExample } from "registry/default/examples/dialog-nested-example";
+import dialogNestedExampleSource from "registry/default/examples/dialog-nested-example.tsx?raw";
+import { DialogNoCloseButtonExample } from "registry/default/examples/dialog-no-close-button-example";
+import dialogNoCloseButtonExampleSource from "registry/default/examples/dialog-no-close-button-example.tsx?raw";
+import { DialogRowFooterExample } from "registry/default/examples/dialog-row-footer-example";
+import dialogRowFooterExampleSource from "registry/default/examples/dialog-row-footer-example.tsx?raw";
+import dialogSource from "registry/default/ui/dialog.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogExample">
+      <DialogExample />
+    </ComponentPreview>
+    <ComponentSource code={dialogExampleSource} language="tsx" title="dialog-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### Without close button
+
+Set `closeButton={false}` on `DialogHeader` to hide the default close button.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogNoCloseButtonExample">
+      <DialogNoCloseButtonExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={dialogNoCloseButtonExampleSource}
+      language="tsx"
+      title="dialog-no-close-button-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Nested dialog
+
+Dialogs can be nested inside each other. Use `data-nested-dialog-open` and
+`--nested-dialogs` to visually de-emphasize parent dialogs while a child dialog is open.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogNestedExample">
+      <DialogNestedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={dialogNestedExampleSource}
+      language="tsx"
+      title="dialog-nested-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### Row footer
+
+Use `direction="row"` on `DialogFooter` to align buttons horizontally.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="DialogRowFooterExample">
+      <DialogRowFooterExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={dialogRowFooterExampleSource}
+      language="tsx"
+      title="dialog-row-footer-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={dialogSource} language="tsx" />
+
+## API Reference
+
+### Dialog
+
+<PropsTable component="Dialog" />
+
+### DialogTrigger
+
+<PropsTable component="DialogTrigger" />
+
+### DialogContent
+
+<PropsTable component="DialogContent" />
+
+### DialogHeader
+
+<PropsTable component="DialogHeader" />
+
+### DialogBody
+
+<PropsTable component="DialogBody" />
+
+### DialogFooter
+
+<PropsTable component="DialogFooter" />
+
+### DialogTitle
+
+<PropsTable component="DialogTitle" />
+
+### DialogDescription
+
+<PropsTable component="DialogDescription" />
+
+### DialogBackdrop
+
+<PropsTable component="DialogBackdrop" />
+
+### DialogClose
+
+<PropsTable component="DialogClose" />
+
+### DialogPortal
+
+<PropsTable component="DialogPortal" />

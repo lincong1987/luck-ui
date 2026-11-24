@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-destructive-example",
+  "title": "Menu Destructive Example",
+  "description": "Atomic example for the Luck UI Menu component.",
+  "registryDependencies": [
+    "menu",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/menu-destructive-example.tsx",
+      "content": "import {\r\n  Menu,\r\n  MenuTrigger,\r\n  MenuContent,\r\n  MenuItem,\r\n  MenuItemLabel,\r\n  MenuSeparator,\r\n} from \"registry/default/ui/menu\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function MenuDestructiveExample() {\r\n  return (\r\n    <Menu>\r\n      <MenuTrigger render={<Button variant=\"outline\">Menu</Button>} />\r\n      <MenuContent>\r\n        <MenuItem>\r\n          <MenuItemLabel>Edit</MenuItemLabel>\r\n        </MenuItem>\r\n        <MenuItem>\r\n          <MenuItemLabel>Duplicate</MenuItemLabel>\r\n        </MenuItem>\r\n        <MenuSeparator />\r\n        <MenuItem variant=\"destructive\">\r\n          <MenuItemLabel>Delete</MenuItemLabel>\r\n        </MenuItem>\r\n      </MenuContent>\r\n    </Menu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/menu-destructive-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

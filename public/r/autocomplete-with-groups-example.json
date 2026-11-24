@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "autocomplete-with-groups-example",
+  "title": "Autocomplete With Groups Example",
+  "description": "Atomic example for the Luck UI Autocomplete component.",
+  "registryDependencies": [
+    "autocomplete"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/autocomplete-with-groups-example.tsx",
+      "content": "import {\r\n  Autocomplete,\r\n  AutocompleteCollection,\r\n  AutocompleteContent,\r\n  AutocompleteEmpty,\r\n  AutocompleteGroup,\r\n  AutocompleteGroupLabel,\r\n  AutocompleteInput,\r\n  AutocompleteInputGroup,\r\n  AutocompleteItem,\r\n  AutocompleteList,\r\n} from \"registry/default/ui/autocomplete\";\r\n\r\nconst frameworks = [\r\n  { value: \"Frontend\", items: [\"React\", \"Vue\", \"Svelte\", \"Solid\"] },\r\n  { value: \"Backend\", items: [\"Express\", \"Fastify\", \"NestJS\", \"Hono\"] },\r\n  { value: \"Meta\", items: [\"Next.js\", \"Nuxt\", \"Astro\", \"Remix\"] },\r\n];\r\n\r\nexport function AutocompleteWithGroupsExample() {\r\n  return (\r\n    <div className=\"w-full max-w-64\">\r\n      <Autocomplete items={frameworks}>\r\n        <AutocompleteInputGroup>\r\n          <AutocompleteInput placeholder=\"Search a framework\" />\r\n        </AutocompleteInputGroup>\r\n        <AutocompleteContent>\r\n          <AutocompleteEmpty>No frameworks found.</AutocompleteEmpty>\r\n          <AutocompleteList>\r\n            {(group: (typeof frameworks)[number]) => (\r\n              <AutocompleteGroup key={group.value} items={group.items}>\r\n                <AutocompleteGroupLabel>{group.value}</AutocompleteGroupLabel>\r\n                <AutocompleteCollection>\r\n                  {(item: string) => (\r\n                    <AutocompleteItem key={item} value={item}>\r\n                      {item}\r\n                    </AutocompleteItem>\r\n                  )}\r\n                </AutocompleteCollection>\r\n              </AutocompleteGroup>\r\n            )}\r\n          </AutocompleteList>\r\n        </AutocompleteContent>\r\n      </Autocomplete>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/autocomplete-with-groups-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

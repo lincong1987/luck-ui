@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-column-footer-example",
+  "title": "Card Column Footer Example",
+  "description": "Atomic example for the Luck UI Card component.",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/card-column-footer-example.tsx",
+      "content": "import {\r\n  Card,\r\n  CardBody,\r\n  CardDescription,\r\n  CardFooter,\r\n  CardHeader,\r\n  CardTitle,\r\n} from \"registry/default/ui/card\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function CardColumnFooterExample() {\r\n  return (\r\n    <Card className=\"w-full max-w-lg\">\r\n      <CardHeader>\r\n        <CardTitle>Subscribe</CardTitle>\r\n        <CardDescription>Get the latest updates delivered to your inbox.</CardDescription>\r\n      </CardHeader>\r\n      <CardBody>\r\n        <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n          Join our newsletter for weekly insights and product updates.\r\n        </p>\r\n      </CardBody>\r\n      <CardFooter direction=\"column\">\r\n        <Button className=\"w-full\">Subscribe Now</Button>\r\n        <Button variant=\"secondary\" className=\"w-full\">\r\n          Learn More\r\n        </Button>\r\n      </CardFooter>\r\n    </Card>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/card-column-footer-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

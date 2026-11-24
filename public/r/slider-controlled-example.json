@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-controlled-example",
+  "title": "Slider Controlled Example",
+  "description": "Atomic example for the Luck UI Slider component.",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/slider-controlled-example.tsx",
+      "content": "import { useState } from \"react\";\r\nimport Slider from \"registry/default/ui/slider\";\r\nexport function ControlledSliderExample() {\r\n  const [value, setValue] = useState(40);\r\n\r\n  return (\r\n    <div className=\"flex flex-col gap-4\">\r\n      <Slider\r\n        aria-label=\"Volume\"\r\n        value={value}\r\n        onValueChange={(nextValue) => {\r\n          setValue(Array.isArray(nextValue) ? (nextValue[0] ?? 0) : nextValue);\r\n        }}\r\n      />\r\n      <span className=\"text-sm text-gray-600 dark:text-gray-400\">Volume: {value}</span>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/slider-controlled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

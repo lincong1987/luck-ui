@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-destructive-example",
+  "title": "Alert Dialog Destructive Example",
+  "description": "Atomic example for the Luck UI Alert Dialog component.",
+  "registryDependencies": [
+    "alert-dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/alert-dialog-destructive-example.tsx",
+      "content": "import {\r\n  AlertDialog,\r\n  AlertDialogClose,\r\n  AlertDialogContent,\r\n  AlertDialogDescription,\r\n  AlertDialogFooter,\r\n  AlertDialogHeader,\r\n  AlertDialogTitle,\r\n  AlertDialogTrigger,\r\n} from \"registry/default/ui/alert-dialog\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function AlertDialogDestructiveExample() {\r\n  return (\r\n    <AlertDialog>\r\n      <AlertDialogTrigger render={<Button variant=\"destructive\">Delete Project</Button>} />\r\n      <AlertDialogContent>\r\n        <AlertDialogHeader>\r\n          <AlertDialogTitle>Delete project</AlertDialogTitle>\r\n        </AlertDialogHeader>\r\n        <AlertDialogDescription>\r\n          Are you sure you want to delete this project? All associated data, including deployments\r\n          and environment variables, will be permanently removed.\r\n        </AlertDialogDescription>\r\n        <AlertDialogFooter>\r\n          <AlertDialogClose render={<Button variant=\"secondary\">Cancel</Button>} />\r\n          <Button variant=\"destructive\">Delete</Button>\r\n        </AlertDialogFooter>\r\n      </AlertDialogContent>\r\n    </AlertDialog>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/alert-dialog-destructive-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

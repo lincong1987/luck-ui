@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-variants-example",
+  "title": "Select Variants Example",
+  "description": "Atomic example for the Luck UI Select component.",
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/select-variants-example.tsx",
+      "content": "import {\r\n  Select,\r\n  SelectTrigger,\r\n  SelectContent,\r\n  SelectItem,\r\n  SelectValue,\r\n} from \"registry/default/ui/select\";\r\nexport function SelectVariantsExample() {\r\n  const variants = [\r\n    { value: \"outline\", label: \"Outline\" },\r\n    { value: \"solid\", label: \"Solid\" },\r\n  ];\r\n\r\n  const sizes = [\r\n    { value: \"sm\", label: \"Small\" },\r\n    { value: \"default\", label: \"Default\" },\r\n    { value: \"lg\", label: \"Large\" },\r\n  ];\r\n\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Select items={variants} defaultValue=\"outline\">\r\n        <SelectTrigger variant=\"outline\" className=\"w-44\">\r\n          <SelectValue placeholder=\"Variant\" />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          {variants.map((item) => (\r\n            <SelectItem key={item.value} value={item.value}>\r\n              {item.label}\r\n            </SelectItem>\r\n          ))}\r\n        </SelectContent>\r\n      </Select>\r\n\r\n      <Select items={sizes} defaultValue=\"sm\">\r\n        <SelectTrigger variant=\"outline\" size=\"sm\" className=\"w-44\">\r\n          <SelectValue placeholder=\"Size\" />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          {sizes.map((item) => (\r\n            <SelectItem key={item.value} value={item.value}>\r\n              {item.label}\r\n            </SelectItem>\r\n          ))}\r\n        </SelectContent>\r\n      </Select>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/select-variants-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

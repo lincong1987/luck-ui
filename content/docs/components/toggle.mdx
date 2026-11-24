@@ -1,0 +1,69 @@
+---
+title: Toggle
+description: A two-state button that can be either on or off.
+component: Toggle
+registry: toggle
+---
+
+import { ToggleExample } from "registry/default/examples/toggle-default-example";
+import toggleExampleSource from "registry/default/examples/toggle-default-example.tsx?raw";
+import { ToggleSizesExample } from "registry/default/examples/toggle-sizes-example";
+import toggleSizesExampleSource from "registry/default/examples/toggle-sizes-example.tsx?raw";
+import { ToggleWithIconsExample } from "registry/default/examples/toggle-with-icons-example";
+import toggleWithIconsExampleSource from "registry/default/examples/toggle-with-icons-example.tsx?raw";
+import toggleSource from "registry/default/ui/toggle.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToggleExample">
+      <ToggleExample />
+    </ComponentPreview>
+    <ComponentSource code={toggleExampleSource} language="tsx" title="toggle-default-example.tsx" />
+  </ComponentTabs>
+</ComponentSection>
+
+## Examples
+
+### Sizes
+
+Available sizes: `default`, `sm`, `lg`.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToggleSizesExample">
+      <ToggleSizesExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={toggleSizesExampleSource}
+      language="tsx"
+      title="toggle-sizes-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### With icons
+
+Use an icon inside the toggle for toolbars and formatting controls.
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ToggleWithIconsExample">
+      <ToggleWithIconsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={toggleWithIconsExampleSource}
+      language="tsx"
+      title="toggle-with-icons-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## Installation
+
+Copy the source code below into your project:
+
+<CodeBlock code={toggleSource} language="tsx" />
+
+## API Reference
+
+<PropsTable component="Toggle" />

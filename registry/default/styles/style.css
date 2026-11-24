@@ -1,0 +1,227 @@
+@theme {
+  --color-gray-50: oklch(98.6% 0.001 48.7);
+  --color-gray-100: oklch(96.13% 0.002 48.7);
+  --color-gray-200: oklch(92.65% 0.003 48.7);
+  --color-gray-300: oklch(85.96% 0.0028 48.7);
+  --color-gray-400: oklch(76.81% 0.0036 48.7);
+  --color-gray-500: oklch(65.68% 0.004 48.7);
+  --color-gray-600: oklch(53.97% 0.0034 48.7);
+  --color-gray-700: oklch(42.76% 0.0009 48.7);
+  --color-gray-800: oklch(32.66% 0.0016 48.7);
+  --color-gray-900: oklch(24.1% 0.0024 48.7);
+  --color-gray-950: oklch(18.77% 0.0021 48.7);
+
+  --color-orange-50: oklch(98.19% 0.0092 41.5);
+  --color-orange-100: oklch(96.4% 0.0186 41.5);
+  --color-orange-200: oklch(92.09% 0.0396 41.52);
+  --color-orange-300: oklch(84.65% 0.0866 41.57);
+  --color-orange-400: oklch(74.18% 0.1564 41.71);
+  --color-orange-500: oklch(62.35% 0.17 42.01);
+  --color-orange-600: oklch(50.47% 0.1343 42.62);
+  --color-orange-700: oklch(38.98% 0.1044 43.77);
+  --color-orange-800: oklch(28.36% 0.0801 45.68);
+  --color-orange-900: oklch(19.6% 0.053 48.35);
+  --color-orange-950: oklch(14.08% 0.0364 51.51);
+
+  --color-red-50: oklch(98.1% 0.0092 24.9);
+  --color-red-100: oklch(96.28% 0.0182 24.9);
+  --color-red-200: oklch(91.93% 0.0375 24.9);
+  --color-red-300: oklch(84.35% 0.0844 24.9);
+  --color-red-400: oklch(73.59% 0.1571 24.9);
+  --color-red-500: oklch(61.41% 0.18 24.9);
+  --color-red-600: oklch(49.5% 0.1421 24.9);
+  --color-red-700: oklch(37.92% 0.1106 24.9);
+  --color-red-800: oklch(27.09% 0.0878 24.9);
+  --color-red-900: oklch(17.47% 0.0708 24.9);
+  --color-red-950: oklch(11.95% 0.0484 24.9);
+
+  --color-green-50: oklch(97.64% 0.0173 131.8);
+  --color-green-100: oklch(95.65% 0.0492 131.8);
+  --color-green-200: oklch(91.25% 0.0912 131.8);
+  --color-green-300: oklch(84.04% 0.1378 131.8);
+  --color-green-400: oklch(74.34% 0.1478 131.8);
+  --color-green-500: oklch(62.93% 0.1344 131.8);
+  --color-green-600: oklch(50.99% 0.1152 131.8);
+  --color-green-700: oklch(39.52% 0.093 131.8);
+  --color-green-800: oklch(29.16% 0.0701 131.8);
+  --color-green-900: oklch(20.6% 0.0492 131.8);
+  --color-green-950: oklch(15.27% 0.0336 131.8);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: var(--color-gray-50);
+    --foreground: var(--color-gray-900);
+    --card: var(--color-gray-100);
+    --card-foreground: var(--color-gray-900);
+    --popover: oklch(1 0 0);
+    --popover-foreground: var(--color-gray-900);
+    --dialog: var(--color-gray-50);
+    --dialog-foreground: var(--color-gray-900);
+    --primary: var(--color-gray-900);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: color-mix(in oklch, var(--color-gray-950) 8%, transparent);
+    --secondary-foreground: var(--color-gray-900);
+    --muted: var(--color-gray-100);
+    --muted-foreground: var(--color-gray-600);
+    --accent: var(--color-orange-500);
+    --accent-foreground: oklch(1 0 0);
+    --destructive: var(--color-red-500);
+    --destructive-foreground: oklch(1 0 0);
+    --border: color-mix(in oklch, var(--color-gray-950) 10%, transparent);
+    --ring: color-mix(in oklch, var(--color-orange-500) 30%, transparent);
+    --field: color-mix(in oklch, var(--color-gray-950) 5%, transparent);
+
+    /* surface state variants — derived from each base token via color-mix.
+       Opaque surfaces mix toward --foreground (darken in light, lighten in
+       dark); primary mixes toward its own foreground (the inverse). These are
+       theme-agnostic and inherited by [data-theme="dark"]. Only --secondary
+       stays per-theme: it's a translucent overlay tint, so its states bump
+       alpha rather than mixing to an opaque color. */
+    --background-hover: color-mix(in oklch, var(--background), var(--foreground) 6%);
+    --background-active: color-mix(in oklch, var(--background), var(--foreground) 12%);
+    --card-hover: color-mix(in oklch, var(--card), var(--foreground) 6%);
+    --card-active: color-mix(in oklch, var(--card), var(--foreground) 12%);
+    --popover-hover: color-mix(in oklch, var(--popover), var(--foreground) 6%);
+    --popover-active: color-mix(in oklch, var(--popover), var(--foreground) 12%);
+    --dialog-hover: color-mix(in oklch, var(--dialog), var(--foreground) 6%);
+    --dialog-active: color-mix(in oklch, var(--dialog), var(--foreground) 12%);
+    --muted-hover: color-mix(in oklch, var(--muted), var(--foreground) 6%);
+    --muted-active: color-mix(in oklch, var(--muted), var(--foreground) 12%);
+    --primary-hover: color-mix(in oklch, var(--primary), var(--primary-foreground) 15%);
+    --primary-active: color-mix(in oklch, var(--primary), var(--primary-foreground) 26%);
+    --accent-hover: color-mix(in oklch, var(--accent), var(--foreground) 12%);
+    --accent-active: color-mix(in oklch, var(--accent), var(--foreground) 22%);
+    --destructive-hover: color-mix(in oklch, var(--destructive), var(--foreground) 12%);
+    --destructive-active: color-mix(in oklch, var(--destructive), var(--foreground) 22%);
+    --secondary-hover: color-mix(in oklch, var(--color-gray-950) 16%, transparent);
+    --secondary-active: color-mix(in oklch, var(--color-gray-950) 22%, transparent);
+
+    --chart-1: var(--color-orange-500);
+    --chart-2: var(--color-red-500);
+    --chart-3: var(--color-gray-500);
+    --chart-4: var(--color-orange-400);
+    --chart-5: var(--color-red-300);
+    --sidebar: var(--card);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--secondary);
+    --sidebar-accent-foreground: var(--secondary-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+  }
+
+  :root[data-theme="dark"],
+  .dark {
+    color-scheme: dark;
+    --background: var(--color-gray-950);
+    --foreground: var(--color-gray-100);
+    --card: var(--color-gray-900);
+    --card-foreground: var(--color-gray-100);
+    --popover: var(--color-gray-900);
+    --popover-foreground: var(--color-gray-100);
+    --dialog: var(--color-gray-900);
+    --dialog-foreground: var(--color-gray-100);
+    --primary: var(--color-gray-100);
+    --primary-foreground: var(--color-gray-900);
+    --secondary: color-mix(in oklch, var(--color-gray-50) 8%, transparent);
+    --secondary-foreground: var(--color-gray-100);
+    --muted: var(--color-gray-900);
+    --muted-foreground: var(--color-gray-400);
+    --accent: var(--color-orange-600);
+    --accent-foreground: oklch(1 0 0);
+    --destructive: var(--color-red-500);
+    --destructive-foreground: oklch(1 0 0);
+    --border: color-mix(in oklch, var(--color-gray-50) 10%, transparent);
+    --ring: color-mix(in oklch, var(--color-orange-500) 30%, transparent);
+    /* darker well in dark mode — same gray-950 base, higher alpha */
+    --field: color-mix(in oklch, var(--color-gray-950) 30%, transparent);
+
+    /* surface state variants — opaque tokens inherit the color-mix
+       derivations from :root and re-resolve against the dark base/foreground.
+       Only the translucent --secondary overlay is redefined per-theme. */
+    --secondary-hover: color-mix(in oklch, var(--color-gray-50) 16%, transparent);
+    --secondary-active: color-mix(in oklch, var(--color-gray-50) 22%, transparent);
+
+    --chart-1: var(--color-orange-600);
+    --chart-2: var(--color-red-500);
+    --chart-3: var(--color-gray-400);
+    --chart-4: var(--color-orange-700);
+    --chart-5: var(--color-red-300);
+    --sidebar: var(--card);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--secondary);
+    --sidebar-accent-foreground: var(--secondary-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+  }
+
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-hover: var(--background-hover);
+  --color-background-active: var(--background-active);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-hover: var(--card-hover);
+  --color-card-active: var(--card-active);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover-hover: var(--popover-hover);
+  --color-popover-active: var(--popover-active);
+  --color-dialog: var(--dialog);
+  --color-dialog-foreground: var(--dialog-foreground);
+  --color-dialog-hover: var(--dialog-hover);
+  --color-dialog-active: var(--dialog-active);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-active: var(--secondary-active);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-hover: var(--muted-hover);
+  --color-muted-active: var(--muted-active);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-active: var(--accent-active);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-hover: var(--destructive-hover);
+  --color-destructive-active: var(--destructive-active);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-border: var(--border);
+  --color-field: var(--field);
+  --color-ring: var(--ring);
+}

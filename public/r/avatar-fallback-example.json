@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-fallback-example",
+  "title": "Avatar Fallback Example",
+  "description": "Atomic example for the Luck UI Avatar component.",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/avatar-fallback-example.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"registry/default/ui/avatar\";\r\n\r\nexport function AvatarFallbackExample() {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center gap-4\">\r\n      <Avatar>\r\n        <AvatarFallback>IU</AvatarFallback>\r\n      </Avatar>\r\n      <Avatar>\r\n        <AvatarImage alt=\"Broken image\" src=\"https://invalid-url/avatar.png\" />\r\n        <AvatarFallback>ER</AvatarFallback>\r\n      </Avatar>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/avatar-fallback-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

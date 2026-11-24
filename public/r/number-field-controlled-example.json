@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "number-field-controlled-example",
+  "title": "Number Field Controlled Example",
+  "description": "Atomic example for the Luck UI Number Field component.",
+  "registryDependencies": [
+    "number-field"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/number-field-controlled-example.tsx",
+      "content": "import { useState } from \"react\";\r\nimport {\r\n  NumberField,\r\n  NumberFieldDecrement,\r\n  NumberFieldGroup,\r\n  NumberFieldIncrement,\r\n  NumberFieldInput,\r\n} from \"registry/default/ui/number-field\";\r\n\r\nexport function NumberFieldControlledExample() {\r\n  const [value, setValue] = useState<number | null>(50);\r\n\r\n  return (\r\n    <div className=\"flex w-full max-w-48 flex-col gap-3\">\r\n      <NumberField value={value} onValueChange={setValue} step={5} min={0} max={100}>\r\n        <NumberFieldGroup>\r\n          <NumberFieldDecrement />\r\n          <NumberFieldInput />\r\n          <NumberFieldIncrement />\r\n        </NumberFieldGroup>\r\n      </NumberField>\r\n      <span className=\"text-sm text-muted-foreground\">\r\n        Value: {value === null ? \"empty\" : value}\r\n      </span>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/number-field-controlled-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

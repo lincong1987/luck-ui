@@ -1,0 +1,155 @@
+---
+title: 复选框
+description: 允许用户在选中、未选中和不确定状态之间切换的控件。
+component: Checkbox
+registry: checkbox
+---
+
+import { CheckboxExample } from "registry/default/examples/checkbox-default-example";
+import checkboxExampleSource from "registry/default/examples/checkbox-default-example.tsx?raw";
+import { CheckboxCheckedExample } from "registry/default/examples/checkbox-checked-example";
+import checkboxCheckedExampleSource from "registry/default/examples/checkbox-checked-example.tsx?raw";
+import { CheckboxDisabledExample } from "registry/default/examples/checkbox-disabled-example";
+import checkboxDisabledExampleSource from "registry/default/examples/checkbox-disabled-example.tsx?raw";
+import { CheckboxControlledExample } from "registry/default/examples/checkbox-controlled-example";
+import checkboxControlledExampleSource from "registry/default/examples/checkbox-controlled-example.tsx?raw";
+import { CheckboxGroupExample } from "registry/default/examples/checkbox-group-example";
+import checkboxGroupExampleSource from "registry/default/examples/checkbox-group-example.tsx?raw";
+import { CheckboxGroupControlledExample } from "registry/default/examples/checkbox-group-controlled-example";
+import checkboxGroupControlledExampleSource from "registry/default/examples/checkbox-group-controlled-example.tsx?raw";
+import { CheckboxGroupIndeterminateExample } from "registry/default/examples/checkbox-group-indeterminate-example";
+import checkboxGroupIndeterminateExampleSource from "registry/default/examples/checkbox-group-indeterminate-example.tsx?raw";
+import checkboxSource from "registry/default/ui/checkbox.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CheckboxExample">
+      <CheckboxExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={checkboxExampleSource}
+      language="tsx"
+      title="checkbox-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 默认选中
+
+使用 `defaultChecked` 设置初始状态，而无需将组件变为受控组件。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CheckboxCheckedExample">
+      <CheckboxCheckedExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={checkboxCheckedExampleSource}
+      language="tsx"
+      title="checkbox-checked-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 禁用
+
+使用 `disabled` 属性禁止交互。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CheckboxDisabledExample">
+      <CheckboxDisabledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={checkboxDisabledExampleSource}
+      language="tsx"
+      title="checkbox-disabled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 受控
+
+通过 `checked` 与 `onCheckedChange`，用 React 状态管理选中状态。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CheckboxControlledExample">
+      <CheckboxControlledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={checkboxControlledExampleSource}
+      language="tsx"
+      title="checkbox-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 分组
+
+使用 `CheckboxGroup` 管理多个相关复选框。每个子复选框的 `value` 属性应与分组的值数组对应。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CheckboxGroupExample">
+      <CheckboxGroupExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={checkboxGroupExampleSource}
+      language="tsx"
+      title="checkbox-group-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 受控分组
+
+通过 `value` 与 `onValueChange`，用 React 状态管理分组中选中的值。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CheckboxGroupControlledExample">
+      <CheckboxGroupControlledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={checkboxGroupControlledExampleSource}
+      language="tsx"
+      title="checkbox-group-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 父级复选框
+
+使用带 `parent` 属性的父级复选框来控制一组子复选框。向 `CheckboxGroup` 传入 `allValues`，父级即可切换全部子项。当只选中部分子项时，父级会自动显示不确定状态。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="CheckboxGroupIndeterminateExample">
+      <CheckboxGroupIndeterminateExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={checkboxGroupIndeterminateExampleSource}
+      language="tsx"
+      title="checkbox-group-indeterminate-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={checkboxSource} language="tsx" />
+
+## API 参考
+
+### Checkbox
+
+<PropsTable component="Checkbox" />
+
+### CheckboxGroup
+
+<PropsTable component="CheckboxGroup" />

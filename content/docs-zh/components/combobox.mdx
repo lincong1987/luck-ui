@@ -1,0 +1,173 @@
+---
+title: 组合框
+description: 将文本输入框与弹出选项列表结合，让用户可以筛选并选择选项。
+component: Combobox
+registry: combobox
+---
+
+import { ComboboxExample } from "registry/default/examples/combobox-default-example";
+import comboboxExampleSource from "registry/default/examples/combobox-default-example.tsx?raw";
+import { ComboboxWithInputExample } from "registry/default/examples/combobox-with-input-example";
+import comboboxWithInputExampleSource from "registry/default/examples/combobox-with-input-example.tsx?raw";
+import { ComboboxWithGroupsExample } from "registry/default/examples/combobox-with-groups-example";
+import comboboxWithGroupsExampleSource from "registry/default/examples/combobox-with-groups-example.tsx?raw";
+import { ComboboxMultiSelectExample } from "registry/default/examples/combobox-multi-select-example";
+import comboboxMultiSelectExampleSource from "registry/default/examples/combobox-multi-select-example.tsx?raw";
+import { ComboboxControlledExample } from "registry/default/examples/combobox-controlled-example";
+import comboboxControlledExampleSource from "registry/default/examples/combobox-controlled-example.tsx?raw";
+import comboboxSource from "registry/default/ui/combobox.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ComboboxWithInputExample">
+      <ComboboxWithInputExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={comboboxWithInputExampleSource}
+      language="tsx"
+      title="combobox-with-input-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 带触发按钮
+
+使用 `ComboboxTrigger` 可得到不带文本输入的按钮式组合框。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ComboboxExample">
+      <ComboboxExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={comboboxExampleSource}
+      language="tsx"
+      title="combobox-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 分组
+
+使用 `ComboboxGroup` 与 `ComboboxGroupLabel` 对相关条目分组。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ComboboxWithGroupsExample">
+      <ComboboxWithGroupsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={comboboxWithGroupsExampleSource}
+      language="tsx"
+      title="combobox-with-groups-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 多选
+
+启用 `multiple` 多选，并将选中的值以标签形式显示在输入框内。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ComboboxMultiSelectExample">
+      <ComboboxMultiSelectExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={comboboxMultiSelectExampleSource}
+      language="tsx"
+      title="combobox-multi-select-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 受控
+
+用 React 状态管理选中的值。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ComboboxControlledExample">
+      <ComboboxControlledExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={comboboxControlledExampleSource}
+      language="tsx"
+      title="combobox-controlled-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={comboboxSource} language="tsx" />
+
+## API 参考
+
+### Combobox
+
+<PropsTable component="Combobox" />
+
+### ComboboxTrigger
+
+<PropsTable component="ComboboxTrigger" />
+
+### ComboboxContent
+
+<PropsTable component="ComboboxContent" />
+
+### ComboboxList
+
+<PropsTable component="ComboboxList" />
+
+### ComboboxItem
+
+<PropsTable component="ComboboxItem" />
+
+### ComboboxValue
+
+<PropsTable component="ComboboxValue" />
+
+### ComboboxInput
+
+<PropsTable component="ComboboxInput" />
+
+### ComboboxEmpty
+
+<PropsTable component="ComboboxEmpty" />
+
+### ComboboxSeparator
+
+<PropsTable component="ComboboxSeparator" />
+
+### ComboboxChips
+
+<PropsTable component="ComboboxChips" />
+
+### ComboboxChip
+
+<PropsTable component="ComboboxChip" />
+
+### ComboboxItemIndicator
+
+<PropsTable component="ComboboxItemIndicator" />
+
+### ComboboxItemAddon
+
+<PropsTable component="ComboboxItemAddon" />
+
+### ComboboxItemLabel
+
+<PropsTable component="ComboboxItemLabel" />
+
+### ComboboxGroup
+
+<PropsTable component="ComboboxGroup" />
+
+### ComboboxGroupLabel
+
+<PropsTable component="ComboboxGroupLabel" />

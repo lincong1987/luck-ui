@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-menu-with-kbd-example",
+  "title": "Context Menu With Kbd Example",
+  "description": "Atomic example for the Luck UI Context Menu component.",
+  "registryDependencies": [
+    "context-menu",
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/context-menu-with-kbd-example.tsx",
+      "content": "import {\r\n  ContextMenu,\r\n  ContextMenuTrigger,\r\n  ContextMenuContent,\r\n  ContextMenuItem,\r\n  ContextMenuItemAddon,\r\n  ContextMenuItemLabel,\r\n  ContextMenuSeparator,\r\n} from \"registry/default/ui/context-menu\";\r\nimport { Kbd } from \"registry/default/ui/kbd\";\r\n\r\nexport function ContextMenuWithKbdExample() {\r\n  return (\r\n    <ContextMenu>\r\n      <ContextMenuTrigger className=\"flex h-36 w-72 items-center justify-center rounded-xl border border-dashed text-sm text-muted-foreground\">\r\n        Right click here\r\n      </ContextMenuTrigger>\r\n      <ContextMenuContent className=\"min-w-52\">\r\n        <ContextMenuItem>\r\n          <ContextMenuItemLabel>Cut</ContextMenuItemLabel>\r\n          <ContextMenuItemAddon>\r\n            <Kbd>⌘X</Kbd>\r\n          </ContextMenuItemAddon>\r\n        </ContextMenuItem>\r\n        <ContextMenuItem>\r\n          <ContextMenuItemLabel>Copy</ContextMenuItemLabel>\r\n          <ContextMenuItemAddon>\r\n            <Kbd>⌘C</Kbd>\r\n          </ContextMenuItemAddon>\r\n        </ContextMenuItem>\r\n        <ContextMenuItem>\r\n          <ContextMenuItemLabel>Paste</ContextMenuItemLabel>\r\n          <ContextMenuItemAddon>\r\n            <Kbd>⌘V</Kbd>\r\n          </ContextMenuItemAddon>\r\n        </ContextMenuItem>\r\n        <ContextMenuSeparator />\r\n        <ContextMenuItem>\r\n          <ContextMenuItemLabel>Select all</ContextMenuItemLabel>\r\n          <ContextMenuItemAddon>\r\n            <Kbd>⌘A</Kbd>\r\n          </ContextMenuItemAddon>\r\n        </ContextMenuItem>\r\n      </ContextMenuContent>\r\n    </ContextMenu>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/context-menu-with-kbd-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

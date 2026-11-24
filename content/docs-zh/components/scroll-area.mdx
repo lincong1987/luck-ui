@@ -1,0 +1,60 @@
+---
+title: 滚动区域
+description: 带自定义滚动条样式的可滚动容器。
+component: Scroll Area
+registry: scroll-area
+---
+
+import { ScrollAreaExample } from "registry/default/examples/scroll-area-default-example";
+import scrollAreaExampleSource from "registry/default/examples/scroll-area-default-example.tsx?raw";
+import { ScrollAreaHorizontalExample } from "registry/default/examples/scroll-area-horizontal-example";
+import scrollAreaHorizontalExampleSource from "registry/default/examples/scroll-area-horizontal-example.tsx?raw";
+import scrollAreaSource from "registry/default/ui/scroll-area.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ScrollAreaExample">
+      <ScrollAreaExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={scrollAreaExampleSource}
+      language="tsx"
+      title="scroll-area-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 横向滚动
+
+横向滚动的内容同样使用 `ScrollArea` 组件。滚动条会自动适应内容方向。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="ScrollAreaHorizontalExample">
+      <ScrollAreaHorizontalExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={scrollAreaHorizontalExampleSource}
+      language="tsx"
+      title="scroll-area-horizontal-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={scrollAreaSource} language="tsx" />
+
+## API 参考
+
+### ScrollArea
+
+<PropsTable component="ScrollArea" />
+
+### ScrollBar
+
+<PropsTable component="ScrollBar" />

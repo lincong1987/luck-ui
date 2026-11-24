@@ -1,0 +1,150 @@
+---
+title: 自动完成
+description: 带弹出建议列表的文本输入框，输入时实时筛选，帮助用户快速找到并选定值。
+component: Autocomplete
+registry: autocomplete
+---
+
+import { AutocompleteExample } from "registry/default/examples/autocomplete-default-example";
+import autocompleteExampleSource from "registry/default/examples/autocomplete-default-example.tsx?raw";
+import { AutocompleteWithClearExample } from "registry/default/examples/autocomplete-with-clear-example";
+import autocompleteWithClearExampleSource from "registry/default/examples/autocomplete-with-clear-example.tsx?raw";
+import { AutocompleteWithGroupsExample } from "registry/default/examples/autocomplete-with-groups-example";
+import autocompleteWithGroupsExampleSource from "registry/default/examples/autocomplete-with-groups-example.tsx?raw";
+import { AutocompleteAsyncExample } from "registry/default/examples/autocomplete-async-example";
+import autocompleteAsyncExampleSource from "registry/default/examples/autocomplete-async-example.tsx?raw";
+import autocompleteSource from "registry/default/ui/autocomplete.tsx?raw";
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AutocompleteExample">
+      <AutocompleteExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={autocompleteExampleSource}
+      language="tsx"
+      title="autocomplete-default-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 示例
+
+### 带清除与触发按钮
+
+用 `AutocompleteInputAddon` 为输入框组添加前置图标，再搭配 `AutocompleteClear` 与 `AutocompleteTrigger` 按钮。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AutocompleteWithClearExample">
+      <AutocompleteWithClearExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={autocompleteWithClearExampleSource}
+      language="tsx"
+      title="autocomplete-with-clear-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 分组
+
+传入分组后的条目，并用 `AutocompleteGroup`、`AutocompleteGroupLabel` 和 `AutocompleteCollection` 渲染。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AutocompleteWithGroupsExample">
+      <AutocompleteWithGroupsExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={autocompleteWithGroupsExampleSource}
+      language="tsx"
+      title="autocomplete-with-groups-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+### 异步加载
+
+在用户输入时获取建议。设置 `mode="none"` 可关闭内置筛选，并使用 `AutocompleteStatus` 播报加载状态。
+
+<ComponentSection>
+  <ComponentTabs>
+    <ComponentPreview name="AutocompleteAsyncExample">
+      <AutocompleteAsyncExample />
+    </ComponentPreview>
+    <ComponentSource
+      code={autocompleteAsyncExampleSource}
+      language="tsx"
+      title="autocomplete-async-example.tsx"
+    />
+  </ComponentTabs>
+</ComponentSection>
+
+## 安装
+
+将下面的源代码复制到你的项目中：
+
+<CodeBlock code={autocompleteSource} language="tsx" />
+
+## API 参考
+
+### Autocomplete
+
+<PropsTable component="Autocomplete" />
+
+### AutocompleteInputGroup
+
+<PropsTable component="AutocompleteInputGroup" />
+
+### AutocompleteInput
+
+<PropsTable component="AutocompleteInput" />
+
+### AutocompleteInputAddon
+
+<PropsTable component="AutocompleteInputAddon" />
+
+### AutocompleteTrigger
+
+<PropsTable component="AutocompleteTrigger" />
+
+### AutocompleteClear
+
+<PropsTable component="AutocompleteClear" />
+
+### AutocompleteContent
+
+<PropsTable component="AutocompleteContent" />
+
+### AutocompleteList
+
+<PropsTable component="AutocompleteList" />
+
+### AutocompleteItem
+
+<PropsTable component="AutocompleteItem" />
+
+### AutocompleteValue
+
+<PropsTable component="AutocompleteValue" />
+
+### AutocompleteEmpty
+
+<PropsTable component="AutocompleteEmpty" />
+
+### AutocompleteStatus
+
+<PropsTable component="AutocompleteStatus" />
+
+### AutocompleteSeparator
+
+<PropsTable component="AutocompleteSeparator" />
+
+### AutocompleteGroup
+
+<PropsTable component="AutocompleteGroup" />
+
+### AutocompleteGroupLabel
+
+<PropsTable component="AutocompleteGroupLabel" />

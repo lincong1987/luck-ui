@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-no-close-button-example",
+  "title": "Popover No Close Button Example",
+  "description": "Atomic example for the Luck UI Popover component.",
+  "registryDependencies": [
+    "popover",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/popover-no-close-button-example.tsx",
+      "content": "import {\r\n  Popover,\r\n  PopoverBody,\r\n  PopoverClose,\r\n  PopoverContent,\r\n  PopoverHeader,\r\n  PopoverTitle,\r\n  PopoverTrigger,\r\n} from \"registry/default/ui/popover\";\r\nimport { Button } from \"registry/default/ui/button\";\r\nexport function PopoverNoCloseButtonExample() {\r\n  return (\r\n    <Popover>\r\n      <PopoverTrigger render={<Button variant=\"outline\">No Close Button</Button>} />\r\n      <PopoverContent>\r\n        <PopoverHeader closeButton={false}>\r\n          <PopoverTitle>Notice</PopoverTitle>\r\n        </PopoverHeader>\r\n        <PopoverBody>\r\n          <p className=\"text-sm text-gray-600 dark:text-gray-400\">\r\n            This popover has no default close button in the header.\r\n          </p>\r\n          <PopoverClose render={<Button size=\"sm\">Dismiss</Button>} />\r\n        </PopoverBody>\r\n      </PopoverContent>\r\n    </Popover>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/popover-no-close-button-example.tsx"
+    }
+  ],
+  "type": "registry:component"
+}
