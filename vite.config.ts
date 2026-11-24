@@ -32,6 +32,8 @@ export default defineConfig({
       prerender: {
         enabled: isStaticBuild,
         crawlLinks: true,
+        retryCount: 3,
+        retryDelay: 800,
       },
     }),
     mdx(MdxConfig),

@@ -684,7 +684,7 @@ export const propsRegistry: Record<string, ComponentPropsEntry> = {
   ButtonGroupSeparator: {
     extends: {
       name: "Luck UI Separator",
-      href: "/components/separator",
+      href: "/docs/components/separator",
     },
     props: [
       {
@@ -730,7 +730,7 @@ export const propsRegistry: Record<string, ComponentPropsEntry> = {
   InputGroupButton: {
     extends: {
       name: "Luck UI Button",
-      href: "/components/button",
+      href: "/docs/components/button",
     },
     props: [
       {

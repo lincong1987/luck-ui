@@ -1,4 +1,4 @@
-import { useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
 import { getLocaleFromPath, getMessages } from "../../lib/i18n";
 import { localizePropDescription, propsRegistry } from "../../lib/props-registry";
@@ -196,6 +196,19 @@ export function KeyboardShortcuts({
 }
 
 function BaseLink({ href, children }: { href: string; children: ReactNode }) {
+  const isInternal = href.startsWith("/") && !href.startsWith("//");
+
+  if (isInternal) {
+    return (
+      <Link
+        className="text-orange-600 underline underline-offset-2 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300"
+        to={href}
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <a
       className="text-orange-600 underline underline-offset-2 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300"
