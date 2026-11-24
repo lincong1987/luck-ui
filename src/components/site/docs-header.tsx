@@ -42,7 +42,7 @@ export function DocsHeader() {
           <Button
             nativeButton={false}
             variant="ghost"
-            render={<a href={getLocaleTogglePath(pathname)} aria-label={copy.language} />}
+            render={<Link to={getLocaleTogglePath(pathname)} aria-label={copy.language} />}
           >
             {locale === "zh" ? "EN" : "中文"}
           </Button>

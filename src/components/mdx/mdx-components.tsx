@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import type { MDXComponents } from "mdx/types";
 import { CodeBlock } from "../docs/code-block";
 import { CodeSnippet, CodeSnippetCommand } from "../docs/code-snippet";
@@ -17,6 +18,7 @@ import { MdxTable, MdxTbody, MdxTd, MdxTh, MdxThead, MdxTr } from "./table-compo
 
 export function getMDXComponents(): MDXComponents {
   return {
+    a: MdxLink,
     ComponentPreview,
     ComponentSource,
     ComponentTabs,
@@ -39,6 +41,25 @@ export function getMDXComponents(): MDXComponents {
     pre: CodeBlock,
     code: InlineCode,
   };
+}
+
+function MdxLink(props: React.ComponentProps<"a">) {
+  const { href = "#", children, ...rest } = props;
+  const isInternal = href.startsWith("/") && !href.startsWith("//");
+
+  if (!isInternal) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link to={href} {...rest}>
+      {children}
+    </Link>
+  );
 }
 
 function InlineCode(props: React.ComponentProps<"code">) {

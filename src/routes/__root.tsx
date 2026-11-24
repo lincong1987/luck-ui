@@ -10,7 +10,7 @@ import {
 import type { ReactNode } from "react";
 import { ToastProvider } from "registry/default/ui/toast";
 import { DocsSidebarProvider } from "../components/site/docs-sidebar-context";
-import { SITE_NAME, buildSeoMeta, ogImageUrl } from "../lib/seo";
+import { SITE_NAME, brandImageUrl, buildSeoMeta } from "../lib/seo";
 import { legacyThemeStorageKey, uiStorageKey } from "../lib/theme";
 import { getLocaleFromPath, getMessages } from "../lib/i18n";
 import appCss from "../styles/app.css?url";
@@ -46,7 +46,7 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "color-scheme", content: "light dark" },
       { title: SITE_NAME },
-      ...buildSeoMeta({ title: SITE_NAME, image: ogImageUrl() }),
+      ...buildSeoMeta({ title: SITE_NAME, image: brandImageUrl() }),
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

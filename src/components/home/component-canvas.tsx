@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { PointerEvent as ReactPointerEvent, ReactNode } from "react";
 import {
@@ -1547,7 +1548,7 @@ export function ComponentCanvas({ locale = "en" }: { locale?: HomeLocale }) {
       <div className="fixed top-4 right-4 z-30">
         <Button
           nativeButton={false}
-          render={<a aria-label={copy.languageSwitch.ariaLabel} href={copy.languageSwitch.href} />}
+          render={<Link aria-label={copy.languageSwitch.ariaLabel} to={copy.languageSwitch.href} />}
           size="sm"
           variant="outline"
         >

@@ -1,92 +1,139 @@
+<div align="center">
+
 # Luck UI
 
-A warm, approachable React component library built on [Base UI](https://base-ui.com) and styled with [Tailwind CSS v4](https://tailwindcss.com), distributed through the [shadcn registry](https://ui.shadcn.com/docs/registry).
+**A warm, bilingual React component library — built on Base UI, styled with Tailwind CSS v4, distributed through the shadcn registry.**
 
-**Docs:** `/docs` (English) · `/zh/docs` (简体中文)
+[![Live Demo](https://img.shields.io/badge/demo-lincong1987.github.io%2Fluck--ui-orange)](https://lincong1987.github.io/luck-ui/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![React 19](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)](https://react.dev)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![English](https://img.shields.io/badge/docs-English-black)](https://lincong1987.github.io/luck-ui/docs)
+[![简体中文](https://img.shields.io/badge/docs-简体中文-black)](https://lincong1987.github.io/luck-ui/zh/docs)
 
-Luck UI provides accessible, customizable components with warm grays, orange accents, generous rounded corners, and subtle motion. Components are copied into your application through the registry, so you own and can customize the source.
+[English](https://lincong1987.github.io/luck-ui/docs) · [简体中文](https://lincong1987.github.io/luck-ui/zh/docs) · [Report Bug](https://github.com/lincong1987/luck-ui/issues) · [Request Feature](https://github.com/lincong1987/luck-ui/issues)
 
-## Features
+![Luck UI homepage — a draggable canvas of live component previews](.github/assets/home-en.png)
 
-- Accessible interaction primitives from Base UI
-- Tailwind CSS v4 theme with light and dark modes
-- Motion-powered transitions and micro-interactions
-- 31 components with live examples and bilingual documentation
-- shadcn-compatible registry output
+</div>
 
-## Tech stack
+## ✨ Why Luck UI?
 
-- [TanStack Start](https://tanstack.com/start), [React 19](https://react.dev), and TypeScript
-- [Tailwind CSS v4](https://tailwindcss.com) and [Base UI](https://base-ui.com)
-- [fumadocs-mdx](https://fumadocs.dev) for docs
-- [shadcn CLI](https://ui.shadcn.com) for registry builds
-- [Cloudflare Workers](https://workers.cloudflare.com) deployment via Wrangler
+Luck UI gives you **31 accessible components with 135 live examples** in a warm, human design language — warm grays, orange accents, generous rounded corners, and subtle micro-interactions. It is made for consumer-facing products that should feel inviting, not for dense data dashboards.
 
-## Getting started
+Like [shadcn/ui](https://ui.shadcn.com), Luck UI is **not an npm dependency**. It is a copy-paste registry: you own the code. Every component is a single self-contained file with no hidden abstractions and no version lock-in.
+
+|                              |                                                                                   |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| ♿ **Accessible by default** | Built on [Base UI](https://base-ui.com)'s unstyled, WAI-ARIA-compliant primitives |
+| 🌗 **Light & dark modes**    | Theme defined entirely with CSS variables; flip `data-theme="dark"`               |
+| 🌏 **Bilingual docs**        | Full documentation in English and 简体中文 with a path-preserving switch          |
+| 🎬 **Motion built in**       | Smooth, natural transitions via [Motion](https://motion.dev)                      |
+| 🧩 **Own your code**         | Self-contained files you copy in and customize freely                             |
+| 🎨 **Warm design language**  | Warm gray + orange OKLCH palette, large radii, human feel                         |
+
+<details>
+<summary><strong>📦 31 components</strong></summary>
+
+Accordion · Alert Dialog · Autocomplete · Avatar · Button · Button Group · Card · Checkbox · Combobox · Command · Context Menu · Dialog · Drawer · Input · Input Group · Kbd · Menu · Number Field · Popover · Radio · Scroll Area · Select · Separator · Slider · Switch · Tabs · Tag · Textarea · Toast · Toggle · Tooltip
+
+</details>
+
+## 🌅 Screenshots
+
+<div align="center">
+<img src=".github/assets/home-zh.png" width="49%" alt="Luck UI 中文首页" /> <img src=".github/assets/docs-button-dark.png" width="49%" alt="Luck UI dark mode docs" />
+</div>
+<div align="center">
+<img src=".github/assets/docs-button-en.png" width="49%" alt="Luck UI English docs" /> <img src=".github/assets/docs-button-zh.png" width="49%" alt="Luck UI 中文文档" />
+</div>
+
+## 🚀 Getting Started
+
+### 1. Set up your project
+
+Luck UI components expect **React 19 + Tailwind CSS v4** with the Base UI primitives installed:
 
 ```bash
-pnpm install
-pnpm dev --host 127.0.0.1 --port 5553
+pnpm add @base-ui/react @phosphor-icons/react motion
 ```
 
-Open `http://127.0.0.1:5553/` for the component canvas. English docs are at `/docs`; Chinese docs are at `/zh/docs`.
+### 2. Add a component
 
-Add a component from the published registry:
+Pull any component straight from the registry with the shadcn CLI:
 
 ```bash
 npx shadcn@latest add https://raw.githubusercontent.com/lincong1987/luck-ui/main/public/r/button.json
 ```
 
-## Commands
+Browse every registry item in [`public/r/`](./public/r) — each component, demo, and the theme are one JSON away:
 
-| Command               | Description                            |
-| --------------------- | -------------------------------------- |
-| `pnpm dev`            | Start the Vite development server      |
-| `pnpm build`          | Build the site                         |
-| `pnpm preview`        | Preview the production build           |
-| `pnpm deploy`         | Build and deploy to Cloudflare Workers |
-| `pnpm lint`           | Run oxlint                             |
-| `pnpm format:check`   | Check formatting                       |
-| `pnpm typecheck`      | Run TypeScript checks                  |
-| `pnpm typegen`        | Regenerate fumadocs MDX types          |
-| `pnpm registry:build` | Build registry JSON into `public/r/`   |
-
-Set `VITE_SITE_URL` when building for a hosted domain so canonical and Open Graph URLs use that origin.
-
-## Project structure
-
-```text
-├── content/docs/          # English MDX documentation
-├── content/docs-zh/       # Simplified Chinese MDX documentation
-├── registry/
-│   └── default/
-│       ├── ui/            # Registry components
-│       ├── examples/      # Component demos
-│       ├── lib/           # Shared utilities
-│       └── styles/        # Theme CSS variables
-├── src/
-│   ├── routes/            # TanStack Router routes
-│   ├── components/        # Site components
-│   └── styles/             # Site styles
-├── registry.json          # shadcn registry definition
-└── public/r/               # Generated registry output
+```bash
+npx shadcn@latest add https://raw.githubusercontent.com/lincong1987/luck-ui/main/public/r/dialog.json
+npx shadcn@latest add https://raw.githubusercontent.com/lincong1987/luck-ui/main/public/r/toast.json
+npx shadcn@latest add https://raw.githubusercontent.com/lincong1987/luck-ui/main/public/r/theme.json   # the color tokens
 ```
 
-## Adding a component
+### 3. Own the code
 
-1. Add the component under `registry/default/ui/`.
-2. Add examples under `registry/default/examples/`.
-3. Register the files in `registry.json` and run `pnpm registry:build`.
-4. Add English and Chinese documentation under `content/docs/` and `content/docs-zh/`.
+The component source lands in your project. Restyle it, rename it, delete half of it — it's yours.
 
-## Generated files
+## 🖥 Local Development
 
-Do not edit these directly:
+```bash
+git clone https://github.com/lincong1987/luck-ui.git
+cd luck-ui
+pnpm install
+pnpm dev
+```
 
-- `.source/` — generated by fumadocs-mdx (`pnpm typegen`)
-- `src/routeTree.gen.ts` — generated by TanStack Router
-- `public/r/` — generated by `pnpm registry:build`
+| Command               | Description                                    |
+| --------------------- | ---------------------------------------------- |
+| `pnpm dev`            | Start the docs site at `http://localhost:3000` |
+| `pnpm build`          | Production build                               |
+| `pnpm typecheck`      | Type-check with `tsc --noEmit`                 |
+| `pnpm lint`           | Lint with oxlint                               |
+| `pnpm registry:build` | Rebuild registry JSON into `public/r/`         |
+| `pnpm typegen`        | Regenerate fumadocs MDX types                  |
 
-## License
+**Deploy targets.** The site is a [TanStack Start](https://tanstack.com/start) app. Build for Cloudflare Workers with plain `pnpm build` + `pnpm deploy`, or for any static host (GitHub Pages) with:
 
-See [LICENSE](./LICENSE).
+```bash
+VITE_BASE_PATH=luck-ui VITE_STATIC_BUILD=true VITE_SITE_URL=https://lincong1987.github.io/luck-ui pnpm build
+# deploy dist/client
+```
+
+## 🧱 Tech Stack
+
+- **[TanStack Start](https://tanstack.com/start)** — full-stack React framework with file-based routing and static prerendering
+- **[React 19](https://react.dev)** + TypeScript
+- **[Base UI](https://base-ui.com)** — accessible component primitives
+- **[Tailwind CSS v4](https://tailwindcss.com)** — theme via CSS variables, no config file
+- **[fumadocs-mdx](https://fumadocs.dev)** — MDX-powered bilingual documentation
+- **[Motion](https://motion.dev)** — transitions and micro-interactions
+
+## 🤝 Contributing
+
+Contributions are welcome! To add a component:
+
+1. Create it in `registry/default/ui/<component>.tsx` with demos in `registry/default/examples/`
+2. Register it in `registry.json` and run `pnpm registry:build`
+3. Add both English and Chinese docs under `content/docs/` and `content/docs-zh/`
+
+Please open an issue first for larger changes.
+
+## 📄 License
+
+[MIT](./LICENSE) — free for personal and commercial use.
+
+## 🙏 Acknowledgements
+
+Luck UI stands on the shoulders of:
+
+- [Base UI](https://base-ui.com) — accessible React primitives powering every component
+- [shadcn/ui](https://ui.shadcn.com) — the copy-and-paste registry model and CLI tooling
+- [Coss UI](https://coss.com/ui) — design and styling inspiration
+
+<div align="center">
+<sub>If Luck UI made your day a little luckier, consider giving it a ⭐</sub>
+</div>
