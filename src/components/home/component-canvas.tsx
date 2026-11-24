@@ -1125,14 +1125,14 @@ function TitleCard({
           {copy.description}
         </p>
       </div>
-      <a
+      <Link
         className={cn(buttonVariants({ size: "lg" }), "pointer-events-auto shadow-xs")}
-        href={copy.docsHref}
+        to={copy.docsHref}
         onPointerDown={(event) => event.stopPropagation()}
       >
         {copy.docsLabel}
         <ArrowRightIcon />
-      </a>
+      </Link>
     </article>
   );
 }

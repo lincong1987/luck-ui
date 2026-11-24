@@ -49,7 +49,7 @@ export const Route = createRootRoute({
       ...buildSeoMeta({ title: SITE_NAME, image: brandImageUrl() }),
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: `${import.meta.env.BASE_URL.replace(/\/+$/, "")}/favicon.svg` },
       { rel: "stylesheet", href: appCss },
     ],
   }),
